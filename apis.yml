@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - PKI
-  - Certificates
-  - Security
-  - Certificate Authority
   - AWS
+  - Certificate Authority
+  - Certificates
+  - PKI
+  - Security
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,8 +28,8 @@ apis:
     humanURL: https://aws.amazon.com/private-ca/
     baseURL: https://acm-pca.amazonaws.com
     tags:
-      - PKI
       - Certificates
+      - PKI
       - Security
     properties:
       - type: Documentation
