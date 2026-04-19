@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-policy-qualifier-id-schema.json",
+  "title": "PolicyQualifierId",
+  "description": "PolicyQualifierId schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "CPS"
+  ]
+}

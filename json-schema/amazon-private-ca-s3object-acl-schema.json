@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-s3object-acl-schema.json",
+  "title": "S3ObjectAcl",
+  "description": "S3ObjectAcl schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "PUBLIC_READ",
+    "BUCKET_OWNER_FULL_CONTROL"
+  ]
+}

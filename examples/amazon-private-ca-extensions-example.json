@@ -1,0 +1,7 @@
+{
+  "CertificatePolicies": "example-CertificatePolicies",
+  "ExtendedKeyUsage": "example-ExtendedKeyUsage",
+  "KeyUsage": "example-KeyUsage",
+  "SubjectAlternativeNames": "Example CA",
+  "CustomExtensions": "example-CustomExtensions"
+}

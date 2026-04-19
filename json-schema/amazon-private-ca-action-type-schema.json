@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-action-type-schema.json",
+  "title": "ActionType",
+  "description": "ActionType schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "IssueCertificate",
+    "GetCertificate",
+    "ListPermissions"
+  ]
+}

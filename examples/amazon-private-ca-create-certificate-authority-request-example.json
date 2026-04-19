@@ -1,0 +1,9 @@
+{
+  "CertificateAuthorityConfiguration": "example-CertificateAuthorityConfiguration",
+  "RevocationConfiguration": "example-RevocationConfiguration",
+  "CertificateAuthorityType": "ROOT",
+  "IdempotencyToken": "abc218def",
+  "KeyStorageSecurityStandard": "example-KeyStorageSecurityStandard",
+  "Tags": "example-Tags",
+  "UsageMode": "example-UsageMode"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-other-name-schema.json",
+  "title": "OtherName",
+  "description": "Defines a custom ASN.1 X.400 <code>GeneralName</code> using an object identifier (OID) and value. The OID must satisfy the regular expression shown below. For more information, see NIST's definition of <a href=\"https://csrc.nist.gov/glossary/term/Object_Identifier\">Object Identifier (OID)</a>.",
+  "type": "object",
+  "properties": {
+    "TypeId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomObjectIdentifier"
+        },
+        {
+          "description": "Specifies an OID. "
+        }
+      ]
+    },
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String256"
+        },
+        {
+          "description": "Specifies an OID value."
+        }
+      ]
+    }
+  },
+  "required": [
+    "TypeId",
+    "Value"
+  ]
+}

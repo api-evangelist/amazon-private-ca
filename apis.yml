@@ -1,74 +1,116 @@
-aid: amazon-private-ca
 name: Amazon Private CA
-description: >-
-  AWS Private Certificate Authority (AWS Private CA) is a highly available,
-  fully managed private CA service that helps you easily and securely manage
-  the lifecycle of your private certificates. It allows you to create private
-  CA hierarchies and issue X.509 certificates for your internal resources.
+description: AWS Private Certificate Authority (AWS Private CA) is a highly available, fully managed private CA service that helps you easily and securely manage the lifecycle of your private certificates. It allows you to create private CA hierarchies and issue X.509 certificates for your internal resources including TLS certificates for microservices, IoT devices, and user authentication.
+url: https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/apis.yml
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 tags:
   - AWS
   - Certificate Authority
   - Certificates
   - PKI
   - Security
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/apis.yml
+  - X.509
+  - TLS
+  - IoT
 created: '2026-03-16'
-modified: '2026-03-16'
-specificationVersion: '0.19'
+modified: '2026-04-19'
 apis:
-  - aid: amazon-private-ca:aws-private-ca-api
-    name: AWS Private CA API
-    description: >-
-      The AWS Private CA API provides programmatic access to create and manage
-      private certificate authorities, certificates, certificate revocation lists,
-      permissions, policies, and tags for private PKI infrastructure.
+  - name: AWS Private CA API
+    description: The AWS Private CA API provides programmatic access to create and manage private certificate authorities, issue X.509 certificates, manage certificate revocation lists, configure audit reports, and control permissions and policies for private PKI infrastructure.
     humanURL: https://aws.amazon.com/private-ca/
     baseURL: https://acm-pca.amazonaws.com
     tags:
       - Certificates
       - PKI
       - Security
+      - Certificate Authority
+      - X.509
     properties:
       - type: Documentation
         url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
       - type: OpenAPI
-        url: https://api.apis.guru/v2/specs/amazonaws.com/acm-pca/2017-08-22/openapi.yaml
-      - type: Getting Started
+        url: openapi/amazon-private-ca-openapi-original.yaml
+      - type: GettingStarted
         url: https://aws.amazon.com/private-ca/getting-started/
       - type: Pricing
         url: https://aws.amazon.com/private-ca/pricing/
       - type: FAQ
         url: https://aws.amazon.com/private-ca/faqs/
+      - type: Authentication
+        url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+      - type: RateLimits
+        url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
 common:
   - type: Portal
     url: https://aws.amazon.com/private-ca/
-  - type: Website
-    url: https://aws.amazon.com/private-ca/
   - type: Documentation
     url: https://docs.aws.amazon.com/privateca/
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://aws.amazon.com/service-terms/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://aws.amazon.com/privacy/
   - type: Support
     url: https://aws.amazon.com/premiumsupport/
   - type: Blog
     url: https://aws.amazon.com/blogs/security/tag/aws-certificate-manager-private-ca/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/aws
   - type: Console
     url: https://console.aws.amazon.com/acm-pca/
-  - type: Sign Up
+  - type: SignUp
     url: https://portal.aws.amazon.com/billing/signup
-  - type: Login
-    url: https://signin.aws.amazon.com/
-  - type: Status
+  - type: StatusPage
     url: https://health.aws.amazon.com/health/status
-  - type: Contact
-    url: https://aws.amazon.com/contact-us/
+  - type: SpectralRules
+    url: rules/amazon-private-ca-spectral-rules.yml
+  - type: NaftikoCapability
+    url: capabilities/pki-management.yaml
+  - type: Vocabulary
+    url: vocabulary/amazon-private-ca-vocabulary.yaml
+  - type: Features
+    data:
+      - name: Private CA Hierarchy
+        description: Create root and subordinate CA hierarchies for complete control over your PKI infrastructure.
+      - name: X.509 Certificate Issuance
+        description: Issue end-entity and CA certificates signed by your private CAs for internal resources.
+      - name: Certificate Revocation
+        description: Revoke compromised or expired certificates with CRL and OCSP support.
+      - name: Audit Reports
+        description: Generate detailed audit reports of all certificate issuance activity stored in S3.
+      - name: Short-Lived Certificates
+        description: Issue short-lived certificates to reduce revocation overhead and improve security posture.
+      - name: Custom Templates
+        description: Use certificate templates to standardize certificate extensions and constraints.
+      - name: IAM Integration
+        description: Control access to CA operations using fine-grained IAM policies and resource-based policies.
+      - name: High Availability
+        description: Fully managed, highly available service with automatic failover across AWS Availability Zones.
+  - type: UseCases
+    data:
+      - name: TLS for Internal Services
+        description: Issue TLS certificates for microservices, APIs, and internal web applications.
+      - name: IoT Device Authentication
+        description: Provision unique X.509 certificates to IoT devices for mutual TLS authentication.
+      - name: User and Workload Identity
+        description: Issue certificates for user authentication and workload identity in zero-trust architectures.
+      - name: Code Signing
+        description: Sign software artifacts and container images with private CA-issued certificates.
+      - name: VPN and Network Security
+        description: Issue certificates for VPN clients and network devices for mutual authentication.
+  - type: Integrations
+    data:
+      - name: AWS Certificate Manager
+        description: Integrate Private CA with ACM to manage and deploy certificates on AWS services.
+      - name: AWS IoT Core
+        description: Use Private CA to provision certificates for IoT devices connecting to AWS IoT Core.
+      - name: Kubernetes
+        description: Integrate with cert-manager for automated certificate provisioning in Kubernetes clusters.
+      - name: Amazon EKS
+        description: Issue certificates for service mesh and pod-to-pod TLS in EKS clusters.
+      - name: AWS Secrets Manager
+        description: Store and rotate private keys associated with issued certificates.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+    url: https://apievangelist.com
+include: []

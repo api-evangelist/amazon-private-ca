@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-custom-attribute-schema.json",
+  "title": "CustomAttribute",
+  "description": "Defines the X.500 relative distinguished name (RDN).",
+  "type": "object",
+  "properties": {
+    "ObjectIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomObjectIdentifier"
+        },
+        {
+          "description": "Specifies the object identifier (OID) of the attribute type of the relative distinguished name (RDN)."
+        }
+      ]
+    },
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String1To256"
+        },
+        {
+          "description": "<p/> <p>Specifies the attribute value of relative distinguished name (RDN).</p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "ObjectIdentifier",
+    "Value"
+  ]
+}

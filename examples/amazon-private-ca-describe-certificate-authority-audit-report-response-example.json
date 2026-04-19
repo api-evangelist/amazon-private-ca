@@ -1,0 +1,6 @@
+{
+  "AuditReportStatus": "ACTIVE",
+  "S3BucketName": "Example CA",
+  "S3Key": "example-S3Key",
+  "CreatedAt": "example-CreatedAt"
+}

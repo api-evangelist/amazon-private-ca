@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-validity-period-type-schema.json",
+  "title": "ValidityPeriodType",
+  "description": "ValidityPeriodType schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "END_DATE",
+    "ABSOLUTE",
+    "DAYS",
+    "MONTHS",
+    "YEARS"
+  ]
+}

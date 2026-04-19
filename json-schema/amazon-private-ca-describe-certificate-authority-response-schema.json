@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-describe-certificate-authority-response-schema.json",
+  "title": "DescribeCertificateAuthorityResponse",
+  "description": "DescribeCertificateAuthorityResponse schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "CertificateAuthority": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateAuthority"
+        },
+        {
+          "description": "A <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CertificateAuthority.html\">CertificateAuthority</a> structure that contains information about your private CA."
+        }
+      ]
+    }
+  }
+}

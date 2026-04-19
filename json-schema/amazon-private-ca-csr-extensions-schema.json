@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-csr-extensions-schema.json",
+  "title": "CsrExtensions",
+  "description": "Describes the certificate extensions to be added to the certificate signing request (CSR).",
+  "type": "object",
+  "properties": {
+    "KeyUsage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KeyUsage"
+        },
+        {
+          "description": "Indicates the purpose of the certificate and of the key contained in the certificate."
+        }
+      ]
+    },
+    "SubjectInformationAccess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessDescriptionList"
+        },
+        {
+          "description": "For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and policy. For more information, see <a href=\"https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2\">Subject Information Access</a> in RFC 5280."
+        }
+      ]
+    }
+  }
+}

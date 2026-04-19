@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-create-certificate-authority-audit-report-request-schema.json",
+  "title": "CreateCertificateAuthorityAuditReportRequest",
+  "description": "CreateCertificateAuthorityAuditReportRequest schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "CertificateAuthorityArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of the CA to be audited. This is of the form:</p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>.</p>"
+        }
+      ]
+    },
+    "S3BucketName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3BucketName"
+        },
+        {
+          "description": "The name of the S3 bucket that will contain the audit report."
+        }
+      ]
+    },
+    "AuditReportResponseFormat": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AuditReportResponseFormat"
+        },
+        {
+          "description": "The format in which to create the report. This can be either <b>JSON</b> or <b>CSV</b>."
+        }
+      ]
+    }
+  },
+  "required": [
+    "CertificateAuthorityArn",
+    "S3BucketName",
+    "AuditReportResponseFormat"
+  ]
+}

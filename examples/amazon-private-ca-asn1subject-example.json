@@ -1,0 +1,17 @@
+{
+  "Country": "example-Country",
+  "Organization": "example-Organization",
+  "OrganizationalUnit": "example-OrganizationalUnit",
+  "DistinguishedNameQualifier": "Example CA",
+  "State": "example-State",
+  "CommonName": "Example CA",
+  "SerialNumber": "01:23:45:67:89:ab:cd:ef",
+  "Locality": "example-Locality",
+  "Title": "example-Title",
+  "Surname": "Example CA",
+  "GivenName": "Example CA",
+  "Initials": "example-Initials",
+  "Pseudonym": "example-Pseudonym",
+  "GenerationQualifier": "example-GenerationQualifier",
+  "CustomAttributes": "example-CustomAttributes"
+}

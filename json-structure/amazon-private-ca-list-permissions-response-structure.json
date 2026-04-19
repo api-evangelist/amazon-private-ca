@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-list-permissions-response-structure.json",
+  "name": "ListPermissionsResponse",
+  "description": "ListPermissionsResponse schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "Permissions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PermissionList"
+        },
+        {
+          "description": "Summary information about each permission assigned by the specified private CA, including the action enabled, the policy provided, and the time of creation."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. "
+        }
+      ]
+    }
+  }
+}

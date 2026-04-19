@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-key-storage-security-standard-schema.json",
+  "title": "KeyStorageSecurityStandard",
+  "description": "KeyStorageSecurityStandard schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "FIPS_140_2_LEVEL_2_OR_HIGHER",
+    "FIPS_140_2_LEVEL_3_OR_HIGHER"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-audit-report-status-schema.json",
+  "title": "AuditReportStatus",
+  "description": "AuditReportStatus schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "CREATING",
+    "SUCCESS",
+    "FAILED"
+  ]
+}

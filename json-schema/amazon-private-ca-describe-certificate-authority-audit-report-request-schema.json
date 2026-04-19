@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-describe-certificate-authority-audit-report-request-schema.json",
+  "title": "DescribeCertificateAuthorityAuditReportRequest",
+  "description": "DescribeCertificateAuthorityAuditReportRequest schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "CertificateAuthorityArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of the private CA. This must be of the form:</p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>. </p>"
+        }
+      ]
+    },
+    "AuditReportId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AuditReportId"
+        },
+        {
+          "description": "The report ID returned by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthorityAuditReport.html\">CreateCertificateAuthorityAuditReport</a> action."
+        }
+      ]
+    }
+  },
+  "required": [
+    "CertificateAuthorityArn",
+    "AuditReportId"
+  ]
+}

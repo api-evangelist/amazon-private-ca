@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-get-certificate-authority-certificate-request-structure.json",
+  "name": "GetCertificateAuthorityCertificateRequest",
+  "description": "GetCertificateAuthorityCertificateRequest schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "CertificateAuthorityArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of your private CA. This is of the form:</p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>. </p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "CertificateAuthorityArn"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "CertificateAuthorityArn": "arn:aws:acm-pca:us-east-1:123456789:certificate-authority/abc123",
+  "CertificateSerial": "01:23:45:67:89:ab:cd:ef",
+  "RevocationReason": "example-RevocationReason"
+}

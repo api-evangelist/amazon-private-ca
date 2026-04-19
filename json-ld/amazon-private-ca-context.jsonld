@@ -1,0 +1,464 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "pca": "https://acm-pca.amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Extensions": "pca:Extensions",
+    "CertificatePolicies": {
+      "@id": "pca:CertificatePolicies",
+      "@type": "xsd:string"
+    },
+    "ExtendedKeyUsage": "pca:ExtendedKeyUsage",
+    "KeyUsage": "pca:KeyUsage",
+    "SubjectAlternativeNames": {
+      "@id": "pca:SubjectAlternativeNames",
+      "@type": "xsd:string"
+    },
+    "CustomExtensions": {
+      "@id": "pca:CustomExtensions",
+      "@type": "xsd:string"
+    },
+    "AccessDescription": "pca:AccessDescription",
+    "AccessMethod": "pca:AccessMethod",
+    "AccessLocation": {
+      "@id": "pca:AccessLocation",
+      "@type": "xsd:string"
+    },
+    "ASN1Subject": "pca:ASN1Subject",
+    "Country": {
+      "@id": "pca:Country",
+      "@type": "xsd:string"
+    },
+    "Organization": {
+      "@id": "pca:Organization",
+      "@type": "xsd:string"
+    },
+    "OrganizationalUnit": {
+      "@id": "pca:OrganizationalUnit",
+      "@type": "xsd:string"
+    },
+    "DistinguishedNameQualifier": {
+      "@id": "pca:DistinguishedNameQualifier",
+      "@type": "xsd:string"
+    },
+    "State": {
+      "@id": "pca:State",
+      "@type": "xsd:string"
+    },
+    "CommonName": {
+      "@id": "pca:CommonName",
+      "@type": "xsd:string"
+    },
+    "SerialNumber": {
+      "@id": "pca:SerialNumber",
+      "@type": "xsd:string"
+    },
+    "Locality": {
+      "@id": "pca:Locality",
+      "@type": "xsd:string"
+    },
+    "Title": {
+      "@id": "pca:Title",
+      "@type": "xsd:string"
+    },
+    "Surname": {
+      "@id": "pca:Surname",
+      "@type": "xsd:string"
+    },
+    "GivenName": {
+      "@id": "pca:GivenName",
+      "@type": "xsd:string"
+    },
+    "Initials": {
+      "@id": "pca:Initials",
+      "@type": "xsd:string"
+    },
+    "Pseudonym": {
+      "@id": "pca:Pseudonym",
+      "@type": "xsd:string"
+    },
+    "GenerationQualifier": {
+      "@id": "pca:GenerationQualifier",
+      "@type": "xsd:string"
+    },
+    "CustomAttributes": {
+      "@id": "pca:CustomAttributes",
+      "@type": "xsd:string"
+    },
+    "UpdateCertificateAuthorityRequest": "pca:UpdateCertificateAuthorityRequest",
+    "CertificateAuthorityArn": {
+      "@id": "pca:CertificateAuthorityArn",
+      "@type": "xsd:string"
+    },
+    "RevocationConfiguration": "pca:RevocationConfiguration",
+    "Status": {
+      "@id": "pca:Status",
+      "@type": "xsd:string"
+    },
+    "ApiPassthrough": "pca:ApiPassthrough",
+    "Subject": {
+      "@id": "pca:Subject",
+      "@type": "xsd:string"
+    },
+    "DeleteCertificateAuthorityRequest": "pca:DeleteCertificateAuthorityRequest",
+    "PermanentDeletionTimeInDays": {
+      "@id": "pca:PermanentDeletionTimeInDays",
+      "@type": "xsd:string"
+    },
+    "GeneralName": "pca:GeneralName",
+    "OtherName": "pca:OtherName",
+    "Rfc822Name": {
+      "@id": "pca:Rfc822Name",
+      "@type": "xsd:string"
+    },
+    "DnsName": {
+      "@id": "pca:DnsName",
+      "@type": "xsd:string"
+    },
+    "DirectoryName": {
+      "@id": "pca:DirectoryName",
+      "@type": "xsd:string"
+    },
+    "EdiPartyName": "pca:EdiPartyName",
+    "UniformResourceIdentifier": {
+      "@id": "pca:UniformResourceIdentifier",
+      "@type": "xsd:string"
+    },
+    "IpAddress": {
+      "@id": "pca:IpAddress",
+      "@type": "xsd:string"
+    },
+    "RegisteredId": {
+      "@id": "pca:RegisteredId",
+      "@type": "xsd:string"
+    },
+    "Qualifier": "pca:Qualifier",
+    "CpsUri": {
+      "@id": "pca:CpsUri",
+      "@type": "xsd:string"
+    },
+    "DescribeCertificateAuthorityRequest": "pca:DescribeCertificateAuthorityRequest",
+    "GetPolicyResponse": "pca:GetPolicyResponse",
+    "Policy": {
+      "@id": "pca:Policy",
+      "@type": "xsd:string"
+    },
+    "ListPermissionsRequest": "pca:ListPermissionsRequest",
+    "NextToken": {
+      "@id": "pca:NextToken",
+      "@type": "xsd:string"
+    },
+    "MaxResults": {
+      "@id": "pca:MaxResults",
+      "@type": "xsd:string"
+    },
+    "DescribeCertificateAuthorityAuditReportResponse": "pca:DescribeCertificateAuthorityAuditReportResponse",
+    "AuditReportStatus": {
+      "@id": "pca:AuditReportStatus",
+      "@type": "xsd:string"
+    },
+    "S3BucketName": {
+      "@id": "pca:S3BucketName",
+      "@type": "xsd:string"
+    },
+    "S3Key": {
+      "@id": "pca:S3Key",
+      "@type": "xsd:string"
+    },
+    "CreatedAt": {
+      "@id": "pca:CreatedAt",
+      "@type": "xsd:string"
+    },
+    "PutPolicyRequest": "pca:PutPolicyRequest",
+    "ResourceArn": {
+      "@id": "pca:ResourceArn",
+      "@type": "xsd:string"
+    },
+    "DescribeCertificateAuthorityAuditReportRequest": "pca:DescribeCertificateAuthorityAuditReportRequest",
+    "AuditReportId": {
+      "@id": "pca:AuditReportId",
+      "@type": "xsd:string"
+    },
+    "DigitalSignature": {
+      "@id": "pca:DigitalSignature",
+      "@type": "xsd:string"
+    },
+    "NonRepudiation": {
+      "@id": "pca:NonRepudiation",
+      "@type": "xsd:string"
+    },
+    "KeyEncipherment": {
+      "@id": "pca:KeyEncipherment",
+      "@type": "xsd:string"
+    },
+    "DataEncipherment": {
+      "@id": "pca:DataEncipherment",
+      "@type": "xsd:string"
+    },
+    "KeyAgreement": {
+      "@id": "pca:KeyAgreement",
+      "@type": "xsd:string"
+    },
+    "KeyCertSign": {
+      "@id": "pca:KeyCertSign",
+      "@type": "xsd:string"
+    },
+    "CRLSign": {
+      "@id": "pca:CRLSign",
+      "@type": "xsd:string"
+    },
+    "EncipherOnly": {
+      "@id": "pca:EncipherOnly",
+      "@type": "xsd:string"
+    },
+    "DecipherOnly": {
+      "@id": "pca:DecipherOnly",
+      "@type": "xsd:string"
+    },
+    "PolicyQualifierInfo": "pca:PolicyQualifierInfo",
+    "PolicyQualifierId": {
+      "@id": "pca:PolicyQualifierId",
+      "@type": "xsd:string"
+    },
+    "CreateCertificateAuthorityRequest": "pca:CreateCertificateAuthorityRequest",
+    "CertificateAuthorityConfiguration": "pca:CertificateAuthorityConfiguration",
+    "CertificateAuthorityType": {
+      "@id": "pca:CertificateAuthorityType",
+      "@type": "xsd:string"
+    },
+    "IdempotencyToken": {
+      "@id": "pca:IdempotencyToken",
+      "@type": "xsd:string"
+    },
+    "KeyStorageSecurityStandard": {
+      "@id": "pca:KeyStorageSecurityStandard",
+      "@type": "xsd:string"
+    },
+    "Tags": {
+      "@id": "pca:Tags",
+      "@type": "xsd:string"
+    },
+    "UsageMode": {
+      "@id": "pca:UsageMode",
+      "@type": "xsd:string"
+    },
+    "ListTagsRequest": "pca:ListTagsRequest",
+    "KeyAlgorithm": {
+      "@id": "pca:KeyAlgorithm",
+      "@type": "xsd:string"
+    },
+    "SigningAlgorithm": {
+      "@id": "pca:SigningAlgorithm",
+      "@type": "xsd:string"
+    },
+    "CsrExtensions": "pca:CsrExtensions",
+    "IssueCertificateResponse": "pca:IssueCertificateResponse",
+    "CertificateArn": {
+      "@id": "pca:CertificateArn",
+      "@type": "xsd:string"
+    },
+    "GetCertificateRequest": "pca:GetCertificateRequest",
+    "GetCertificateAuthorityCsrRequest": "pca:GetCertificateAuthorityCsrRequest",
+    "GetCertificateAuthorityCertificateResponse": "pca:GetCertificateAuthorityCertificateResponse",
+    "Certificate": {
+      "@id": "pca:Certificate",
+      "@type": "xsd:string"
+    },
+    "CertificateChain": {
+      "@id": "pca:CertificateChain",
+      "@type": "xsd:string"
+    },
+    "CustomExtension": "pca:CustomExtension",
+    "ObjectIdentifier": {
+      "@id": "pca:ObjectIdentifier",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "pca:Value",
+      "@type": "xsd:string"
+    },
+    "Critical": {
+      "@id": "pca:Critical",
+      "@type": "xsd:string"
+    },
+    "SubjectInformationAccess": {
+      "@id": "pca:SubjectInformationAccess",
+      "@type": "xsd:string"
+    },
+    "CrlConfiguration": "pca:CrlConfiguration",
+    "Enabled": {
+      "@id": "pca:Enabled",
+      "@type": "xsd:string"
+    },
+    "ExpirationInDays": {
+      "@id": "pca:ExpirationInDays",
+      "@type": "xsd:string"
+    },
+    "CustomCname": {
+      "@id": "pca:CustomCname",
+      "@type": "xsd:string"
+    },
+    "S3ObjectAcl": {
+      "@id": "pca:S3ObjectAcl",
+      "@type": "xsd:string"
+    },
+    "GetCertificateAuthorityCsrResponse": "pca:GetCertificateAuthorityCsrResponse",
+    "Csr": {
+      "@id": "pca:Csr",
+      "@type": "xsd:string"
+    },
+    "RestoreCertificateAuthorityRequest": "pca:RestoreCertificateAuthorityRequest",
+    "IssueCertificateRequest": "pca:IssueCertificateRequest",
+    "TemplateArn": {
+      "@id": "pca:TemplateArn",
+      "@type": "xsd:string"
+    },
+    "Validity": "pca:Validity",
+    "ValidityNotBefore": {
+      "@id": "pca:ValidityNotBefore",
+      "@type": "xsd:string"
+    },
+    "CustomAttribute": "pca:CustomAttribute",
+    "RevokeCertificateRequest": "pca:RevokeCertificateRequest",
+    "CertificateSerial": {
+      "@id": "pca:CertificateSerial",
+      "@type": "xsd:string"
+    },
+    "RevocationReason": {
+      "@id": "pca:RevocationReason",
+      "@type": "xsd:string"
+    },
+    "GetCertificateAuthorityCertificateRequest": "pca:GetCertificateAuthorityCertificateRequest",
+    "Tag": "pca:Tag",
+    "Key": {
+      "@id": "pca:Key",
+      "@type": "xsd:string"
+    },
+    "UntagCertificateAuthorityRequest": "pca:UntagCertificateAuthorityRequest",
+    "TagCertificateAuthorityRequest": "pca:TagCertificateAuthorityRequest",
+    "PolicyInformation": "pca:PolicyInformation",
+    "CertPolicyId": {
+      "@id": "pca:CertPolicyId",
+      "@type": "xsd:string"
+    },
+    "PolicyQualifiers": {
+      "@id": "pca:PolicyQualifiers",
+      "@type": "xsd:string"
+    },
+    "ImportCertificateAuthorityCertificateRequest": "pca:ImportCertificateAuthorityCertificateRequest",
+    "CreateCertificateAuthorityAuditReportResponse": "pca:CreateCertificateAuthorityAuditReportResponse",
+    "Type": {
+      "@id": "pca:Type",
+      "@type": "xsd:string"
+    },
+    "PartyName": {
+      "@id": "pca:PartyName",
+      "@type": "xsd:string"
+    },
+    "NameAssigner": {
+      "@id": "pca:NameAssigner",
+      "@type": "xsd:string"
+    },
+    "Permission": "pca:Permission",
+    "Principal": {
+      "@id": "pca:Principal",
+      "@type": "xsd:string"
+    },
+    "SourceAccount": {
+      "@id": "pca:SourceAccount",
+      "@type": "xsd:string"
+    },
+    "Actions": {
+      "@id": "pca:Actions",
+      "@type": "xsd:string"
+    },
+    "DeletePolicyRequest": "pca:DeletePolicyRequest",
+    "CreatePermissionRequest": "pca:CreatePermissionRequest",
+    "ExtendedKeyUsageType": {
+      "@id": "pca:ExtendedKeyUsageType",
+      "@type": "xsd:string"
+    },
+    "ExtendedKeyUsageObjectIdentifier": {
+      "@id": "pca:ExtendedKeyUsageObjectIdentifier",
+      "@type": "xsd:string"
+    },
+    "CreateCertificateAuthorityResponse": "pca:CreateCertificateAuthorityResponse",
+    "GetPolicyRequest": "pca:GetPolicyRequest",
+    "OcspConfiguration": "pca:OcspConfiguration",
+    "OcspCustomCname": {
+      "@id": "pca:OcspCustomCname",
+      "@type": "xsd:string"
+    },
+    "ListCertificateAuthoritiesRequest": "pca:ListCertificateAuthoritiesRequest",
+    "ResourceOwner": {
+      "@id": "pca:ResourceOwner",
+      "@type": "xsd:string"
+    },
+    "TypeId": {
+      "@id": "pca:TypeId",
+      "@type": "xsd:string"
+    },
+    "CreateCertificateAuthorityAuditReportRequest": "pca:CreateCertificateAuthorityAuditReportRequest",
+    "AuditReportResponseFormat": {
+      "@id": "pca:AuditReportResponseFormat",
+      "@type": "xsd:string"
+    },
+    "DescribeCertificateAuthorityResponse": "pca:DescribeCertificateAuthorityResponse",
+    "CertificateAuthority": "pca:CertificateAuthority",
+    "ListTagsResponse": "pca:ListTagsResponse",
+    "Arn": {
+      "@id": "pca:Arn",
+      "@type": "xsd:string"
+    },
+    "OwnerAccount": {
+      "@id": "pca:OwnerAccount",
+      "@type": "xsd:string"
+    },
+    "LastStateChangeAt": {
+      "@id": "pca:LastStateChangeAt",
+      "@type": "xsd:string"
+    },
+    "Serial": {
+      "@id": "pca:Serial",
+      "@type": "xsd:string"
+    },
+    "NotBefore": {
+      "@id": "pca:NotBefore",
+      "@type": "xsd:string"
+    },
+    "NotAfter": {
+      "@id": "pca:NotAfter",
+      "@type": "xsd:string"
+    },
+    "FailureReason": {
+      "@id": "pca:FailureReason",
+      "@type": "xsd:string"
+    },
+    "RestorableUntil": {
+      "@id": "pca:RestorableUntil",
+      "@type": "xsd:string"
+    },
+    "ListCertificateAuthoritiesResponse": "pca:ListCertificateAuthoritiesResponse",
+    "CertificateAuthorities": {
+      "@id": "pca:CertificateAuthorities",
+      "@type": "xsd:string"
+    },
+    "ListPermissionsResponse": "pca:ListPermissionsResponse",
+    "Permissions": {
+      "@id": "pca:Permissions",
+      "@type": "xsd:string"
+    },
+    "DeletePermissionRequest": "pca:DeletePermissionRequest",
+    "GetCertificateResponse": "pca:GetCertificateResponse",
+    "CustomObjectIdentifier": {
+      "@id": "pca:CustomObjectIdentifier",
+      "@type": "xsd:string"
+    },
+    "AccessMethodType": {
+      "@id": "pca:AccessMethodType",
+      "@type": "xsd:string"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-access-description-structure.json",
+  "name": "AccessDescription",
+  "description": "Provides access information used by the <code>authorityInfoAccess</code> and <code>subjectInfoAccess</code> extensions described in <a href=\"https://datatracker.ietf.org/doc/html/rfc5280\">RFC 5280</a>.",
+  "type": "object",
+  "properties": {
+    "AccessMethod": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessMethod"
+        },
+        {
+          "description": "The type and format of <code>AccessDescription</code> information."
+        }
+      ]
+    },
+    "AccessLocation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GeneralName"
+        },
+        {
+          "description": "The location of <code>AccessDescription</code> information."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccessMethod",
+    "AccessLocation"
+  ]
+}

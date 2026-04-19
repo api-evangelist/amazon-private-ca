@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-signing-algorithm-schema.json",
+  "title": "SigningAlgorithm",
+  "description": "SigningAlgorithm schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "SHA256WITHECDSA",
+    "SHA384WITHECDSA",
+    "SHA512WITHECDSA",
+    "SHA256WITHRSA",
+    "SHA384WITHRSA",
+    "SHA512WITHRSA"
+  ]
+}

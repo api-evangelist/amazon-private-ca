@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-access-method-type-schema.json",
+  "title": "AccessMethodType",
+  "description": "AccessMethodType schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "CA_REPOSITORY",
+    "RESOURCE_PKI_MANIFEST",
+    "RESOURCE_PKI_NOTIFY"
+  ]
+}

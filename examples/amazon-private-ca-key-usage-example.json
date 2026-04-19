@@ -1,0 +1,11 @@
+{
+  "DigitalSignature": "example-DigitalSignature",
+  "NonRepudiation": "example-NonRepudiation",
+  "KeyEncipherment": "example-KeyEncipherment",
+  "DataEncipherment": "example-DataEncipherment",
+  "KeyAgreement": "example-KeyAgreement",
+  "KeyCertSign": "example-KeyCertSign",
+  "CRLSign": "example-CRLSign",
+  "EncipherOnly": "example-EncipherOnly",
+  "DecipherOnly": "example-DecipherOnly"
+}

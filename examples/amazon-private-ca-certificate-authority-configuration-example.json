@@ -1,0 +1,6 @@
+{
+  "KeyAlgorithm": "RSA_2048",
+  "SigningAlgorithm": "RSA_2048",
+  "Subject": "example-Subject",
+  "CsrExtensions": "example-CsrExtensions"
+}

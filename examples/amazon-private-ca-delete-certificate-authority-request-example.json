@@ -1,0 +1,4 @@
+{
+  "CertificateAuthorityArn": "arn:aws:acm-pca:us-east-1:123456789:certificate-authority/abc123",
+  "PermanentDeletionTimeInDays": "2025-03-15T14:30:00Z"
+}

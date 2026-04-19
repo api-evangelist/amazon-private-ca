@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-custom-extension-schema.json",
+  "title": "CustomExtension",
+  "description": "<p/> <p>Specifies the X.509 extension information for a certificate.</p> <p>Extensions present in <code>CustomExtensions</code> follow the <code>ApiPassthrough</code> <a href=\"https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations\">template rules</a>. </p>",
+  "type": "object",
+  "properties": {
+    "ObjectIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomObjectIdentifier"
+        },
+        {
+          "description": "<p/> <p>Specifies the object identifier (OID) of the X.509 extension. For more information, see the <a href=\"https://oidref.com/2.5.29\">Global OID reference database.</a> </p>"
+        }
+      ]
+    },
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Base64String1To4096"
+        },
+        {
+          "description": "<p/> <p>Specifies the base64-encoded value of the X.509 extension.</p>"
+        }
+      ]
+    },
+    "Critical": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "<p/> <p>Specifies the critical flag of the X.509 extension.</p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "ObjectIdentifier",
+    "Value"
+  ]
+}

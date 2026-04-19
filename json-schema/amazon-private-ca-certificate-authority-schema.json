@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-certificate-authority-schema.json",
+  "title": "CertificateAuthority",
+  "description": "Contains information about your private certificate authority (CA). Your private CA can issue and revoke X.509 digital certificates. Digital certificates verify that the entity named in the certificate <b>Subject</b> field owns or controls the public key contained in the <b>Subject Public Key Info</b> field. Call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action to create your private CA. You must then call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_GetCertificateAuthorityCertificate.html\">GetCertificateAuthorityCertificate</a> action to retrieve a private CA certificate signing request (CSR). Sign the CSR with your Amazon Web Services Private CA-hosted or on-premises root or subordinate CA certificate. Call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ImportCertificateAuthorityCertificate.html\">ImportCertificateAuthorityCertificate</a> action to import the signed certificate into Certificate Manager (ACM). ",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "Amazon Resource Name (ARN) for your private certificate authority (CA). The format is <code> <i>12345678-1234-1234-1234-123456789012</i> </code>."
+        }
+      ]
+    },
+    "OwnerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "description": "The Amazon Web Services account ID that owns the certificate authority."
+        }
+      ]
+    },
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TStamp"
+        },
+        {
+          "description": "Date and time at which your private CA was created."
+        }
+      ]
+    },
+    "LastStateChangeAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TStamp"
+        },
+        {
+          "description": "Date and time at which your private CA was last updated."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateAuthorityType"
+        },
+        {
+          "description": "Type of your private CA."
+        }
+      ]
+    },
+    "Serial": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Serial number of your private CA."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateAuthorityStatus"
+        },
+        {
+          "description": "Status of your private CA."
+        }
+      ]
+    },
+    "NotBefore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TStamp"
+        },
+        {
+          "description": "Date and time before which your private CA certificate is not valid."
+        }
+      ]
+    },
+    "NotAfter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TStamp"
+        },
+        {
+          "description": "Date and time after which your private CA certificate is not valid."
+        }
+      ]
+    },
+    "FailureReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailureReason"
+        },
+        {
+          "description": "Reason the request to create your private CA failed."
+        }
+      ]
+    },
+    "CertificateAuthorityConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateAuthorityConfiguration"
+        },
+        {
+          "description": "Your private CA configuration."
+        }
+      ]
+    },
+    "RevocationConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevocationConfiguration"
+        },
+        {
+          "description": "Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation list (CRL) created and maintained by your private CA. "
+        }
+      ]
+    },
+    "RestorableUntil": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TStamp"
+        },
+        {
+          "description": "The period during which a deleted CA can be restored. For more information, see the <code>PermanentDeletionTimeInDays</code> parameter of the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_DeleteCertificateAuthorityRequest.html\">DeleteCertificateAuthorityRequest</a> action. "
+        }
+      ]
+    },
+    "KeyStorageSecurityStandard": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KeyStorageSecurityStandard"
+        },
+        {
+          "description": "<p>Defines a cryptographic key management compliance standard used for handling CA keys. </p> <p>Default: FIPS_140_2_LEVEL_3_OR_HIGHER</p> <p>Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify this parameter and value when creating a CA in that Region. Specifying a different value (or no value) results in an <code>InvalidArgsException</code> with the message \"A certificate authority cannot be created in this region with the specified security standard.\"</p>"
+        }
+      ]
+    },
+    "UsageMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateAuthorityUsageMode"
+        },
+        {
+          "description": "<p>Specifies whether the CA issues general-purpose certificates that typically require a revocation mechanism, or short-lived certificates that may optionally omit revocation because they expire quickly. Short-lived certificate validity is limited to seven days.</p> <p>The default value is GENERAL_PURPOSE.</p>"
+        }
+      ]
+    }
+  }
+}

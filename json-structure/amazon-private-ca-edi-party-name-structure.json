@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-edi-party-name-structure.json",
+  "name": "EdiPartyName",
+  "description": "Describes an Electronic Data Interchange (EDI) entity as described in as defined in <a href=\"https://datatracker.ietf.org/doc/html/rfc5280\">Subject Alternative Name</a> in RFC 5280.",
+  "type": "object",
+  "properties": {
+    "PartyName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String256"
+        },
+        {
+          "description": "Specifies the party name."
+        }
+      ]
+    },
+    "NameAssigner": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String256"
+        },
+        {
+          "description": "Specifies the name assigner."
+        }
+      ]
+    }
+  },
+  "required": [
+    "PartyName"
+  ]
+}

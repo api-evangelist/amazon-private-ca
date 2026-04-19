@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-extended-key-usage-type-structure.json",
+  "name": "ExtendedKeyUsageType",
+  "description": "ExtendedKeyUsageType schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "SERVER_AUTH",
+    "CLIENT_AUTH",
+    "CODE_SIGNING",
+    "EMAIL_PROTECTION",
+    "TIME_STAMPING",
+    "OCSP_SIGNING",
+    "SMART_CARD_LOGIN",
+    "DOCUMENT_SIGNING",
+    "CERTIFICATE_TRANSPARENCY"
+  ]
+}

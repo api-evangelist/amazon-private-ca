@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-policy-information-schema.json",
+  "title": "PolicyInformation",
+  "description": "Defines the X.509 <code>CertificatePolicies</code> extension.",
+  "type": "object",
+  "properties": {
+    "CertPolicyId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomObjectIdentifier"
+        },
+        {
+          "description": "Specifies the object identifier (OID) of the certificate policy under which the certificate was issued. For more information, see NIST's definition of <a href=\"https://csrc.nist.gov/glossary/term/Object_Identifier\">Object Identifier (OID)</a>."
+        }
+      ]
+    },
+    "PolicyQualifiers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PolicyQualifierInfoList"
+        },
+        {
+          "description": "Modifies the given <code>CertPolicyId</code> with a qualifier. Amazon Web Services Private CA supports the certification practice statement (CPS) qualifier."
+        }
+      ]
+    }
+  },
+  "required": [
+    "CertPolicyId"
+  ]
+}

@@ -1,0 +1,177 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: Amazon Private CA
+  description: Vocabulary for Amazon Private CA API covering certificate authorities, certificates, revocation, and PKI management operations.
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: amazon-private-ca
+      version: "2017-08-22"
+      baseUrl: https://acm-pca.{region}.amazonaws.com
+      status: active
+      description: AWS Private Certificate Authority management API
+
+  resources:
+    - name: certificate-authorities
+      api: amazon-private-ca
+      operations: [CreateCertificateAuthority, ListCertificateAuthorities, DescribeCertificateAuthority, UpdateCertificateAuthority, DeleteCertificateAuthority]
+    - name: certificates
+      api: amazon-private-ca
+      operations: [IssueCertificate, GetCertificate, RevokeCertificate]
+    - name: csr
+      api: amazon-private-ca
+      operations: [GetCertificateAuthorityCsr]
+    - name: audit-reports
+      api: amazon-private-ca
+      operations: [CreateCertificateAuthorityAuditReport, DescribeCertificateAuthorityAuditReport]
+    - name: permissions
+      api: amazon-private-ca
+      operations: [CreatePermission, DeletePermission, ListPermissions]
+    - name: policies
+      api: amazon-private-ca
+      operations: [GetPolicy, PutPolicy, DeletePolicy]
+    - name: tags
+      api: amazon-private-ca
+      operations: [ListTags, TagCertificateAuthority, UntagCertificateAuthority]
+
+  actions:
+    - verb: create
+      httpMethod: POST
+      pattern: write
+      count: 4
+    - verb: list
+      httpMethod: POST
+      pattern: read
+      count: 3
+    - verb: describe
+      httpMethod: POST
+      pattern: read
+      count: 2
+    - verb: get
+      httpMethod: POST
+      pattern: read
+      count: 3
+    - verb: update
+      httpMethod: POST
+      pattern: write
+      count: 1
+    - verb: delete
+      httpMethod: POST
+      pattern: destructive
+      count: 3
+    - verb: issue
+      httpMethod: POST
+      pattern: write
+      count: 1
+    - verb: revoke
+      httpMethod: POST
+      pattern: destructive
+      count: 1
+    - verb: tag
+      httpMethod: POST
+      pattern: write
+      count: 2
+
+  schemas:
+    core:
+      - CertificateAuthority
+      - CertificateAuthorityConfiguration
+      - Validity
+    pki:
+      - ASN1Subject
+      - RevocationConfiguration
+      - CrlConfiguration
+      - OcspConfiguration
+    permissions:
+      - Permission
+
+  enums:
+    ca-types:
+      - ROOT
+      - SUBORDINATE
+    ca-status:
+      - CREATING
+      - PENDING_CERTIFICATE
+      - ACTIVE
+      - DELETED
+      - DISABLED
+      - EXPIRED
+      - FAILED
+    signing-algorithms:
+      - SHA256WITHRSA
+      - SHA384WITHRSA
+      - SHA512WITHRSA
+      - SHA256WITHECDSA
+      - SHA384WITHECDSA
+      - SHA512WITHECDSA
+    revocation-reasons:
+      - UNSPECIFIED
+      - KEY_COMPROMISE
+      - CERTIFICATE_AUTHORITY_COMPROMISE
+      - AFFILIATION_CHANGED
+      - SUPERSEDED
+      - CESSATION_OF_OPERATION
+      - PRIVILEGE_WITHDRAWN
+      - A_A_COMPROMISE
+
+  authentication:
+    schemes:
+      - AWS Signature Version 4 (SigV4)
+    description: All requests signed with SigV4 using acm-pca signing name
+
+capability:
+  workflows:
+    - name: PKI Management
+      file: capabilities/pki-management.yaml
+      description: Private PKI infrastructure management workflow
+      apisUsed:
+        - Amazon Private CA API
+      personas:
+        - Security Engineer
+        - Platform Engineer
+
+  personas:
+    - id: security-engineer
+      name: Security Engineer
+      description: Manages PKI infrastructure, CA hierarchies, and certificate policies
+      workflows:
+        - PKI Management
+    - id: platform-engineer
+      name: Platform Engineer
+      description: Issues certificates for internal services and manages certificate lifecycle
+      workflows:
+        - PKI Management
+
+  domains:
+    - PKI
+    - Security
+    - Certificate Management
+
+  namespaces:
+    - name: amazon-private-ca
+      type: consumed
+      baseUri: https://acm-pca.{region}.amazonaws.com
+    - name: pki-management-api
+      type: rest
+      port: 8080
+    - name: pki-management-mcp
+      type: mcp
+      port: 9090
+
+  binds:
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY
+    - AWS_REGION
+
+crossReference:
+  - resource: certificate-authorities
+    operations: [CreateCertificateAuthority, ListCertificateAuthorities, DescribeCertificateAuthority]
+    workflows: [PKI Management]
+    personas: [Security Engineer, Platform Engineer]
+  - resource: certificates
+    operations: [IssueCertificate, GetCertificate, RevokeCertificate]
+    workflows: [PKI Management]
+    personas: [Security Engineer, Platform Engineer]

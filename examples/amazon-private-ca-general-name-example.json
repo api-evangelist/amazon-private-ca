@@ -1,0 +1,10 @@
+{
+  "OtherName": "Example CA",
+  "Rfc822Name": "Example CA",
+  "DnsName": "Example CA",
+  "DirectoryName": "Example CA",
+  "EdiPartyName": "Example CA",
+  "UniformResourceIdentifier": "abc901def",
+  "IpAddress": "example-IpAddress",
+  "RegisteredId": "abc848def"
+}

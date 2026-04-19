@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-get-policy-response-structure.json",
+  "name": "GetPolicyResponse",
+  "description": "GetPolicyResponse schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "Policy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AWSPolicy"
+        },
+        {
+          "description": "The policy attached to the private CA as a JSON document."
+        }
+      ]
+    }
+  }
+}

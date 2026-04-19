@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-failure-reason-schema.json",
+  "title": "FailureReason",
+  "description": "FailureReason schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "REQUEST_TIMED_OUT",
+    "UNSUPPORTED_ALGORITHM",
+    "OTHER"
+  ]
+}

@@ -1,0 +1,182 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: Amazon Private CA PKI Management
+  description: Workflow capability for managing private PKI infrastructure using Amazon Private CA. Combines certificate authority management, certificate issuance, revocation, and audit reporting for security engineers and platform teams.
+  tags:
+    - Amazon
+    - AWS
+    - PKI
+    - Certificate Authority
+    - Security
+    - X.509
+    - Certificates
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+
+capability:
+  consumes:
+    - import: amazon-private-ca
+      location: ./shared/amazon-private-ca.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: pki-management-api
+      description: Unified REST API for Amazon Private CA PKI management workflows.
+      resources:
+        - path: /v1/certificate-authorities
+          name: certificate-authorities
+          description: Certificate authority hierarchy management
+          operations:
+            - method: POST
+              name: create-ca
+              description: Create a new private certificate authority
+              call: "amazon-private-ca.create-certificate-authority"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+            - method: GET
+              name: list-cas
+              description: List all certificate authorities
+              call: "amazon-private-ca.list-certificate-authorities"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/certificate-authorities/{ca-id}
+          name: certificate-authority
+          description: Individual certificate authority operations
+          operations:
+            - method: GET
+              name: describe-ca
+              description: Get certificate authority details
+              call: "amazon-private-ca.describe-certificate-authority"
+              with:
+                ca_arn: "rest.ca_arn"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/certificates
+          name: certificates
+          description: Certificate lifecycle management
+          operations:
+            - method: POST
+              name: issue-certificate
+              description: Issue a new certificate
+              call: "amazon-private-ca.issue-certificate"
+              with:
+                ca_arn: "rest.ca_arn"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/certificates/{cert-id}
+          name: certificate
+          description: Individual certificate operations
+          operations:
+            - method: GET
+              name: get-certificate
+              description: Retrieve a certificate
+              call: "amazon-private-ca.get-certificate"
+              with:
+                ca_arn: "rest.ca_arn"
+                cert_arn: "rest.cert_arn"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+            - method: DELETE
+              name: revoke-certificate
+              description: Revoke a certificate
+              call: "amazon-private-ca.revoke-certificate"
+              with:
+                ca_arn: "rest.ca_arn"
+                serial: "rest.serial"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9090
+      namespace: pki-management-mcp
+      transport: http
+      description: MCP server for AI-assisted PKI management workflows with Amazon Private CA.
+      tools:
+        - name: create-certificate-authority
+          description: Create a new private certificate authority in the CA hierarchy
+          hints:
+            readOnly: false
+            destructive: false
+          call: "amazon-private-ca.create-certificate-authority"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: list-certificate-authorities
+          description: List all private certificate authorities
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "amazon-private-ca.list-certificate-authorities"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: describe-certificate-authority
+          description: Get details about a specific certificate authority
+          hints:
+            readOnly: true
+            openWorld: false
+          call: "amazon-private-ca.describe-certificate-authority"
+          with:
+            ca_arn: "tools.ca_arn"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: issue-certificate
+          description: Issue a new X.509 certificate from a certificate authority
+          hints:
+            readOnly: false
+            destructive: false
+          call: "amazon-private-ca.issue-certificate"
+          with:
+            ca_arn: "tools.ca_arn"
+            csr: "tools.csr"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: get-certificate
+          description: Retrieve an issued certificate by ARN
+          hints:
+            readOnly: true
+            openWorld: false
+          call: "amazon-private-ca.get-certificate"
+          with:
+            ca_arn: "tools.ca_arn"
+            cert_arn: "tools.cert_arn"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: revoke-certificate
+          description: Revoke an issued certificate
+          hints:
+            readOnly: false
+            destructive: true
+          call: "amazon-private-ca.revoke-certificate"
+          with:
+            ca_arn: "tools.ca_arn"
+            serial: "tools.serial"
+          outputParameters:
+            - type: object
+              mapping: "$."

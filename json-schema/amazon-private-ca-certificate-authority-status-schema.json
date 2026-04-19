@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-certificate-authority-status-schema.json",
+  "title": "CertificateAuthorityStatus",
+  "description": "CertificateAuthorityStatus schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "CREATING",
+    "PENDING_CERTIFICATE",
+    "ACTIVE",
+    "DELETED",
+    "DISABLED",
+    "EXPIRED",
+    "FAILED"
+  ]
+}

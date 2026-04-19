@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-tag-schema.json",
+  "title": "Tag",
+  "description": "Tags are labels that you can use to identify and organize your private CAs. Each tag consists of a key and an optional value. You can associate up to 50 tags with a private CA. To add one or more tags to a private CA, call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_TagCertificateAuthority.html\">TagCertificateAuthority</a> action. To remove a tag, call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_UntagCertificateAuthority.html\">UntagCertificateAuthority</a> action. ",
+  "type": "object",
+  "properties": {
+    "Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagKey"
+        },
+        {
+          "description": "Key (name) of the tag."
+        }
+      ]
+    },
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagValue"
+        },
+        {
+          "description": "Value of the tag."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Key"
+  ]
+}

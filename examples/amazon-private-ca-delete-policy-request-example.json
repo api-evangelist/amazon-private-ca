@@ -1,0 +1,3 @@
+{
+  "ResourceArn": "arn:aws:acm-pca:us-east-1:123456789:certificate-authority/abc123"
+}

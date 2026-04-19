@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-list-certificate-authorities-request-schema.json",
+  "title": "ListCertificateAuthoritiesRequest",
+  "description": "ListCertificateAuthoritiesRequest schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextToken"
+        },
+        {
+          "description": "Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResults"
+        },
+        {
+          "description": "Use this parameter when paginating results to specify the maximum number of items to return in the response on each page. If additional items exist beyond the number you specify, the <code>NextToken</code> element is sent in the response. Use this <code>NextToken</code> value in a subsequent request to retrieve additional items."
+        }
+      ]
+    },
+    "ResourceOwner": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceOwner"
+        },
+        {
+          "description": "Use this parameter to filter the returned set of certificate authorities based on their owner. The default is SELF."
+        }
+      ]
+    }
+  }
+}

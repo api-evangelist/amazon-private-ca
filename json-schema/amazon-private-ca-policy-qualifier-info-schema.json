@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-policy-qualifier-info-schema.json",
+  "title": "PolicyQualifierInfo",
+  "description": "Modifies the <code>CertPolicyId</code> of a <code>PolicyInformation</code> object with a qualifier. Amazon Web Services Private CA supports the certification practice statement (CPS) qualifier.",
+  "type": "object",
+  "properties": {
+    "PolicyQualifierId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PolicyQualifierId"
+        },
+        {
+          "description": "Identifies the qualifier modifying a <code>CertPolicyId</code>."
+        }
+      ]
+    },
+    "Qualifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Qualifier"
+        },
+        {
+          "description": "Defines the qualifier type. Amazon Web Services Private CA supports the use of a URI for a CPS qualifier in this field."
+        }
+      ]
+    }
+  },
+  "required": [
+    "PolicyQualifierId",
+    "Qualifier"
+  ]
+}

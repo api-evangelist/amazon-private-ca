@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-describe-certificate-authority-audit-report-response-schema.json",
+  "title": "DescribeCertificateAuthorityAuditReportResponse",
+  "description": "DescribeCertificateAuthorityAuditReportResponse schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "AuditReportStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AuditReportStatus"
+        },
+        {
+          "description": "Specifies whether report creation is in progress, has succeeded, or has failed."
+        }
+      ]
+    },
+    "S3BucketName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3BucketName"
+        },
+        {
+          "description": "Name of the S3 bucket that contains the report."
+        }
+      ]
+    },
+    "S3Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Key"
+        },
+        {
+          "description": "S3 <b>key</b> that uniquely identifies the report file in your S3 bucket."
+        }
+      ]
+    },
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TStamp"
+        },
+        {
+          "description": "The date and time at which the report was created."
+        }
+      ]
+    }
+  }
+}

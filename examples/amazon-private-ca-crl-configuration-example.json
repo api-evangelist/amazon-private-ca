@@ -1,0 +1,7 @@
+{
+  "Enabled": "example-Enabled",
+  "ExpirationInDays": "example-ExpirationInDays",
+  "CustomCname": "Example CA",
+  "S3BucketName": "Example CA",
+  "S3ObjectAcl": "example-S3ObjectAcl"
+}

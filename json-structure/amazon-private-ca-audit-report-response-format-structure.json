@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-audit-report-response-format-structure.json",
+  "name": "AuditReportResponseFormat",
+  "description": "AuditReportResponseFormat schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "JSON",
+    "CSV"
+  ]
+}

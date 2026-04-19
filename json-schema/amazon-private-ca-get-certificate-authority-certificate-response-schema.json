@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-get-certificate-authority-certificate-response-schema.json",
+  "title": "GetCertificateAuthorityCertificateResponse",
+  "description": "GetCertificateAuthorityCertificateResponse schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "Certificate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateBody"
+        },
+        {
+          "description": "Base64-encoded certificate authority (CA) certificate."
+        }
+      ]
+    },
+    "CertificateChain": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateChain"
+        },
+        {
+          "description": "Base64-encoded certificate chain that includes any intermediate certificates and chains up to root certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. If this is a root CA, the value will be null."
+        }
+      ]
+    }
+  }
+}

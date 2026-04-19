@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-qualifier-schema.json",
+  "title": "Qualifier",
+  "description": "Defines a <code>PolicyInformation</code> qualifier. Amazon Web Services Private CA supports the <a href=\"https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.4\">certification practice statement (CPS) qualifier</a> defined in RFC 5280. ",
+  "type": "object",
+  "properties": {
+    "CpsUri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String256"
+        },
+        {
+          "description": "Contains a pointer to a certification practice statement (CPS) published by the CA."
+        }
+      ]
+    }
+  },
+  "required": [
+    "CpsUri"
+  ]
+}

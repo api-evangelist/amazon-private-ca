@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-extended-key-usage-structure.json",
+  "name": "ExtendedKeyUsage",
+  "description": "Specifies additional purposes for which the certified public key may be used other than basic purposes indicated in the <code>KeyUsage</code> extension.",
+  "type": "object",
+  "properties": {
+    "ExtendedKeyUsageType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExtendedKeyUsageType"
+        },
+        {
+          "description": "Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a href=\"https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12\">RFC 5280</a>."
+        }
+      ]
+    },
+    "ExtendedKeyUsageObjectIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomObjectIdentifier"
+        },
+        {
+          "description": "Specifies a custom <code>ExtendedKeyUsage</code> with an object identifier (OID)."
+        }
+      ]
+    }
+  }
+}

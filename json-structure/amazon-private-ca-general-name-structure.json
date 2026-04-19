@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-general-name-structure.json",
+  "name": "GeneralName",
+  "description": "Describes an ASN.1 X.400 <code>GeneralName</code> as defined in <a href=\"https://datatracker.ietf.org/doc/html/rfc5280\">RFC 5280</a>. Only one of the following naming options should be provided. Providing more than one option results in an <code>InvalidArgsException</code> error.",
+  "type": "object",
+  "properties": {
+    "OtherName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OtherName"
+        },
+        {
+          "description": "Represents <code>GeneralName</code> using an <code>OtherName</code> object."
+        }
+      ]
+    },
+    "Rfc822Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String256"
+        },
+        {
+          "description": "Represents <code>GeneralName</code> as an <a href=\"https://datatracker.ietf.org/doc/html/rfc822\">RFC 822</a> email address."
+        }
+      ]
+    },
+    "DnsName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String253"
+        },
+        {
+          "description": "Represents <code>GeneralName</code> as a DNS name."
+        }
+      ]
+    },
+    "DirectoryName": {
+      "$ref": "#/components/schemas/ASN1Subject"
+    },
+    "EdiPartyName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EdiPartyName"
+        },
+        {
+          "description": "Represents <code>GeneralName</code> as an <code>EdiPartyName</code> object."
+        }
+      ]
+    },
+    "UniformResourceIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String253"
+        },
+        {
+          "description": "Represents <code>GeneralName</code> as a URI."
+        }
+      ]
+    },
+    "IpAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String39"
+        },
+        {
+          "description": "Represents <code>GeneralName</code> as an IPv4 or IPv6 address."
+        }
+      ]
+    },
+    "RegisteredId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomObjectIdentifier"
+        },
+        {
+          "description": " Represents <code>GeneralName</code> as an object identifier (OID)."
+        }
+      ]
+    }
+  }
+}

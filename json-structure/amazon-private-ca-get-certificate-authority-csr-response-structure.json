@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-get-certificate-authority-csr-response-structure.json",
+  "name": "GetCertificateAuthorityCsrResponse",
+  "description": "GetCertificateAuthorityCsrResponse schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "Csr": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CsrBody"
+        },
+        {
+          "description": "The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Arn": "arn:aws:acm-pca:us-east-1:123456789:certificate-authority/abc123",
+  "OwnerAccount": "example-OwnerAccount",
+  "CreatedAt": "example-CreatedAt",
+  "LastStateChangeAt": "example-LastStateChangeAt",
+  "Type": "ROOT",
+  "Serial": "01:23:45:67:89:ab:cd:ef",
+  "Status": "ACTIVE",
+  "NotBefore": "example-NotBefore",
+  "NotAfter": "example-NotAfter",
+  "FailureReason": "example-FailureReason",
+  "CertificateAuthorityConfiguration": "example-CertificateAuthorityConfiguration",
+  "RevocationConfiguration": "example-RevocationConfiguration",
+  "RestorableUntil": "example-RestorableUntil",
+  "KeyStorageSecurityStandard": "example-KeyStorageSecurityStandard",
+  "UsageMode": "example-UsageMode"
+}

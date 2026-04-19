@@ -1,0 +1,10 @@
+{
+  "ApiPassthrough": "example-ApiPassthrough",
+  "CertificateAuthorityArn": "arn:aws:acm-pca:us-east-1:123456789:certificate-authority/abc123",
+  "Csr": "example-Csr",
+  "SigningAlgorithm": "RSA_2048",
+  "TemplateArn": "arn:aws:acm-pca:us-east-1:123456789:certificate-authority/abc123",
+  "Validity": "abc356def",
+  "ValidityNotBefore": "abc137def",
+  "IdempotencyToken": "abc734def"
+}

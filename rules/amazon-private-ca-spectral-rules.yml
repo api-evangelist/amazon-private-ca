@@ -1,0 +1,167 @@
+rules:
+
+  # INFO / METADATA
+  info-title-required:
+    description: API must have a title
+    message: Info object must have a title
+    severity: error
+    given: $.info
+    then:
+      field: title
+      function: truthy
+
+  info-description-required:
+    description: API must have a description
+    message: Info object must have a description
+    severity: error
+    given: $.info
+    then:
+      field: description
+      function: truthy
+
+  info-version-required:
+    description: API version must be defined
+    message: Info object must have a version
+    severity: error
+    given: $.info
+    then:
+      field: version
+      function: truthy
+
+  # OPENAPI VERSION
+  openapi-version-3:
+    description: API should use OpenAPI 3.x
+    severity: error
+    given: $.openapi
+    then:
+      function: pattern
+      functionOptions:
+        match: "^3\\."
+
+  # SERVERS
+  servers-defined:
+    description: Servers must be defined
+    severity: error
+    given: $
+    then:
+      field: servers
+      function: truthy
+
+  # OPERATIONS
+  operation-summary-required:
+    description: All operations must have a summary
+    severity: error
+    given: $.paths[*][post,get,put,delete,patch]
+    then:
+      field: summary
+      function: truthy
+
+  operation-summary-amazon-private-ca-prefix:
+    description: Summaries should start with Amazon Private CA
+    message: Operation summary should start with 'Amazon Private CA'
+    severity: warn
+    given: $.paths[*][post,get,put,delete,patch].summary
+    then:
+      function: pattern
+      functionOptions:
+        match: "^Amazon Private CA"
+
+  operation-description-required:
+    description: All operations must have a description
+    severity: error
+    given: $.paths[*][post,get,put,delete,patch]
+    then:
+      field: description
+      function: truthy
+
+  operation-id-required:
+    description: All operations must have an operationId
+    severity: error
+    given: $.paths[*][post,get,put,delete,patch]
+    then:
+      field: operationId
+      function: truthy
+
+  operation-tags-required:
+    description: All operations must have tags
+    severity: warn
+    given: $.paths[*][post,get,put,delete,patch]
+    then:
+      field: tags
+      function: truthy
+
+  # PARAMETERS
+  parameter-description-required:
+    description: All parameters must have descriptions
+    severity: error
+    given: $.paths[*][*].parameters[*]
+    then:
+      field: description
+      function: truthy
+
+  # RESPONSES
+  response-success-required:
+    description: All operations must have a success response
+    severity: error
+    given: $.paths[*][post,get,put,delete,patch]
+    then:
+      field: responses
+      function: truthy
+
+  response-description-required:
+    description: All responses must have descriptions
+    severity: error
+    given: $.paths[*][*].responses[*]
+    then:
+      field: description
+      function: truthy
+
+  # SCHEMAS
+  schema-type-defined:
+    description: Schemas should define a type
+    severity: warn
+    given: $.components.schemas[*]
+    then:
+      field: type
+      function: truthy
+
+  schema-description-required:
+    description: Schemas should have descriptions
+    severity: info
+    given: $.components.schemas[*]
+    then:
+      field: description
+      function: truthy
+
+  # SECURITY
+  security-schemes-defined:
+    description: Security schemes must be defined
+    severity: error
+    given: $.components
+    then:
+      field: securitySchemes
+      function: truthy
+
+  security-global-defined:
+    description: Global security must be defined
+    severity: warn
+    given: $
+    then:
+      field: security
+      function: truthy
+
+  # GENERAL QUALITY
+  no-empty-descriptions:
+    description: Descriptions must not be empty
+    severity: warn
+    given: $..description
+    then:
+      function: truthy
+
+  operation-examples-encouraged:
+    description: Consider adding examples to operation responses
+    severity: info
+    given: $.paths[*][*].responses[*].content[*]
+    then:
+      field: examples
+      function: truthy

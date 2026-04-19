@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-schema/amazon-private-ca-create-certificate-authority-audit-report-response-schema.json",
+  "title": "CreateCertificateAuthorityAuditReportResponse",
+  "description": "CreateCertificateAuthorityAuditReportResponse schema from Amazon Private CA API",
+  "type": "object",
+  "properties": {
+    "AuditReportId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AuditReportId"
+        },
+        {
+          "description": "An alphanumeric string that contains a report identifier."
+        }
+      ]
+    },
+    "S3Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Key"
+        },
+        {
+          "description": "The <b>key</b> that uniquely identifies the report file in your S3 bucket."
+        }
+      ]
+    }
+  }
+}

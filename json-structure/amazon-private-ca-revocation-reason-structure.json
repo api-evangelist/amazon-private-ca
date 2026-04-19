@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/json-structure/amazon-private-ca-revocation-reason-structure.json",
+  "name": "RevocationReason",
+  "description": "RevocationReason schema from Amazon Private CA API",
+  "type": "string",
+  "enum": [
+    "UNSPECIFIED",
+    "KEY_COMPROMISE",
+    "CERTIFICATE_AUTHORITY_COMPROMISE",
+    "AFFILIATION_CHANGED",
+    "SUPERSEDED",
+    "CESSATION_OF_OPERATION",
+    "PRIVILEGE_WITHDRAWN",
+    "A_A_COMPROMISE"
+  ]
+}
