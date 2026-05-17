@@ -112,7 +112,7 @@ common:
     description: Issue certificates for service mesh and pod-to-pod TLS in EKS clusters.
   - name: AWS Secrets Manager
     description: Store and rotate private keys associated with issued certificates.
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-private-ca-context.jsonld
 - type: JSONSchema
   url: json-schema/amazon-private-ca-access-description-schema.json
