@@ -1,7 +1,8 @@
 name: Amazon Private CA
-description: AWS Private Certificate Authority (AWS Private CA) is a highly available, fully managed private CA service that helps you easily and securely manage the lifecycle of your private 
-  certificates. It allows you to create private CA hierarchies and issue X.509 certificates for your internal resources including TLS certificates for microservices, IoT devices, and user 
-  authentication.
+description: AWS Private Certificate Authority (AWS Private CA) is a highly available, fully managed private CA service that
+  helps you easily and securely manage the lifecycle of your private certificates. It allows you to create private CA hierarchies
+  and issue X.509 certificates for your internal resources including TLS certificates for microservices, IoT devices, and
+  user authentication.
 url: https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/apis.yml
 type: Index
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
@@ -15,11 +16,12 @@ tags:
 - TLS
 - IoT
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: AWS Private CA API
-  description: The AWS Private CA API provides programmatic access to create and manage private certificate authorities, issue X.509 certificates, manage certificate revocation lists, configure audit 
-    reports, and control permissions and policies for private PKI infrastructure.
+  description: The AWS Private CA API provides programmatic access to create and manage private certificate authorities, issue
+    X.509 certificates, manage certificate revocation lists, configure audit reports, and control permissions and policies
+    for private PKI infrastructure.
   humanURL: https://aws.amazon.com/private-ca/
   baseURL: https://acm-pca.amazonaws.com
   tags:
@@ -43,6 +45,8 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/private-ca/
@@ -66,8 +70,6 @@ common:
   url: https://health.aws.amazon.com/health/status
 - type: SpectralRules
   url: rules/amazon-private-ca-spectral-rules.yml
-- type: NaftikoCapability
-  url: capabilities/pki-management.yaml
 - type: Vocabulary
   url: vocabulary/amazon-private-ca-vocabulary.yaml
 - type: Features
@@ -536,19 +538,17 @@ common:
   url: examples/amazon-private-ca-update-certificate-authority-request-example.json
 - type: Example
   url: examples/amazon-private-ca-validity-example.json
-- type: NaftikoCapability
-  url: capabilities/shared/amazon-private-ca.yaml
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
