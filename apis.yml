@@ -45,7 +45,7 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/amazon-private-ca.yaml
 common:
 - type: Portal
@@ -64,7 +64,7 @@ common:
   url: https://github.com/aws
 - type: Console
   url: https://console.aws.amazon.com/acm-pca/
-- type: SignUp
+- type: Signup
   url: https://portal.aws.amazon.com/billing/signup
 - type: StatusPage
   url: https://health.aws.amazon.com/health/status
@@ -420,123 +420,123 @@ common:
   url: json-structure/amazon-private-ca-validity-period-type-structure.json
 - type: JSONStructure
   url: json-structure/amazon-private-ca-validity-structure.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-access-description-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-access-method-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-api-passthrough-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-asn1subject-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-certificate-authority-configuration-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-certificate-authority-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-create-certificate-authority-audit-report-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-create-certificate-authority-audit-report-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-create-certificate-authority-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-create-certificate-authority-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-create-permission-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-crl-configuration-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-csr-extensions-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-custom-attribute-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-custom-extension-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-delete-certificate-authority-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-delete-permission-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-delete-policy-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-describe-certificate-authority-audit-report-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-describe-certificate-authority-audit-report-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-describe-certificate-authority-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-describe-certificate-authority-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-edi-party-name-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-extended-key-usage-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-extensions-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-general-name-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-get-certificate-authority-certificate-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-get-certificate-authority-certificate-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-get-certificate-authority-csr-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-get-certificate-authority-csr-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-get-certificate-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-get-certificate-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-get-policy-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-get-policy-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-import-certificate-authority-certificate-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-issue-certificate-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-issue-certificate-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-key-usage-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-list-certificate-authorities-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-list-certificate-authorities-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-list-permissions-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-list-permissions-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-list-tags-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-list-tags-response-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-ocsp-configuration-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-other-name-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-permission-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-policy-information-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-policy-qualifier-info-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-put-policy-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-qualifier-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-restore-certificate-authority-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-revocation-configuration-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-revoke-certificate-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-tag-certificate-authority-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-tag-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-untag-certificate-authority-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-update-certificate-authority-request-example.json
-- type: Example
+- type: Examples
   url: examples/amazon-private-ca-validity-example.json
 - type: Integrations
   url: https://aws.amazon.com/partners/
