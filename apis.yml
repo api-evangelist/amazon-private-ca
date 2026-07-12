@@ -48,6 +48,14 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-private-ca.yaml
 common:
+- type: TrustCenter
+  url: security/amazon-private-ca-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-private-ca-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-private-ca-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-private-ca-authentication.yml
 - type: Portal
   url: https://aws.amazon.com/private-ca/
 - type: Documentation
