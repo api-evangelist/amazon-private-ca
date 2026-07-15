@@ -48,6 +48,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-private-ca.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-private-ca-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-private-ca-trust-center.yml
 - type: VulnerabilityDisclosure
