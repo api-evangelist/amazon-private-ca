@@ -5,6 +5,19 @@ description: AWS Private Certificate Authority (AWS Private CA) is a highly avai
   user authentication.
 url: https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/apis.yml
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 tags:
 - AWS
@@ -18,23 +31,615 @@ tags:
 created: '2026-03-16'
 modified: '2026-05-19'
 apis:
-- name: AWS Private CA API
-  description: The AWS Private CA API provides programmatic access to create and manage private certificate authorities, issue
-    X.509 certificates, manage certificate revocation lists, configure audit reports, and control permissions and policies
-    for private PKI infrastructure.
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthority-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.CreateCertificateAuthority API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.CreateCertificateAuthority API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.createcertificateauthority.
   humanURL: https://aws.amazon.com/private-ca/
   baseURL: https://acm-pca.amazonaws.com
   tags:
-  - Certificates
-  - PKI
-  - Security
-  - Certificate Authority
-  - X.509
+  - '#X Amz Target=ACMPrivateCA.CreateCertificateAuthority'
   properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthority-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthorityauditreport-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.CreateCertificateAuthorityAuditReport API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.CreateCertificateAuthorityAuditReport API from Amazon Private CA —
+    1 operation(s) for #x amz target=acmprivateca.createcertificateauthorityauditreport.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.CreateCertificateAuthorityAuditReport'
+  properties:
   - type: OpenAPI
-    url: openapi/amazon-private-ca-openapi-original.yaml
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthorityauditreport-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-createpermission-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.CreatePermission API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.CreatePermission API from Amazon Private CA — 1 operation(s) for #x
+    amz target=acmprivateca.createpermission.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.CreatePermission'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-createpermission-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-deletecertificateauthority-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DeleteCertificateAuthority API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.DeleteCertificateAuthority API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.deletecertificateauthority.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.DeleteCertificateAuthority'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-deletecertificateauthority-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-deletepermission-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DeletePermission API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.DeletePermission API from Amazon Private CA — 1 operation(s) for #x
+    amz target=acmprivateca.deletepermission.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.DeletePermission'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-deletepermission-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-deletepolicy-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DeletePolicy API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.DeletePolicy API from Amazon Private CA — 1 operation(s) for #x amz
+    target=acmprivateca.deletepolicy.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.DeletePolicy'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-deletepolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthority-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DescribeCertificateAuthority API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.DescribeCertificateAuthority API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.describecertificateauthority.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.DescribeCertificateAuthority'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthority-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthorityauditreport-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DescribeCertificateAuthorityAuditReport API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.DescribeCertificateAuthorityAuditReport API from Amazon Private CA
+    — 1 operation(s) for #x amz target=acmprivateca.describecertificateauthorityauditreport.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.DescribeCertificateAuthorityAuditReport'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthorityauditreport-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-getcertificate-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.GetCertificate API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.GetCertificate API from Amazon Private CA — 1 operation(s) for #x amz
+    target=acmprivateca.getcertificate.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.GetCertificate'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-getcertificate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycertificate-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.GetCertificateAuthorityCertificate API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.GetCertificateAuthorityCertificate API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.getcertificateauthoritycertificate.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.GetCertificateAuthorityCertificate'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycertificate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycsr-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.GetCertificateAuthorityCsr API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.GetCertificateAuthorityCsr API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.getcertificateauthoritycsr.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.GetCertificateAuthorityCsr'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycsr-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-getpolicy-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.GetPolicy API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.GetPolicy API from Amazon Private CA — 1 operation(s) for #x amz target=acmprivateca.getpolicy.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.GetPolicy'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-getpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-importcertificateauthoritycertificate-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.ImportCertificateAuthorityCertificate API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.ImportCertificateAuthorityCertificate API from Amazon Private CA —
+    1 operation(s) for #x amz target=acmprivateca.importcertificateauthoritycertificate.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.ImportCertificateAuthorityCertificate'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-importcertificateauthoritycertificate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-issuecertificate-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.IssueCertificate API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.IssueCertificate API from Amazon Private CA — 1 operation(s) for #x
+    amz target=acmprivateca.issuecertificate.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.IssueCertificate'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-issuecertificate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-listcertificateauthorities-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.ListCertificateAuthorities API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.ListCertificateAuthorities API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.listcertificateauthorities.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.ListCertificateAuthorities'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-listcertificateauthorities-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-listpermissions-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.ListPermissions API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.ListPermissions API from Amazon Private CA — 1 operation(s) for #x
+    amz target=acmprivateca.listpermissions.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.ListPermissions'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-listpermissions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-listtags-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.ListTags API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.ListTags API from Amazon Private CA — 1 operation(s) for #x amz target=acmprivateca.listtags.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.ListTags'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-listtags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-putpolicy-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.PutPolicy API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.PutPolicy API from Amazon Private CA — 1 operation(s) for #x amz target=acmprivateca.putpolicy.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.PutPolicy'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-putpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-restorecertificateauthority-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.RestoreCertificateAuthority API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.RestoreCertificateAuthority API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.restorecertificateauthority.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.RestoreCertificateAuthority'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-restorecertificateauthority-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-revokecertificate-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.RevokeCertificate API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.RevokeCertificate API from Amazon Private CA — 1 operation(s) for #x
+    amz target=acmprivateca.revokecertificate.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.RevokeCertificate'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-x-amz-target-acmprivateca-revokecertificate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-tagcertificateauthority-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.TagCertificateAuthority API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.TagCertificateAuthority API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.tagcertificateauthority.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.TagCertificateAuthority'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-tagcertificateauthority-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-untagcertificateauthority-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.UntagCertificateAuthority API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.UntagCertificateAuthority API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.untagcertificateauthority.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.UntagCertificateAuthority'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-untagcertificateauthority-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-private-ca.yaml
+- aid: >-
+    amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-updatecertificateauthority-api
+  name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.UpdateCertificateAuthority API'
+  description: >-
+    The #X Amz Target=ACMPrivateCA.UpdateCertificateAuthority API from Amazon Private CA — 1 operation(s)
+    for #x amz target=acmprivateca.updatecertificateauthority.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.amazonaws.com
+  tags:
+  - '#X Amz Target=ACMPrivateCA.UpdateCertificateAuthority'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-private-ca-x-amz-target-acmprivateca-updatecertificateauthority-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
   - type: GettingStarted
     url: https://aws.amazon.com/private-ca/getting-started/
   - type: Pricing
@@ -48,6 +653,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-private-ca.yaml
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-private-ca/overview
 - type: AgenticAccess
   url: agentic-access/amazon-private-ca-agentic-access.yml
 - type: TrustCenter
