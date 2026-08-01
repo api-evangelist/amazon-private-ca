@@ -1,0 +1,741 @@
+{
+  "info": {
+    "_postman_id": "38a25ea5-6f15-43ed-864e-e5f9b9f6048c",
+    "name": "AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.UpdateCertificateAuthority API",
+    "description": "<p>This is the <i>Amazon Web Services Private Certificate Authority API Reference</i>. It provides descriptions, syntax, and usage examples for each of the actions and data types involved in creating and managing a private certificate authority (CA) for your organization.</p> <p>The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you prefer. For more information, see <a href=\"https://aws.amazon.com/tools/#SDKs\">Amazon Web Services SDKs</a>.</p> <p>Each Amazon Web Services Private CA API operation has a quota that determines the number of times the operation can be called per second. Amazon Web Services Private CA throttles API requests at different rates depending on the operation. Throttling means that Amazon Web Services Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of requests per second. When a request is throttled, Amazon Web Services Private CA returns a <a href=\"https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html\">ThrottlingException</a> error. Amazon Web Services Private CA does not guarantee a minimum request rate for APIs. </p> <p>To see an up-to-date list of your Amazon Web Services Private CA quotas, or to request a quota increase, log into your Amazon Web Services account and visit the <a href=\"https://console.aws.amazon.com/servicequotas/\">Service Quotas</a> console.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:43:47.000Z",
+    "updatedAt": "2026-07-28T10:43:47.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-38a25ea5-6f15-43ed-864e-e5f9b9f6048c"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+      "item": [
+        {
+          "name": "Amazon Private CA Update Certificate Authority",
+          "id": "695d6d24-d165-47df-ab03-b53efc69a0cc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "ACMPrivateCA.UpdateCertificateAuthority"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CertificateAuthorityArn\": \"arn:F5dPUES:6R+__rwmWx:_:234:PsxLPTe97/g/bLH2t_/PYxH@B/JTjZ2l1Ce8/I2/MGDEBZ3.Euw/d1djdkQd/Y5a/5n_zhUwof\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"77)D\",\n      \"S3BucketName\": \"CrCr\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"RU\"\n    }\n  },\n  \"Status\": \"ACTIVE\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority"
+            },
+            "description": "<p>Updates the status or configuration of a private certificate authority (CA). Your private CA must be in the <code>ACTIVE</code> or <code>DISABLED</code> state before you can update it. You can disable a private CA that is in the <code>ACTIVE</code> state or make a CA that is in the <code>DISABLED</code> state active again.</p> <note> <p>Both Amazon Web Services Private CA and the IAM principal must have permission to write to the S3 bucket that you specify. If the IAM principal making the call does not have permission to write to the bucket, then an exception is thrown. For more information, see <a href=\"https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html#s3-policies\">Access policies for CRLs in Amazon S3</a>.</p> </note>"
+          },
+          "response": [
+            {
+              "id": "39ea2d3c-d204-46e9-b243-449db24b9eac",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.UpdateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:F5dPUES:6R+__rwmWx:_:234:PsxLPTe97/g/bLH2t_/PYxH@B/JTjZ2l1Ce8/I2/MGDEBZ3.Euw/d1djdkQd/Y5a/5n_zhUwof\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"77)D\",\n      \"S3BucketName\": \"CrCr\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"RU\"\n    }\n  },\n  \"Status\": \"ACTIVE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T10:43:47.000Z",
+              "updatedAt": "2026-07-28T10:43:47.000Z",
+              "uid": "35240-39ea2d3c-d204-46e9-b243-449db24b9eac"
+            },
+            {
+              "id": "29ef7d75-6ff6-4c5e-968e-5f9b23305b35",
+              "name": "ConcurrentModificationException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.UpdateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:F5dPUES:6R+__rwmWx:_:234:PsxLPTe97/g/bLH2t_/PYxH@B/JTjZ2l1Ce8/I2/MGDEBZ3.Euw/d1djdkQd/Y5a/5n_zhUwof\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"77)D\",\n      \"S3BucketName\": \"CrCr\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"RU\"\n    }\n  },\n  \"Status\": \"ACTIVE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:47.000Z",
+              "updatedAt": "2026-07-28T10:43:47.000Z",
+              "uid": "35240-29ef7d75-6ff6-4c5e-968e-5f9b23305b35"
+            },
+            {
+              "id": "90e21d3c-9e7c-42eb-a047-851dfb943be3",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.UpdateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:F5dPUES:6R+__rwmWx:_:234:PsxLPTe97/g/bLH2t_/PYxH@B/JTjZ2l1Ce8/I2/MGDEBZ3.Euw/d1djdkQd/Y5a/5n_zhUwof\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"77)D\",\n      \"S3BucketName\": \"CrCr\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"RU\"\n    }\n  },\n  \"Status\": \"ACTIVE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:47.000Z",
+              "updatedAt": "2026-07-28T10:43:47.000Z",
+              "uid": "35240-90e21d3c-9e7c-42eb-a047-851dfb943be3"
+            },
+            {
+              "id": "4341cf17-2643-4046-b864-6b80bc4cf16a",
+              "name": "InvalidArgsException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.UpdateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:F5dPUES:6R+__rwmWx:_:234:PsxLPTe97/g/bLH2t_/PYxH@B/JTjZ2l1Ce8/I2/MGDEBZ3.Euw/d1djdkQd/Y5a/5n_zhUwof\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"77)D\",\n      \"S3BucketName\": \"CrCr\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"RU\"\n    }\n  },\n  \"Status\": \"ACTIVE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:47.000Z",
+              "updatedAt": "2026-07-28T10:43:47.000Z",
+              "uid": "35240-4341cf17-2643-4046-b864-6b80bc4cf16a"
+            },
+            {
+              "id": "d1f89207-ef96-4208-ade5-bbf459448a83",
+              "name": "InvalidArnException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.UpdateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:F5dPUES:6R+__rwmWx:_:234:PsxLPTe97/g/bLH2t_/PYxH@B/JTjZ2l1Ce8/I2/MGDEBZ3.Euw/d1djdkQd/Y5a/5n_zhUwof\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"77)D\",\n      \"S3BucketName\": \"CrCr\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"RU\"\n    }\n  },\n  \"Status\": \"ACTIVE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:47.000Z",
+              "updatedAt": "2026-07-28T10:43:47.000Z",
+              "uid": "35240-d1f89207-ef96-4208-ade5-bbf459448a83"
+            },
+            {
+              "id": "90196cfb-3561-45ff-a761-62d2f33f590f",
+              "name": "InvalidStateException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.UpdateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:F5dPUES:6R+__rwmWx:_:234:PsxLPTe97/g/bLH2t_/PYxH@B/JTjZ2l1Ce8/I2/MGDEBZ3.Euw/d1djdkQd/Y5a/5n_zhUwof\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"77)D\",\n      \"S3BucketName\": \"CrCr\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"RU\"\n    }\n  },\n  \"Status\": \"ACTIVE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:47.000Z",
+              "updatedAt": "2026-07-28T10:43:47.000Z",
+              "uid": "35240-90196cfb-3561-45ff-a761-62d2f33f590f"
+            },
+            {
+              "id": "be413650-9ab2-4168-ac43-7c20d89cfc04",
+              "name": "InvalidPolicyException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.UpdateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:F5dPUES:6R+__rwmWx:_:234:PsxLPTe97/g/bLH2t_/PYxH@B/JTjZ2l1Ce8/I2/MGDEBZ3.Euw/d1djdkQd/Y5a/5n_zhUwof\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"77)D\",\n      \"S3BucketName\": \"CrCr\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"RU\"\n    }\n  },\n  \"Status\": \"ACTIVE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:47.000Z",
+              "updatedAt": "2026-07-28T10:43:47.000Z",
+              "uid": "35240-be413650-9ab2-4168-ac43-7c20d89cfc04"
+            }
+          ],
+          "createdAt": "2026-07-28T10:43:47.000Z",
+          "updatedAt": "2026-07-28T10:43:47.000Z",
+          "uid": "35240-695d6d24-d165-47df-ab03-b53efc69a0cc"
+        }
+      ],
+      "id": "9bd6ccdc-f25e-40af-88fc-54df093a2026",
+      "createdAt": "2026-07-28T10:43:47.000Z",
+      "updatedAt": "2026-07-28T10:43:47.000Z",
+      "uid": "35240-9bd6ccdc-f25e-40af-88fc-54df093a2026"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://acm-pca.{{region}}.amazonaws.com"
+    }
+  ]
+}

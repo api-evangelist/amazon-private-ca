@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "13b4d1bc-7210-4938-a95a-5cfd432b0553",
+    "name": "AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.DescribeCertificateAuthority API",
+    "description": "<p>This is the <i>Amazon Web Services Private Certificate Authority API Reference</i>. It provides descriptions, syntax, and usage examples for each of the actions and data types involved in creating and managing a private certificate authority (CA) for your organization.</p> <p>The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you prefer. For more information, see <a href=\"https://aws.amazon.com/tools/#SDKs\">Amazon Web Services SDKs</a>.</p> <p>Each Amazon Web Services Private CA API operation has a quota that determines the number of times the operation can be called per second. Amazon Web Services Private CA throttles API requests at different rates depending on the operation. Throttling means that Amazon Web Services Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of requests per second. When a request is throttled, Amazon Web Services Private CA returns a <a href=\"https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html\">ThrottlingException</a> error. Amazon Web Services Private CA does not guarantee a minimum request rate for APIs. </p> <p>To see an up-to-date list of your Amazon Web Services Private CA quotas, or to request a quota increase, log into your Amazon Web Services account and visit the <a href=\"https://console.aws.amazon.com/servicequotas/\">Service Quotas</a> console.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:42:34.000Z",
+    "updatedAt": "2026-07-28T10:42:34.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-13b4d1bc-7210-4938-a95a-5cfd432b0553"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority",
+      "item": [
+        {
+          "name": "Amazon Private CA Describe Certificate Authority",
+          "id": "cdada082-1fea-49de-af50-c62a99257379",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "ACMPrivateCA.DescribeCertificateAuthority"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CertificateAuthorityArn\": \"arn:OXGTK-:ch5M+0:jtik/ILvKC:9456:N/AUKGI7Io1/icisgr/@INin-iLx=1/,dpjhWX\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority"
+            },
+            "description": "<p>Lists information about your private certificate authority (CA) or one that has been shared with you. You specify the private CA on input by its ARN (Amazon Resource Name). The output contains the status of your CA. This can be any of the following: </p> <ul> <li> <p> <code>CREATING</code> - Amazon Web Services Private CA is creating your private certificate authority.</p> </li> <li> <p> <code>PENDING_CERTIFICATE</code> - The certificate is pending. You must use your Amazon Web Services Private CA-hosted or on-premises root or subordinate CA to sign your private CA CSR and then import it into Amazon Web Services Private CA. </p> </li> <li> <p> <code>ACTIVE</code> - Your private CA is active.</p> </li> <li> <p> <code>DISABLED</code> - Your private CA has been disabled.</p> </li> <li> <p> <code>EXPIRED</code> - Your private CA certificate has expired.</p> </li> <li> <p> <code>FAILED</code> - Your private CA has failed. Your CA can fail because of problems such a network outage or back-end Amazon Web Services failure or other errors. A failed CA can never return to the pending state. You must create a new CA. </p> </li> <li> <p> <code>DELETED</code> - Your private CA is within the restoration period, after which it is permanently deleted. The length of time remaining in the CA's restoration period is also included in this action's output.</p> </li> </ul>"
+          },
+          "response": [
+            {
+              "id": "2079fb8d-53a3-4e01-8bf8-ce23d2ee2849",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.DescribeCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:OXGTK-:ch5M+0:jtik/ILvKC:9456:N/AUKGI7Io1/icisgr/@INin-iLx=1/,dpjhWX\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"CertificateAuthority\": {\n    \"Arn\": \"arn:wiDEH-q:8QsH_kXCBqV:ED2A:0119077302:034L\",\n    \"OwnerAccount\": \"329832983298\",\n    \"CreatedAt\": \"<dateTime>\",\n    \"LastStateChangeAt\": \"<dateTime>\",\n    \"Type\": \"SUBORDINATE\",\n    \"Serial\": \"<string>\",\n    \"Status\": \"EXPIRED\",\n    \"NotBefore\": \"<dateTime>\",\n    \"NotAfter\": \"<dateTime>\",\n    \"FailureReason\": \"OTHER\",\n    \"CertificateAuthorityConfiguration\": {\n      \"KeyAlgorithm\": \"RSA_2048\",\n      \"SigningAlgorithm\": \"SHA512WITHECDSA\",\n      \"Subject\": {\n        \"Country\": \"Ue\",\n        \"Organization\": \"<string>\",\n        \"OrganizationalUnit\": \"<string>\",\n        \"DistinguishedNameQualifier\": \"6tIa?\",\n        \"State\": \"<string>\",\n        \"CommonName\": \"<string>\",\n        \"SerialNumber\": \"9i:tXq\",\n        \"Locality\": \"<string>\",\n        \"Title\": \"<string>\",\n        \"Surname\": \"<string>\",\n        \"GivenName\": \"<string>\",\n        \"Initials\": \"<string>\",\n        \"Pseudonym\": \"<string>\",\n        \"GenerationQualifier\": \"<string>\",\n        \"CustomAttributes\": [\n          {\n            \"ObjectIdentifier\": \"0.0.8968865.879073.067.3525321.1795909.6017.2.5658.95683.20661.6\",\n            \"Value\": \"<string>\"\n          }\n        ]\n      },\n      \"CsrExtensions\": {\n        \"KeyUsage\": {\n          \"DigitalSignature\": \"<boolean>\",\n          \"NonRepudiation\": \"<boolean>\",\n          \"KeyEncipherment\": \"<boolean>\",\n          \"DataEncipherment\": \"<boolean>\",\n          \"KeyAgreement\": \"<boolean>\",\n          \"KeyCertSign\": \"<boolean>\",\n          \"CRLSign\": \"<boolean>\",\n          \"EncipherOnly\": \"<boolean>\",\n          \"DecipherOnly\": \"<boolean>\"\n        },\n        \"SubjectInformationAccess\": [\n          {\n            \"AccessMethod\": {\n              \"CustomObjectIdentifier\": \"1.2.5466.9875081327.1954.262074.040528848.67321353562.0169359496\",\n              \"AccessMethodType\": \"RESOURCE_PKI_MANIFEST\"\n            },\n            \"AccessLocation\": {\n              \"OtherName\": {\n                \"TypeId\": \"2.23.912284.3984036385.035653.65.94.159.7.4274064278.829.47069.6\",\n                \"Value\": \"<string>\"\n              },\n              \"Rfc822Name\": \"<string>\",\n              \"DnsName\": \"<string>\",\n              \"DirectoryName\": {\n                \"Country\": \"BB\",\n                \"Organization\": \"<string>\",\n                \"OrganizationalUnit\": \"<string>\",\n                \"DistinguishedNameQualifier\": \"TbIof45O\",\n                \"State\": \"<string>\",\n                \"CommonName\": \"<string>\",\n                \"SerialNumber\": \"\",\n                \"Locality\": \"<string>\",\n                \"Title\": \"<string>\",\n                \"Surname\": \"<string>\",\n                \"GivenName\": \"<string>\",\n                \"Initials\": \"<string>\",\n                \"Pseudonym\": \"<string>\",\n                \"GenerationQualifier\": \"<string>\",\n                \"CustomAttributes\": [\n                  {\n                    \"ObjectIdentifier\": \"2.33.6843.5013981.68210396470.34747527154.437099039.378231365.15\",\n                    \"Value\": \"<string>\"\n                  }\n                ]\n              },\n              \"EdiPartyName\": {\n                \"PartyName\": \"<string>\",\n                \"NameAssigner\": \"<string>\"\n              },\n              \"UniformResourceIdentifier\": \"<string>\",\n              \"IpAddress\": \"<string>\",\n              \"RegisteredId\": \"1.1.3136.91.947.70.48547524.5.6628627.7052402068.108.2.51031.269\"\n            }\n          },\n          {\n            \"AccessMethod\": {\n              \"CustomObjectIdentifier\": \"2.2.589.9.64.02638.501150304.85.0263628387.79916156475.17594.954\",\n              \"AccessMethodType\": \"CA_REPOSITORY\"\n            },\n            \"AccessLocation\": {\n              \"OtherName\": {\n                \"TypeId\": \"2.7.01506154475.03218\",\n                \"Value\": \"<string>\"\n              },\n              \"Rfc822Name\": \"<string>\",\n              \"DnsName\": \"<string>\",\n              \"DirectoryName\": {\n                \"Country\": \"LE\",\n                \"Organization\": \"<string>\",\n                \"OrganizationalUnit\": \"<string>\",\n                \"DistinguishedNameQualifier\": \"B5/aw\",\n                \"State\": \"<string>\",\n                \"CommonName\": \"<string>\",\n                \"SerialNumber\": \"\",\n                \"Locality\": \"<string>\",\n                \"Title\": \"<string>\",\n                \"Surname\": \"<string>\",\n                \"GivenName\": \"<string>\",\n                \"Initials\": \"<string>\",\n                \"Pseudonym\": \"<string>\",\n                \"GenerationQualifier\": \"<string>\",\n                \"CustomAttributes\": [\n                  {\n                    \"ObjectIdentifier\": \"0.9.28551062091.24301562348.906353.477195.976.1.365.9785164.505.\",\n                    \"Value\": \"<string>\"\n                  }\n                ]\n              },\n              \"EdiPartyName\": {\n                \"PartyName\": \"<string>\",\n                \"NameAssigner\": \"<string>\"\n              },\n              \"UniformResourceIdentifier\": \"<string>\",\n              \"IpAddress\": \"<string>\",\n              \"RegisteredId\": \"0.31.20208.89598708.338.15548015964.85.645.6746412.14707601.5387\"\n            }\n          }\n        ]\n      }\n    },\n    \"RevocationConfiguration\": {\n      \"CrlConfiguration\": {\n        \"Enabled\": \"<boolean>\",\n        \"ExpirationInDays\": \"<integer>\",\n        \"CustomCname\": \"LZ$f\",\n        \"S3BucketName\": \"KmX9mOf2Tko\",\n        \"S3ObjectAcl\": \"PUBLIC_READ\"\n      },\n      \"OcspConfiguration\": {\n        \"Enabled\": \"<boolean>\",\n        \"OcspCustomCname\": \"Wnd\"\n      }\n    },\n    \"RestorableUntil\": \"<dateTime>\",\n    \"KeyStorageSecurityStandard\": \"FIPS_140_2_LEVEL_2_OR_HIGHER\",\n    \"UsageMode\": \"GENERAL_PURPOSE\"\n  }\n}",
+              "createdAt": "2026-07-28T10:42:35.000Z",
+              "updatedAt": "2026-07-28T10:42:35.000Z",
+              "uid": "35240-2079fb8d-53a3-4e01-8bf8-ce23d2ee2849"
+            },
+            {
+              "id": "d8ec11ca-3853-42b5-822d-23ed5d02a4b4",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.DescribeCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:OXGTK-:ch5M+0:jtik/ILvKC:9456:N/AUKGI7Io1/icisgr/@INin-iLx=1/,dpjhWX\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:42:35.000Z",
+              "updatedAt": "2026-07-28T10:42:35.000Z",
+              "uid": "35240-d8ec11ca-3853-42b5-822d-23ed5d02a4b4"
+            },
+            {
+              "id": "008ab099-a949-4ba1-add5-4312a3f3ee21",
+              "name": "InvalidArnException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.DescribeCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityArn\": \"arn:OXGTK-:ch5M+0:jtik/ILvKC:9456:N/AUKGI7Io1/icisgr/@INin-iLx=1/,dpjhWX\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.DescribeCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:42:35.000Z",
+              "updatedAt": "2026-07-28T10:42:35.000Z",
+              "uid": "35240-008ab099-a949-4ba1-add5-4312a3f3ee21"
+            }
+          ],
+          "createdAt": "2026-07-28T10:42:35.000Z",
+          "updatedAt": "2026-07-28T10:42:35.000Z",
+          "uid": "35240-cdada082-1fea-49de-af50-c62a99257379"
+        }
+      ],
+      "id": "0ec02435-1ea3-4dc3-8b51-ec227c2c7aa9",
+      "createdAt": "2026-07-28T10:42:35.000Z",
+      "updatedAt": "2026-07-28T10:42:35.000Z",
+      "uid": "35240-0ec02435-1ea3-4dc3-8b51-ec227c2c7aa9"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://acm-pca.{{region}}.amazonaws.com"
+    }
+  ]
+}

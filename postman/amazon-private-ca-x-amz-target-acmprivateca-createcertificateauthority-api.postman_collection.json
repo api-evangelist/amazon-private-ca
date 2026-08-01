@@ -1,0 +1,574 @@
+{
+  "info": {
+    "_postman_id": "bef0b87f-60eb-48f6-9b02-1d04607b0930",
+    "name": "AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority API",
+    "description": "<p>This is the <i>Amazon Web Services Private Certificate Authority API Reference</i>. It provides descriptions, syntax, and usage examples for each of the actions and data types involved in creating and managing a private certificate authority (CA) for your organization.</p> <p>The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you prefer. For more information, see <a href=\"https://aws.amazon.com/tools/#SDKs\">Amazon Web Services SDKs</a>.</p> <p>Each Amazon Web Services Private CA API operation has a quota that determines the number of times the operation can be called per second. Amazon Web Services Private CA throttles API requests at different rates depending on the operation. Throttling means that Amazon Web Services Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of requests per second. When a request is throttled, Amazon Web Services Private CA returns a <a href=\"https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html\">ThrottlingException</a> error. Amazon Web Services Private CA does not guarantee a minimum request rate for APIs. </p> <p>To see an up-to-date list of your Amazon Web Services Private CA quotas, or to request a quota increase, log into your Amazon Web Services account and visit the <a href=\"https://console.aws.amazon.com/servicequotas/\">Service Quotas</a> console.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:42:18.000Z",
+    "updatedAt": "2026-07-28T10:42:19.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-bef0b87f-60eb-48f6-9b02-1d04607b0930"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority",
+      "item": [
+        {
+          "name": "Amazon Private CA Create Certificate Authority",
+          "id": "370e76a9-33b1-483d-a013-1d4d7a4e31ac",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "ACMPrivateCA.CreateCertificateAuthority"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CertificateAuthorityConfiguration\": {\n    \"KeyAlgorithm\": \"EC_prime256v1\",\n    \"SigningAlgorithm\": \"SHA256WITHECDSA\",\n    \"Subject\": {\n      \"Country\": \"Cb\",\n      \"Organization\": \"<string>\",\n      \"OrganizationalUnit\": \"<string>\",\n      \"DistinguishedNameQualifier\": \"4xx6eJU:q6\",\n      \"State\": \"<string>\",\n      \"CommonName\": \"<string>\",\n      \"SerialNumber\": \"\",\n      \"Locality\": \"<string>\",\n      \"Title\": \"<string>\",\n      \"Surname\": \"<string>\",\n      \"GivenName\": \"<string>\",\n      \"Initials\": \"<string>\",\n      \"Pseudonym\": \"<string>\",\n      \"GenerationQualifier\": \"<string>\",\n      \"CustomAttributes\": [\n        {\n          \"ObjectIdentifier\": \"0.15.8.70731.0959141275.21667164038.435.1705519.428.19815558.283\",\n          \"Value\": \"<string>\"\n        }\n      ]\n    },\n    \"CsrExtensions\": {\n      \"KeyUsage\": {\n        \"DigitalSignature\": \"<boolean>\",\n        \"NonRepudiation\": \"<boolean>\",\n        \"KeyEncipherment\": \"<boolean>\",\n        \"DataEncipherment\": \"<boolean>\",\n        \"KeyAgreement\": \"<boolean>\",\n        \"KeyCertSign\": \"<boolean>\",\n        \"CRLSign\": \"<boolean>\",\n        \"EncipherOnly\": \"<boolean>\",\n        \"DecipherOnly\": \"<boolean>\"\n      },\n      \"SubjectInformationAccess\": [\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"1.12.10108639473.899934.7.109201181.753197.3085377053.6443413185\",\n            \"AccessMethodType\": \"CA_REPOSITORY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.9.033672208.4413913492.6700747.999017.6.13902915105.709022.840\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"wY\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \" PLMWnQ44\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"p11e-\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.01.605.74.778.535.17575.054.453770014.33.987.2344.4856186.3969\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.0.382008074.92758881884.63185.644752100.92474405.57749.5763413\"\n          }\n        },\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"2.27.213096028.342.7004443076.5442.90894127094.3590355.937031605\",\n            \"AccessMethodType\": \"RESOURCE_PKI_NOTIFY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.3.15431957515.1888672967.7.4686195.39056298155.16776.96952.03.\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"sq\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \"\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"wRbPfkSC\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.6.8204.446.9409200446.85342972.59861.46.758761763.215.569.06.2\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.08.83490518665.03.810.5800.37457437712.891.694470.1.0999.5.488\"\n          }\n        }\n      ]\n    }\n  },\n  \"CertificateAuthorityType\": \"SUBORDINATE\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"\",\n      \"S3BucketName\": \"11dkZ7zwT/\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"Z&:_N9c\"\n    }\n  },\n  \"IdempotencyToken\": \"\u00f8\u00ce\u00a8\u00deh\",\n  \"KeyStorageSecurityStandard\": \"FIPS_140_2_LEVEL_2_OR_HIGHER\",\n  \"Tags\": [\n    {\n      \"Key\": \"=:p:-//\",\n      \"Value\": \"\"\n    }\n  ],\n  \"UsageMode\": \"GENERAL_PURPOSE\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority"
+            },
+            "description": "<p>Creates a root or subordinate private certificate authority (CA). You must specify the CA configuration, an optional configuration for Online Certificate Status Protocol (OCSP) and/or a certificate revocation list (CRL), the CA type, and an optional idempotency token to avoid accidental creation of multiple CAs. The CA configuration specifies the name of the algorithm and key size to be used to create the CA private key, the type of signing algorithm that the CA uses, and X.500 subject information. The OCSP configuration can optionally specify a custom URL for the OCSP responder. The CRL configuration specifies the CRL expiration period in days (the validity period of the CRL), the Amazon S3 bucket that will contain the CRL, and a CNAME alias for the S3 bucket that is included in certificates issued by the CA. If successful, this action returns the Amazon Resource Name (ARN) of the CA.</p> <note> <p>Both Amazon Web Services Private CA and the IAM principal must have permission to write to the S3 bucket that you specify. If the IAM principal making the call does not have permission to write to the bucket, then an exception is thrown. For more information, see <a href=\"https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html#s3-policies\">Access policies for CRLs in Amazon S3</a>.</p> </note> <p>Amazon Web Services Private CA assets that are stored in Amazon S3 can be protected with encryption. For more information, see <a href=\"https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#crl-encryption\">Encrypting Your CRLs</a>.</p>"
+          },
+          "response": [
+            {
+              "id": "00b23598-b81c-4e67-9f6a-0f7b94ed51e2",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.CreateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityConfiguration\": {\n    \"KeyAlgorithm\": \"EC_prime256v1\",\n    \"SigningAlgorithm\": \"SHA256WITHECDSA\",\n    \"Subject\": {\n      \"Country\": \"Cb\",\n      \"Organization\": \"<string>\",\n      \"OrganizationalUnit\": \"<string>\",\n      \"DistinguishedNameQualifier\": \"4xx6eJU:q6\",\n      \"State\": \"<string>\",\n      \"CommonName\": \"<string>\",\n      \"SerialNumber\": \"\",\n      \"Locality\": \"<string>\",\n      \"Title\": \"<string>\",\n      \"Surname\": \"<string>\",\n      \"GivenName\": \"<string>\",\n      \"Initials\": \"<string>\",\n      \"Pseudonym\": \"<string>\",\n      \"GenerationQualifier\": \"<string>\",\n      \"CustomAttributes\": [\n        {\n          \"ObjectIdentifier\": \"0.15.8.70731.0959141275.21667164038.435.1705519.428.19815558.283\",\n          \"Value\": \"<string>\"\n        }\n      ]\n    },\n    \"CsrExtensions\": {\n      \"KeyUsage\": {\n        \"DigitalSignature\": \"<boolean>\",\n        \"NonRepudiation\": \"<boolean>\",\n        \"KeyEncipherment\": \"<boolean>\",\n        \"DataEncipherment\": \"<boolean>\",\n        \"KeyAgreement\": \"<boolean>\",\n        \"KeyCertSign\": \"<boolean>\",\n        \"CRLSign\": \"<boolean>\",\n        \"EncipherOnly\": \"<boolean>\",\n        \"DecipherOnly\": \"<boolean>\"\n      },\n      \"SubjectInformationAccess\": [\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"1.12.10108639473.899934.7.109201181.753197.3085377053.6443413185\",\n            \"AccessMethodType\": \"CA_REPOSITORY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.9.033672208.4413913492.6700747.999017.6.13902915105.709022.840\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"wY\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \" PLMWnQ44\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"p11e-\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.01.605.74.778.535.17575.054.453770014.33.987.2344.4856186.3969\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.0.382008074.92758881884.63185.644752100.92474405.57749.5763413\"\n          }\n        },\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"2.27.213096028.342.7004443076.5442.90894127094.3590355.937031605\",\n            \"AccessMethodType\": \"RESOURCE_PKI_NOTIFY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.3.15431957515.1888672967.7.4686195.39056298155.16776.96952.03.\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"sq\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \"\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"wRbPfkSC\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.6.8204.446.9409200446.85342972.59861.46.758761763.215.569.06.2\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.08.83490518665.03.810.5800.37457437712.891.694470.1.0999.5.488\"\n          }\n        }\n      ]\n    }\n  },\n  \"CertificateAuthorityType\": \"SUBORDINATE\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"\",\n      \"S3BucketName\": \"11dkZ7zwT/\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"Z&:_N9c\"\n    }\n  },\n  \"IdempotencyToken\": \"\u00f8\u00ce\u00a8\u00deh\",\n  \"KeyStorageSecurityStandard\": \"FIPS_140_2_LEVEL_2_OR_HIGHER\",\n  \"Tags\": [\n    {\n      \"Key\": \"=:p:-//\",\n      \"Value\": \"\"\n    }\n  ],\n  \"UsageMode\": \"GENERAL_PURPOSE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"CertificateAuthorityArn\": \"arn:G:I4ng9q6:.V@0OxLqgP:28168216:q-/7efJ/7/O/yRG4y9QN2/AKT0aW55-/X.BMKAm.,_A/+a3HdIJ\"\n}",
+              "createdAt": "2026-07-28T10:42:19.000Z",
+              "updatedAt": "2026-07-28T10:42:19.000Z",
+              "uid": "35240-00b23598-b81c-4e67-9f6a-0f7b94ed51e2"
+            },
+            {
+              "id": "d8f31254-4e45-4f4c-ae0a-568a689610e2",
+              "name": "InvalidArgsException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.CreateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityConfiguration\": {\n    \"KeyAlgorithm\": \"EC_prime256v1\",\n    \"SigningAlgorithm\": \"SHA256WITHECDSA\",\n    \"Subject\": {\n      \"Country\": \"Cb\",\n      \"Organization\": \"<string>\",\n      \"OrganizationalUnit\": \"<string>\",\n      \"DistinguishedNameQualifier\": \"4xx6eJU:q6\",\n      \"State\": \"<string>\",\n      \"CommonName\": \"<string>\",\n      \"SerialNumber\": \"\",\n      \"Locality\": \"<string>\",\n      \"Title\": \"<string>\",\n      \"Surname\": \"<string>\",\n      \"GivenName\": \"<string>\",\n      \"Initials\": \"<string>\",\n      \"Pseudonym\": \"<string>\",\n      \"GenerationQualifier\": \"<string>\",\n      \"CustomAttributes\": [\n        {\n          \"ObjectIdentifier\": \"0.15.8.70731.0959141275.21667164038.435.1705519.428.19815558.283\",\n          \"Value\": \"<string>\"\n        }\n      ]\n    },\n    \"CsrExtensions\": {\n      \"KeyUsage\": {\n        \"DigitalSignature\": \"<boolean>\",\n        \"NonRepudiation\": \"<boolean>\",\n        \"KeyEncipherment\": \"<boolean>\",\n        \"DataEncipherment\": \"<boolean>\",\n        \"KeyAgreement\": \"<boolean>\",\n        \"KeyCertSign\": \"<boolean>\",\n        \"CRLSign\": \"<boolean>\",\n        \"EncipherOnly\": \"<boolean>\",\n        \"DecipherOnly\": \"<boolean>\"\n      },\n      \"SubjectInformationAccess\": [\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"1.12.10108639473.899934.7.109201181.753197.3085377053.6443413185\",\n            \"AccessMethodType\": \"CA_REPOSITORY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.9.033672208.4413913492.6700747.999017.6.13902915105.709022.840\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"wY\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \" PLMWnQ44\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"p11e-\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.01.605.74.778.535.17575.054.453770014.33.987.2344.4856186.3969\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.0.382008074.92758881884.63185.644752100.92474405.57749.5763413\"\n          }\n        },\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"2.27.213096028.342.7004443076.5442.90894127094.3590355.937031605\",\n            \"AccessMethodType\": \"RESOURCE_PKI_NOTIFY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.3.15431957515.1888672967.7.4686195.39056298155.16776.96952.03.\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"sq\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \"\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"wRbPfkSC\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.6.8204.446.9409200446.85342972.59861.46.758761763.215.569.06.2\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.08.83490518665.03.810.5800.37457437712.891.694470.1.0999.5.488\"\n          }\n        }\n      ]\n    }\n  },\n  \"CertificateAuthorityType\": \"SUBORDINATE\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"\",\n      \"S3BucketName\": \"11dkZ7zwT/\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"Z&:_N9c\"\n    }\n  },\n  \"IdempotencyToken\": \"\u00f8\u00ce\u00a8\u00deh\",\n  \"KeyStorageSecurityStandard\": \"FIPS_140_2_LEVEL_2_OR_HIGHER\",\n  \"Tags\": [\n    {\n      \"Key\": \"=:p:-//\",\n      \"Value\": \"\"\n    }\n  ],\n  \"UsageMode\": \"GENERAL_PURPOSE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:42:19.000Z",
+              "updatedAt": "2026-07-28T10:42:19.000Z",
+              "uid": "35240-d8f31254-4e45-4f4c-ae0a-568a689610e2"
+            },
+            {
+              "id": "01325eec-37d0-481d-88e6-17c7e3413951",
+              "name": "InvalidPolicyException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.CreateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityConfiguration\": {\n    \"KeyAlgorithm\": \"EC_prime256v1\",\n    \"SigningAlgorithm\": \"SHA256WITHECDSA\",\n    \"Subject\": {\n      \"Country\": \"Cb\",\n      \"Organization\": \"<string>\",\n      \"OrganizationalUnit\": \"<string>\",\n      \"DistinguishedNameQualifier\": \"4xx6eJU:q6\",\n      \"State\": \"<string>\",\n      \"CommonName\": \"<string>\",\n      \"SerialNumber\": \"\",\n      \"Locality\": \"<string>\",\n      \"Title\": \"<string>\",\n      \"Surname\": \"<string>\",\n      \"GivenName\": \"<string>\",\n      \"Initials\": \"<string>\",\n      \"Pseudonym\": \"<string>\",\n      \"GenerationQualifier\": \"<string>\",\n      \"CustomAttributes\": [\n        {\n          \"ObjectIdentifier\": \"0.15.8.70731.0959141275.21667164038.435.1705519.428.19815558.283\",\n          \"Value\": \"<string>\"\n        }\n      ]\n    },\n    \"CsrExtensions\": {\n      \"KeyUsage\": {\n        \"DigitalSignature\": \"<boolean>\",\n        \"NonRepudiation\": \"<boolean>\",\n        \"KeyEncipherment\": \"<boolean>\",\n        \"DataEncipherment\": \"<boolean>\",\n        \"KeyAgreement\": \"<boolean>\",\n        \"KeyCertSign\": \"<boolean>\",\n        \"CRLSign\": \"<boolean>\",\n        \"EncipherOnly\": \"<boolean>\",\n        \"DecipherOnly\": \"<boolean>\"\n      },\n      \"SubjectInformationAccess\": [\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"1.12.10108639473.899934.7.109201181.753197.3085377053.6443413185\",\n            \"AccessMethodType\": \"CA_REPOSITORY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.9.033672208.4413913492.6700747.999017.6.13902915105.709022.840\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"wY\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \" PLMWnQ44\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"p11e-\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.01.605.74.778.535.17575.054.453770014.33.987.2344.4856186.3969\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.0.382008074.92758881884.63185.644752100.92474405.57749.5763413\"\n          }\n        },\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"2.27.213096028.342.7004443076.5442.90894127094.3590355.937031605\",\n            \"AccessMethodType\": \"RESOURCE_PKI_NOTIFY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.3.15431957515.1888672967.7.4686195.39056298155.16776.96952.03.\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"sq\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \"\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"wRbPfkSC\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.6.8204.446.9409200446.85342972.59861.46.758761763.215.569.06.2\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.08.83490518665.03.810.5800.37457437712.891.694470.1.0999.5.488\"\n          }\n        }\n      ]\n    }\n  },\n  \"CertificateAuthorityType\": \"SUBORDINATE\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"\",\n      \"S3BucketName\": \"11dkZ7zwT/\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"Z&:_N9c\"\n    }\n  },\n  \"IdempotencyToken\": \"\u00f8\u00ce\u00a8\u00deh\",\n  \"KeyStorageSecurityStandard\": \"FIPS_140_2_LEVEL_2_OR_HIGHER\",\n  \"Tags\": [\n    {\n      \"Key\": \"=:p:-//\",\n      \"Value\": \"\"\n    }\n  ],\n  \"UsageMode\": \"GENERAL_PURPOSE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:42:19.000Z",
+              "updatedAt": "2026-07-28T10:42:19.000Z",
+              "uid": "35240-01325eec-37d0-481d-88e6-17c7e3413951"
+            },
+            {
+              "id": "004cb97e-c2a7-478d-8603-a6b65451b7f5",
+              "name": "InvalidTagException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.CreateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityConfiguration\": {\n    \"KeyAlgorithm\": \"EC_prime256v1\",\n    \"SigningAlgorithm\": \"SHA256WITHECDSA\",\n    \"Subject\": {\n      \"Country\": \"Cb\",\n      \"Organization\": \"<string>\",\n      \"OrganizationalUnit\": \"<string>\",\n      \"DistinguishedNameQualifier\": \"4xx6eJU:q6\",\n      \"State\": \"<string>\",\n      \"CommonName\": \"<string>\",\n      \"SerialNumber\": \"\",\n      \"Locality\": \"<string>\",\n      \"Title\": \"<string>\",\n      \"Surname\": \"<string>\",\n      \"GivenName\": \"<string>\",\n      \"Initials\": \"<string>\",\n      \"Pseudonym\": \"<string>\",\n      \"GenerationQualifier\": \"<string>\",\n      \"CustomAttributes\": [\n        {\n          \"ObjectIdentifier\": \"0.15.8.70731.0959141275.21667164038.435.1705519.428.19815558.283\",\n          \"Value\": \"<string>\"\n        }\n      ]\n    },\n    \"CsrExtensions\": {\n      \"KeyUsage\": {\n        \"DigitalSignature\": \"<boolean>\",\n        \"NonRepudiation\": \"<boolean>\",\n        \"KeyEncipherment\": \"<boolean>\",\n        \"DataEncipherment\": \"<boolean>\",\n        \"KeyAgreement\": \"<boolean>\",\n        \"KeyCertSign\": \"<boolean>\",\n        \"CRLSign\": \"<boolean>\",\n        \"EncipherOnly\": \"<boolean>\",\n        \"DecipherOnly\": \"<boolean>\"\n      },\n      \"SubjectInformationAccess\": [\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"1.12.10108639473.899934.7.109201181.753197.3085377053.6443413185\",\n            \"AccessMethodType\": \"CA_REPOSITORY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.9.033672208.4413913492.6700747.999017.6.13902915105.709022.840\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"wY\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \" PLMWnQ44\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"p11e-\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.01.605.74.778.535.17575.054.453770014.33.987.2344.4856186.3969\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.0.382008074.92758881884.63185.644752100.92474405.57749.5763413\"\n          }\n        },\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"2.27.213096028.342.7004443076.5442.90894127094.3590355.937031605\",\n            \"AccessMethodType\": \"RESOURCE_PKI_NOTIFY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.3.15431957515.1888672967.7.4686195.39056298155.16776.96952.03.\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"sq\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \"\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"wRbPfkSC\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.6.8204.446.9409200446.85342972.59861.46.758761763.215.569.06.2\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.08.83490518665.03.810.5800.37457437712.891.694470.1.0999.5.488\"\n          }\n        }\n      ]\n    }\n  },\n  \"CertificateAuthorityType\": \"SUBORDINATE\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"\",\n      \"S3BucketName\": \"11dkZ7zwT/\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"Z&:_N9c\"\n    }\n  },\n  \"IdempotencyToken\": \"\u00f8\u00ce\u00a8\u00deh\",\n  \"KeyStorageSecurityStandard\": \"FIPS_140_2_LEVEL_2_OR_HIGHER\",\n  \"Tags\": [\n    {\n      \"Key\": \"=:p:-//\",\n      \"Value\": \"\"\n    }\n  ],\n  \"UsageMode\": \"GENERAL_PURPOSE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:42:19.000Z",
+              "updatedAt": "2026-07-28T10:42:19.000Z",
+              "uid": "35240-004cb97e-c2a7-478d-8603-a6b65451b7f5"
+            },
+            {
+              "id": "797ea0ef-9b05-4f9b-b8b1-0740f37a2234",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "ACMPrivateCA.CreateCertificateAuthority"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CertificateAuthorityConfiguration\": {\n    \"KeyAlgorithm\": \"EC_prime256v1\",\n    \"SigningAlgorithm\": \"SHA256WITHECDSA\",\n    \"Subject\": {\n      \"Country\": \"Cb\",\n      \"Organization\": \"<string>\",\n      \"OrganizationalUnit\": \"<string>\",\n      \"DistinguishedNameQualifier\": \"4xx6eJU:q6\",\n      \"State\": \"<string>\",\n      \"CommonName\": \"<string>\",\n      \"SerialNumber\": \"\",\n      \"Locality\": \"<string>\",\n      \"Title\": \"<string>\",\n      \"Surname\": \"<string>\",\n      \"GivenName\": \"<string>\",\n      \"Initials\": \"<string>\",\n      \"Pseudonym\": \"<string>\",\n      \"GenerationQualifier\": \"<string>\",\n      \"CustomAttributes\": [\n        {\n          \"ObjectIdentifier\": \"0.15.8.70731.0959141275.21667164038.435.1705519.428.19815558.283\",\n          \"Value\": \"<string>\"\n        }\n      ]\n    },\n    \"CsrExtensions\": {\n      \"KeyUsage\": {\n        \"DigitalSignature\": \"<boolean>\",\n        \"NonRepudiation\": \"<boolean>\",\n        \"KeyEncipherment\": \"<boolean>\",\n        \"DataEncipherment\": \"<boolean>\",\n        \"KeyAgreement\": \"<boolean>\",\n        \"KeyCertSign\": \"<boolean>\",\n        \"CRLSign\": \"<boolean>\",\n        \"EncipherOnly\": \"<boolean>\",\n        \"DecipherOnly\": \"<boolean>\"\n      },\n      \"SubjectInformationAccess\": [\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"1.12.10108639473.899934.7.109201181.753197.3085377053.6443413185\",\n            \"AccessMethodType\": \"CA_REPOSITORY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.9.033672208.4413913492.6700747.999017.6.13902915105.709022.840\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"wY\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \" PLMWnQ44\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"p11e-\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.01.605.74.778.535.17575.054.453770014.33.987.2344.4856186.3969\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.0.382008074.92758881884.63185.644752100.92474405.57749.5763413\"\n          }\n        },\n        {\n          \"AccessMethod\": {\n            \"CustomObjectIdentifier\": \"2.27.213096028.342.7004443076.5442.90894127094.3590355.937031605\",\n            \"AccessMethodType\": \"RESOURCE_PKI_NOTIFY\"\n          },\n          \"AccessLocation\": {\n            \"OtherName\": {\n              \"TypeId\": \"0.3.15431957515.1888672967.7.4686195.39056298155.16776.96952.03.\",\n              \"Value\": \"<string>\"\n            },\n            \"Rfc822Name\": \"<string>\",\n            \"DnsName\": \"<string>\",\n            \"DirectoryName\": {\n              \"Country\": \"sq\",\n              \"Organization\": \"<string>\",\n              \"OrganizationalUnit\": \"<string>\",\n              \"DistinguishedNameQualifier\": \"\",\n              \"State\": \"<string>\",\n              \"CommonName\": \"<string>\",\n              \"SerialNumber\": \"wRbPfkSC\",\n              \"Locality\": \"<string>\",\n              \"Title\": \"<string>\",\n              \"Surname\": \"<string>\",\n              \"GivenName\": \"<string>\",\n              \"Initials\": \"<string>\",\n              \"Pseudonym\": \"<string>\",\n              \"GenerationQualifier\": \"<string>\",\n              \"CustomAttributes\": [\n                {\n                  \"ObjectIdentifier\": \"0.6.8204.446.9409200446.85342972.59861.46.758761763.215.569.06.2\",\n                  \"Value\": \"<string>\"\n                }\n              ]\n            },\n            \"EdiPartyName\": {\n              \"PartyName\": \"<string>\",\n              \"NameAssigner\": \"<string>\"\n            },\n            \"UniformResourceIdentifier\": \"<string>\",\n            \"IpAddress\": \"<string>\",\n            \"RegisteredId\": \"1.08.83490518665.03.810.5800.37457437712.891.694470.1.0999.5.488\"\n          }\n        }\n      ]\n    }\n  },\n  \"CertificateAuthorityType\": \"SUBORDINATE\",\n  \"RevocationConfiguration\": {\n    \"CrlConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"ExpirationInDays\": \"<integer>\",\n      \"CustomCname\": \"\",\n      \"S3BucketName\": \"11dkZ7zwT/\",\n      \"S3ObjectAcl\": \"PUBLIC_READ\"\n    },\n    \"OcspConfiguration\": {\n      \"Enabled\": \"<boolean>\",\n      \"OcspCustomCname\": \"Z&:_N9c\"\n    }\n  },\n  \"IdempotencyToken\": \"\u00f8\u00ce\u00a8\u00deh\",\n  \"KeyStorageSecurityStandard\": \"FIPS_140_2_LEVEL_2_OR_HIGHER\",\n  \"Tags\": [\n    {\n      \"Key\": \"=:p:-//\",\n      \"Value\": \"\"\n    }\n  ],\n  \"UsageMode\": \"GENERAL_PURPOSE\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=ACMPrivateCA.CreateCertificateAuthority"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:42:19.000Z",
+              "updatedAt": "2026-07-28T10:42:19.000Z",
+              "uid": "35240-797ea0ef-9b05-4f9b-b8b1-0740f37a2234"
+            }
+          ],
+          "createdAt": "2026-07-28T10:42:19.000Z",
+          "updatedAt": "2026-07-28T10:42:19.000Z",
+          "uid": "35240-370e76a9-33b1-483d-a013-1d4d7a4e31ac"
+        }
+      ],
+      "id": "81d479f2-244f-4373-8896-ef00d7f837f2",
+      "createdAt": "2026-07-28T10:42:19.000Z",
+      "updatedAt": "2026-07-28T10:42:19.000Z",
+      "uid": "35240-81d479f2-244f-4373-8896-ef00d7f837f2"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://acm-pca.{{region}}.amazonaws.com"
+    }
+  ]
+}
