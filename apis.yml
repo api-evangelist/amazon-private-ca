@@ -57,8 +57,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthorityauditreport-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.CreateCertificateAuthorityAuditReport API'
@@ -85,8 +83,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-createpermission-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.CreatePermission API'
   description: >-
@@ -111,8 +107,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-deletecertificateauthority-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DeleteCertificateAuthority API'
@@ -139,8 +133,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-deletepermission-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DeletePermission API'
   description: >-
@@ -165,8 +157,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-deletepolicy-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DeletePolicy API'
   description: >-
@@ -191,8 +181,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthority-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DescribeCertificateAuthority API'
@@ -219,8 +207,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthorityauditreport-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.DescribeCertificateAuthorityAuditReport API'
@@ -247,8 +233,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-getcertificate-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.GetCertificate API'
   description: >-
@@ -273,8 +257,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycertificate-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.GetCertificateAuthorityCertificate API'
@@ -301,8 +283,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycsr-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.GetCertificateAuthorityCsr API'
@@ -329,8 +309,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-getpolicy-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.GetPolicy API'
   description: >-
@@ -354,8 +332,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-importcertificateauthoritycertificate-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.ImportCertificateAuthorityCertificate API'
@@ -382,8 +358,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-issuecertificate-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.IssueCertificate API'
   description: >-
@@ -408,8 +382,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-listcertificateauthorities-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.ListCertificateAuthorities API'
@@ -436,8 +408,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-listpermissions-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.ListPermissions API'
   description: >-
@@ -462,8 +432,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-listtags-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.ListTags API'
   description: >-
@@ -487,8 +455,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-putpolicy-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.PutPolicy API'
   description: >-
@@ -512,8 +478,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-restorecertificateauthority-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.RestoreCertificateAuthority API'
@@ -540,8 +504,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-revokecertificate-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.RevokeCertificate API'
   description: >-
@@ -566,8 +528,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-tagcertificateauthority-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.TagCertificateAuthority API'
@@ -594,8 +554,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-untagcertificateauthority-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.UntagCertificateAuthority API'
@@ -622,8 +580,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 - aid: >-
     amazon-private-ca:amazon-private-ca-x-amz-target-acmprivateca-updatecertificateauthority-api
   name: 'Amazon Private CA #X Amz Target=ACMPrivateCA.UpdateCertificateAuthority API'
@@ -650,8 +606,6 @@ apis:
     url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-private-ca.yaml
 common:
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-private-ca/overview
