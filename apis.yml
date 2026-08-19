@@ -5,6 +5,7 @@ description: AWS Private Certificate Authority (AWS Private CA) is a highly avai
   user authentication.
 url: https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/apis.yml
 type: Index
+specificationVersion: '0.23'
 accessModel:
   pricing: freemium
   onboarding: self-serve
