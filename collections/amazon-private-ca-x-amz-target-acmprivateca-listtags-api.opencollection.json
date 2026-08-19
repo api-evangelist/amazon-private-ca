@@ -1,0 +1,89 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.ListTags API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#X Amz Target=ACMPrivateCA.ListTags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Private CA List Tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://acm-pca.{region}.amazonaws.com/#X-Amz-Target=ACMPrivateCA.ListTags",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Target",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists the tags, if any, that are associated with your private CA or one that has been shared with you. Tags are labels that you can use to identify and organize your CAs. Each tag consists of a key and an optional value. Call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_TagCertificateAuthority.html\">TagCertificateAuthority</a> action to add one or more tags to your CA. Call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_UntagCertificateAu"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
