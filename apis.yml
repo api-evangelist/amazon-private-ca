@@ -66,7 +66,8 @@ apis:
     1 operation(s) for #x amz target=acmprivateca.createcertificateauthorityauditreport.
   humanURL: https://aws.amazon.com/private-ca/
   baseURL: https://acm-pca.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=ACMPrivateCA.CreateCertificateAuthorityAuditReport'
   properties:
   - type: OpenAPI
@@ -216,7 +217,8 @@ apis:
     — 1 operation(s) for #x amz target=acmprivateca.describecertificateauthorityauditreport.
   humanURL: https://aws.amazon.com/private-ca/
   baseURL: https://acm-pca.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=ACMPrivateCA.DescribeCertificateAuthorityAuditReport'
   properties:
   - type: OpenAPI
@@ -266,7 +268,8 @@ apis:
     for #x amz target=acmprivateca.getcertificateauthoritycertificate.
   humanURL: https://aws.amazon.com/private-ca/
   baseURL: https://acm-pca.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=ACMPrivateCA.GetCertificateAuthorityCertificate'
   properties:
   - type: OpenAPI
@@ -341,7 +344,8 @@ apis:
     1 operation(s) for #x amz target=acmprivateca.importcertificateauthoritycertificate.
   humanURL: https://aws.amazon.com/private-ca/
   baseURL: https://acm-pca.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=ACMPrivateCA.ImportCertificateAuthorityCertificate'
   properties:
   - type: OpenAPI
