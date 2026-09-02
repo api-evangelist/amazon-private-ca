@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.IssueCertificate API'
+  title: 'AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.IssueCertificate #X Amz Target=ACMPrivateCA.IssueCertificate #X Amz Target=ACMPrivateCA.IssueCertificate API'
   description: <p>This is the <i>Amazon Web Services Private Certificate Authority API Reference</i>. It provides descriptions, syntax, and usage examples for each of the actions and data types involved in creating and managing a private certificate authority (CA) for your organization.</p> <p>The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you prefer. For more information, see <a href="https://aws.amazon.com/tools/#SDKs">Amazon Web Services SDKs</a>.</p> <p>Each Amazon Web Services Private CA API operation has a quota that determines the number of times the operation can be called per second. Amazon Web Services Private CA throttles API requests at different rates depending on the operation. Throttling means that Amazon Web Services Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of requests per second. When a request is throttled, Amazon Web Services Private CA returns a <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html">ThrottlingException</a> error. Amazon Web Services Private CA does not guarantee a minimum request rate for APIs. </p> <p>To see an up-to-date list of your Amazon Web Services Private CA quotas, or to request a quota increase, log into your Amazon Web Services account and visit the <a href="https://console.aws.amazon.com/servicequotas/">Service Quotas</a> console.</p>
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -190,10 +190,282 @@ paths:
       - '#X Amz Target=ACMPrivateCA.IssueCertificate'
 components:
   schemas:
-    CsrBlob:
+    Boolean:
+      type: boolean
+    OtherName:
+      type: object
+      required:
+      - TypeId
+      - Value
+      properties:
+        TypeId:
+          allOf:
+          - $ref: '#/components/schemas/CustomObjectIdentifier'
+          - description: 'Specifies an OID. '
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String256'
+          - description: Specifies an OID value.
+      description: Defines a custom ASN.1 X.400 <code>GeneralName</code> using an object identifier (OID) and value. The OID must satisfy the regular expression shown below. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.
+    String39:
       type: string
+      minLength: 0
+      maxLength: 39
+    ASN1PrintableString64:
+      type: string
+      pattern: '[a-zA-Z0-9''()+-.?:/= ]*'
+      minLength: 0
+      maxLength: 64
+    SigningAlgorithm:
+      type: string
+      enum:
+      - SHA256WITHECDSA
+      - SHA384WITHECDSA
+      - SHA512WITHECDSA
+      - SHA256WITHRSA
+      - SHA384WITHRSA
+      - SHA512WITHRSA
+    InvalidStateException: {}
+    ValidityPeriodType:
+      type: string
+      enum:
+      - END_DATE
+      - ABSOLUTE
+      - DAYS
+      - MONTHS
+      - YEARS
+    String128:
+      type: string
+      minLength: 0
+      maxLength: 128
+    String256:
+      type: string
+      minLength: 0
+      maxLength: 256
+    String3:
+      type: string
+      minLength: 0
+      maxLength: 3
+    CountryCodeString:
+      type: string
+      pattern: '[A-Za-z]{2}'
+      minLength: 2
+      maxLength: 2
+    String5:
+      type: string
+      minLength: 0
+      maxLength: 5
+    ExtendedKeyUsageList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ExtendedKeyUsage'
+      minItems: 1
+      maxItems: 20
+    PolicyQualifierId:
+      type: string
+      enum:
+      - CPS
+    CustomAttributeList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CustomAttribute'
+      minItems: 1
+      maxItems: 30
+    PolicyInformation:
+      type: object
+      required:
+      - CertPolicyId
+      properties:
+        CertPolicyId:
+          allOf:
+          - $ref: '#/components/schemas/CustomObjectIdentifier'
+          - description: Specifies the object identifier (OID) of the certificate policy under which the certificate was issued. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.
+        PolicyQualifiers:
+          allOf:
+          - $ref: '#/components/schemas/PolicyQualifierInfoList'
+          - description: Modifies the given <code>CertPolicyId</code> with a qualifier. Amazon Web Services Private CA supports the certification practice statement (CPS) qualifier.
+      description: Defines the X.509 <code>CertificatePolicies</code> extension.
+    CustomExtensionList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CustomExtension'
+      minItems: 1
+      maxItems: 20
+    KeyUsage:
+      type: object
+      properties:
+        DigitalSignature:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: ' Key can be used for digital signing.'
+        NonRepudiation:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Key can be used for non-repudiation.
+        KeyEncipherment:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Key can be used to encipher data.
+        DataEncipherment:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Key can be used to decipher data.
+        KeyAgreement:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Key can be used in a key-agreement protocol.
+        KeyCertSign:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Key can be used to sign certificates.
+        CRLSign:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Key can be used to sign CRLs.
+        EncipherOnly:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Key can be used only to encipher data.
+        DecipherOnly:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Key can be used only to decipher data.
+      description: Defines one or more purposes for which the key contained in the certificate can be used. Default value for each option is false.
+    String64:
+      type: string
+      minLength: 0
+      maxLength: 64
+    Base64String1To4096:
+      type: string
+      pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
       minLength: 1
-      maxLength: 32768
+      maxLength: 4096
+    PolicyQualifierInfoList:
+      type: array
+      items:
+        $ref: '#/components/schemas/PolicyQualifierInfo'
+      minItems: 1
+      maxItems: 20
+    IdempotencyToken:
+      type: string
+      pattern: '[\u0009\u000A\u000D\u0020-\u00FF]*'
+      minLength: 1
+      maxLength: 36
+    ApiPassthrough:
+      type: object
+      properties:
+        Extensions:
+          allOf:
+          - $ref: '#/components/schemas/Extensions'
+          - description: Specifies X.509 extension information for a certificate.
+        Subject:
+          $ref: '#/components/schemas/ASN1Subject'
+      description: <p>Contains X.509 certificate information to be placed in an issued certificate. An <code>APIPassthrough</code> or <code>APICSRPassthrough</code> template variant must be selected, or else this parameter is ignored. </p> <p>If conflicting or duplicate certificate information is supplied from other sources, Amazon Web Services Private CA applies <a href="https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations">order of operation rules</a> to determine what information is used.</p>
+    Extensions:
+      type: object
+      properties:
+        CertificatePolicies:
+          allOf:
+          - $ref: '#/components/schemas/CertificatePolicyList'
+          - description: <p>Contains a sequence of one or more policy information terms, each of which consists of an object identifier (OID) and optional qualifiers. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.</p> <p>In an end-entity certificate, these terms indicate the policy under which the certificate was issued and the purposes for which it may be used. In a CA certificate, these terms limit the set of policies for certification paths that include this certificate.</p>
+        ExtendedKeyUsage:
+          allOf:
+          - $ref: '#/components/schemas/ExtendedKeyUsageList'
+          - description: Specifies additional purposes for which the certified public key may be used other than basic purposes indicated in the <code>KeyUsage</code> extension.
+        KeyUsage:
+          $ref: '#/components/schemas/KeyUsage'
+        SubjectAlternativeNames:
+          allOf:
+          - $ref: '#/components/schemas/GeneralNameList'
+          - description: The subject alternative name extension allows identities to be bound to the subject of the certificate. These identities may be included in addition to or in place of the identity in the subject field of the certificate.
+        CustomExtensions:
+          allOf:
+          - $ref: '#/components/schemas/CustomExtensionList'
+          - description: <p/> <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
+      description: Contains X.509 extension information for a certificate.
+    InvalidArgsException: {}
+    GeneralName:
+      type: object
+      properties:
+        OtherName:
+          allOf:
+          - $ref: '#/components/schemas/OtherName'
+          - description: Represents <code>GeneralName</code> using an <code>OtherName</code> object.
+        Rfc822Name:
+          allOf:
+          - $ref: '#/components/schemas/String256'
+          - description: Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC 822</a> email address.
+        DnsName:
+          allOf:
+          - $ref: '#/components/schemas/String253'
+          - description: Represents <code>GeneralName</code> as a DNS name.
+        DirectoryName:
+          $ref: '#/components/schemas/ASN1Subject'
+        EdiPartyName:
+          allOf:
+          - $ref: '#/components/schemas/EdiPartyName'
+          - description: Represents <code>GeneralName</code> as an <code>EdiPartyName</code> object.
+        UniformResourceIdentifier:
+          allOf:
+          - $ref: '#/components/schemas/String253'
+          - description: Represents <code>GeneralName</code> as a URI.
+        IpAddress:
+          allOf:
+          - $ref: '#/components/schemas/String39'
+          - description: Represents <code>GeneralName</code> as an IPv4 or IPv6 address.
+        RegisteredId:
+          allOf:
+          - $ref: '#/components/schemas/CustomObjectIdentifier'
+          - description: ' Represents <code>GeneralName</code> as an object identifier (OID).'
+      description: Describes an ASN.1 X.400 <code>GeneralName</code> as defined in <a href="https://datatracker.ietf.org/doc/html/rfc5280">RFC 5280</a>. Only one of the following naming options should be provided. Providing more than one option results in an <code>InvalidArgsException</code> error.
+    CustomExtension:
+      type: object
+      required:
+      - ObjectIdentifier
+      - Value
+      properties:
+        ObjectIdentifier:
+          allOf:
+          - $ref: '#/components/schemas/CustomObjectIdentifier'
+          - description: <p/> <p>Specifies the object identifier (OID) of the X.509 extension. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/Base64String1To4096'
+          - description: <p/> <p>Specifies the base64-encoded value of the X.509 extension.</p>
+        Critical:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: <p/> <p>Specifies the critical flag of the X.509 extension.</p>
+      description: <p/> <p>Specifies the X.509 extension information for a certificate.</p> <p>Extensions present in <code>CustomExtensions</code> follow the <code>ApiPassthrough</code> <a href="https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations">template rules</a>. </p>
+    EdiPartyName:
+      type: object
+      required:
+      - PartyName
+      properties:
+        PartyName:
+          allOf:
+          - $ref: '#/components/schemas/String256'
+          - description: Specifies the party name.
+        NameAssigner:
+          allOf:
+          - $ref: '#/components/schemas/String256'
+          - description: Specifies the name assigner.
+      description: Describes an Electronic Data Interchange (EDI) entity as described in as defined in <a href="https://datatracker.ietf.org/doc/html/rfc5280">Subject Alternative Name</a> in RFC 5280.
+    Validity:
+      type: object
+      required:
+      - Value
+      - Type
+      properties:
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/PositiveLong'
+          - description: A long integer interpreted according to the value of <code>Type</code>, below.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/ValidityPeriodType'
+          - description: '<p>Determines how <i>Amazon Web Services Private CA</i> interprets the <code>Value</code> parameter, an integer. Supported validity types include those listed below. Type definitions with values include a sample input value and the resulting output. </p> <p> <code>END_DATE</code>: The specific date and time when the certificate will expire, expressed using UTCTime (YYMMDDHHMMSS) or GeneralizedTime (YYYYMMDDHHMMSS) format. When UTCTime is used, if the year field (YY) is greater than or equal to 50, the year is interpreted as 19YY. If the year field is less than 50, the year is interpreted as 20YY.</p> <ul> <li> <p>Sample input value: 491231235959 (UTCTime format)</p> </li> <li> <p>Output expiration date/time: 12/31/2049 23:59:59</p> </li> </ul> <p> <code>ABSOLUTE</code>: The specific date and time when the validity of a certificate will start or expire, expressed in seconds since the Unix Epoch. </p> <ul> <li> <p>Sample input value: 2524608000</p> </li> <li> <p>Output expiration date/time: 01/01/2050 00:00:00</p> </li> </ul> <p> <code>DAYS</code>, <code>MONTHS</code>, <code>YEARS</code>: The relative time from the moment of issuance until the certificate will expire, expressed in days, months, or years. </p> <p>Example if <code>DAYS</code>, issued on 10/12/2020 at 12:34:54 UTC:</p> <ul> <li> <p>Sample input value: 90</p> </li> <li> <p>Output expiration date: 01/10/2020 12:34:54 UTC</p> </li> </ul> <p>The minimum validity duration for a certificate using relative time (<code>DAYS</code>) is one day. The minimum validity for a certificate using absolute time (<code>ABSOLUTE</code> or <code>END_DATE</code>) is one second.</p>'
+      description: <p>Validity specifies the period of time during which a certificate is valid. Validity can be expressed as an explicit date and time when the validity of a certificate starts or expires, or as a span of time after issuance, stated in days, months, or years. For more information, see <a href="https://tools.ietf.org/html/rfc5280#section-4.1.2.5">Validity</a> in RFC 5280.</p> <p>Amazon Web Services Private CA API consumes the <code>Validity</code> data type differently in two distinct parameters of the <code>IssueCertificate</code> action. The required parameter <code>IssueCertificate</code>:<code>Validity</code> specifies the end of a certificate's validity period. The optional parameter <code>IssueCertificate</code>:<code>ValidityNotBefore</code> specifies a customized starting time for the validity period.</p>
     ASN1Subject:
       type: object
       properties:
@@ -258,330 +530,6 @@ components:
           - $ref: '#/components/schemas/CustomAttributeList'
           - description: <p/> <p>Contains a sequence of one or more X.500 relative distinguished names (RDNs), each of which consists of an object identifier (OID) and a value. For more information, see NIST’s definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.</p> <note> <p>Custom attributes cannot be used in combination with standard attributes.</p> </note>
       description: Contains information about the certificate subject. The <code>Subject</code> field in the certificate identifies the entity that owns or controls the public key in the certificate. The entity can be a user, computer, device, or service. The <code>Subject </code>must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the certificate.
-    String39:
-      type: string
-      minLength: 0
-      maxLength: 39
-    PolicyInformation:
-      type: object
-      required:
-      - CertPolicyId
-      properties:
-        CertPolicyId:
-          allOf:
-          - $ref: '#/components/schemas/CustomObjectIdentifier'
-          - description: Specifies the object identifier (OID) of the certificate policy under which the certificate was issued. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.
-        PolicyQualifiers:
-          allOf:
-          - $ref: '#/components/schemas/PolicyQualifierInfoList'
-          - description: Modifies the given <code>CertPolicyId</code> with a qualifier. Amazon Web Services Private CA supports the certification practice statement (CPS) qualifier.
-      description: Defines the X.509 <code>CertificatePolicies</code> extension.
-    CustomAttributeList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CustomAttribute'
-      minItems: 1
-      maxItems: 30
-    CustomObjectIdentifier:
-      type: string
-      pattern: ^([0-2])\.([0-9]|([0-3][0-9]))((\.([0-9]+)){0,126})$
-      minLength: 0
-      maxLength: 64
-    InvalidArgsException: {}
-    ApiPassthrough:
-      type: object
-      properties:
-        Extensions:
-          allOf:
-          - $ref: '#/components/schemas/Extensions'
-          - description: Specifies X.509 extension information for a certificate.
-        Subject:
-          $ref: '#/components/schemas/ASN1Subject'
-      description: <p>Contains X.509 certificate information to be placed in an issued certificate. An <code>APIPassthrough</code> or <code>APICSRPassthrough</code> template variant must be selected, or else this parameter is ignored. </p> <p>If conflicting or duplicate certificate information is supplied from other sources, Amazon Web Services Private CA applies <a href="https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations">order of operation rules</a> to determine what information is used.</p>
-    String64:
-      type: string
-      minLength: 0
-      maxLength: 64
-    String256:
-      type: string
-      minLength: 0
-      maxLength: 256
-    OtherName:
-      type: object
-      required:
-      - TypeId
-      - Value
-      properties:
-        TypeId:
-          allOf:
-          - $ref: '#/components/schemas/CustomObjectIdentifier'
-          - description: 'Specifies an OID. '
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/String256'
-          - description: Specifies an OID value.
-      description: Defines a custom ASN.1 X.400 <code>GeneralName</code> using an object identifier (OID) and value. The OID must satisfy the regular expression shown below. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.
-    PositiveLong:
-      type: integer
-      minimum: 1
-    GeneralName:
-      type: object
-      properties:
-        OtherName:
-          allOf:
-          - $ref: '#/components/schemas/OtherName'
-          - description: Represents <code>GeneralName</code> using an <code>OtherName</code> object.
-        Rfc822Name:
-          allOf:
-          - $ref: '#/components/schemas/String256'
-          - description: Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC 822</a> email address.
-        DnsName:
-          allOf:
-          - $ref: '#/components/schemas/String253'
-          - description: Represents <code>GeneralName</code> as a DNS name.
-        DirectoryName:
-          $ref: '#/components/schemas/ASN1Subject'
-        EdiPartyName:
-          allOf:
-          - $ref: '#/components/schemas/EdiPartyName'
-          - description: Represents <code>GeneralName</code> as an <code>EdiPartyName</code> object.
-        UniformResourceIdentifier:
-          allOf:
-          - $ref: '#/components/schemas/String253'
-          - description: Represents <code>GeneralName</code> as a URI.
-        IpAddress:
-          allOf:
-          - $ref: '#/components/schemas/String39'
-          - description: Represents <code>GeneralName</code> as an IPv4 or IPv6 address.
-        RegisteredId:
-          allOf:
-          - $ref: '#/components/schemas/CustomObjectIdentifier'
-          - description: ' Represents <code>GeneralName</code> as an object identifier (OID).'
-      description: Describes an ASN.1 X.400 <code>GeneralName</code> as defined in <a href="https://datatracker.ietf.org/doc/html/rfc5280">RFC 5280</a>. Only one of the following naming options should be provided. Providing more than one option results in an <code>InvalidArgsException</code> error.
-    InvalidStateException: {}
-    CustomAttribute:
-      type: object
-      required:
-      - ObjectIdentifier
-      - Value
-      properties:
-        ObjectIdentifier:
-          allOf:
-          - $ref: '#/components/schemas/CustomObjectIdentifier'
-          - description: Specifies the object identifier (OID) of the attribute type of the relative distinguished name (RDN).
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/String1To256'
-          - description: <p/> <p>Specifies the attribute value of relative distinguished name (RDN).</p>
-      description: Defines the X.500 relative distinguished name (RDN).
-    IdempotencyToken:
-      type: string
-      pattern: '[\u0009\u000A\u000D\u0020-\u00FF]*'
-      minLength: 1
-      maxLength: 36
-    PolicyQualifierId:
-      type: string
-      enum:
-      - CPS
-    LimitExceededException: {}
-    Extensions:
-      type: object
-      properties:
-        CertificatePolicies:
-          allOf:
-          - $ref: '#/components/schemas/CertificatePolicyList'
-          - description: <p>Contains a sequence of one or more policy information terms, each of which consists of an object identifier (OID) and optional qualifiers. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.</p> <p>In an end-entity certificate, these terms indicate the policy under which the certificate was issued and the purposes for which it may be used. In a CA certificate, these terms limit the set of policies for certification paths that include this certificate.</p>
-        ExtendedKeyUsage:
-          allOf:
-          - $ref: '#/components/schemas/ExtendedKeyUsageList'
-          - description: Specifies additional purposes for which the certified public key may be used other than basic purposes indicated in the <code>KeyUsage</code> extension.
-        KeyUsage:
-          $ref: '#/components/schemas/KeyUsage'
-        SubjectAlternativeNames:
-          allOf:
-          - $ref: '#/components/schemas/GeneralNameList'
-          - description: The subject alternative name extension allows identities to be bound to the subject of the certificate. These identities may be included in addition to or in place of the identity in the subject field of the certificate.
-        CustomExtensions:
-          allOf:
-          - $ref: '#/components/schemas/CustomExtensionList'
-          - description: <p/> <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
-      description: Contains X.509 extension information for a certificate.
-    Arn:
-      type: string
-      pattern: arn:[\w+=/,.@-]+:[\w+=/,.@-]+:[\w+=/,.@-]*:[0-9]*:[\w+=,.@-]+(/[\w+=,.@-]+)*
-      minLength: 5
-      maxLength: 200
-    Base64String1To4096:
-      type: string
-      pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
-      minLength: 1
-      maxLength: 4096
-    CertificatePolicyList:
-      type: array
-      items:
-        $ref: '#/components/schemas/PolicyInformation'
-      minItems: 1
-      maxItems: 20
-    MalformedCSRException: {}
-    String253:
-      type: string
-      minLength: 0
-      maxLength: 253
-    IssueCertificateResponse:
-      type: object
-      properties:
-        CertificateArn:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: <p>The Amazon Resource Name (ARN) of the issued certificate and the certificate serial number. This is of the form:</p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i>/certificate/<i>286535153982981100925020015808220737245</i> </code> </p>
-    String16:
-      type: string
-      minLength: 0
-      maxLength: 16
-    ExtendedKeyUsage:
-      type: object
-      properties:
-        ExtendedKeyUsageType:
-          allOf:
-          - $ref: '#/components/schemas/ExtendedKeyUsageType'
-          - description: Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
-        ExtendedKeyUsageObjectIdentifier:
-          allOf:
-          - $ref: '#/components/schemas/CustomObjectIdentifier'
-          - description: Specifies a custom <code>ExtendedKeyUsage</code> with an object identifier (OID).
-      description: Specifies additional purposes for which the certified public key may be used other than basic purposes indicated in the <code>KeyUsage</code> extension.
-    Validity:
-      type: object
-      required:
-      - Value
-      - Type
-      properties:
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/PositiveLong'
-          - description: A long integer interpreted according to the value of <code>Type</code>, below.
-        Type:
-          allOf:
-          - $ref: '#/components/schemas/ValidityPeriodType'
-          - description: '<p>Determines how <i>Amazon Web Services Private CA</i> interprets the <code>Value</code> parameter, an integer. Supported validity types include those listed below. Type definitions with values include a sample input value and the resulting output. </p> <p> <code>END_DATE</code>: The specific date and time when the certificate will expire, expressed using UTCTime (YYMMDDHHMMSS) or GeneralizedTime (YYYYMMDDHHMMSS) format. When UTCTime is used, if the year field (YY) is greater than or equal to 50, the year is interpreted as 19YY. If the year field is less than 50, the year is interpreted as 20YY.</p> <ul> <li> <p>Sample input value: 491231235959 (UTCTime format)</p> </li> <li> <p>Output expiration date/time: 12/31/2049 23:59:59</p> </li> </ul> <p> <code>ABSOLUTE</code>: The specific date and time when the validity of a certificate will start or expire, expressed in seconds since the Unix Epoch. </p> <ul> <li> <p>Sample input value: 2524608000</p> </li> <li> <p>Output expiration date/time: 01/01/2050 00:00:00</p> </li> </ul> <p> <code>DAYS</code>, <code>MONTHS</code>, <code>YEARS</code>: The relative time from the moment of issuance until the certificate will expire, expressed in days, months, or years. </p> <p>Example if <code>DAYS</code>, issued on 10/12/2020 at 12:34:54 UTC:</p> <ul> <li> <p>Sample input value: 90</p> </li> <li> <p>Output expiration date: 01/10/2020 12:34:54 UTC</p> </li> </ul> <p>The minimum validity duration for a certificate using relative time (<code>DAYS</code>) is one day. The minimum validity for a certificate using absolute time (<code>ABSOLUTE</code> or <code>END_DATE</code>) is one second.</p>'
-      description: <p>Validity specifies the period of time during which a certificate is valid. Validity can be expressed as an explicit date and time when the validity of a certificate starts or expires, or as a span of time after issuance, stated in days, months, or years. For more information, see <a href="https://tools.ietf.org/html/rfc5280#section-4.1.2.5">Validity</a> in RFC 5280.</p> <p>Amazon Web Services Private CA API consumes the <code>Validity</code> data type differently in two distinct parameters of the <code>IssueCertificate</code> action. The required parameter <code>IssueCertificate</code>:<code>Validity</code> specifies the end of a certificate's validity period. The optional parameter <code>IssueCertificate</code>:<code>ValidityNotBefore</code> specifies a customized starting time for the validity period.</p>
-    String3:
-      type: string
-      minLength: 0
-      maxLength: 3
-    GeneralNameList:
-      type: array
-      items:
-        $ref: '#/components/schemas/GeneralName'
-      minItems: 1
-      maxItems: 20
-    ASN1PrintableString64:
-      type: string
-      pattern: '[a-zA-Z0-9''()+-.?:/= ]*'
-      minLength: 0
-      maxLength: 64
-    String40:
-      type: string
-      minLength: 0
-      maxLength: 40
-    PolicyQualifierInfo:
-      type: object
-      required:
-      - PolicyQualifierId
-      - Qualifier
-      properties:
-        PolicyQualifierId:
-          allOf:
-          - $ref: '#/components/schemas/PolicyQualifierId'
-          - description: Identifies the qualifier modifying a <code>CertPolicyId</code>.
-        Qualifier:
-          allOf:
-          - $ref: '#/components/schemas/Qualifier'
-          - description: Defines the qualifier type. Amazon Web Services Private CA supports the use of a URI for a CPS qualifier in this field.
-      description: Modifies the <code>CertPolicyId</code> of a <code>PolicyInformation</code> object with a qualifier. Amazon Web Services Private CA supports the certification practice statement (CPS) qualifier.
-    CustomExtensionList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CustomExtension'
-      minItems: 1
-      maxItems: 20
-    ValidityPeriodType:
-      type: string
-      enum:
-      - END_DATE
-      - ABSOLUTE
-      - DAYS
-      - MONTHS
-      - YEARS
-    PolicyQualifierInfoList:
-      type: array
-      items:
-        $ref: '#/components/schemas/PolicyQualifierInfo'
-      minItems: 1
-      maxItems: 20
-    String128:
-      type: string
-      minLength: 0
-      maxLength: 128
-    CustomExtension:
-      type: object
-      required:
-      - ObjectIdentifier
-      - Value
-      properties:
-        ObjectIdentifier:
-          allOf:
-          - $ref: '#/components/schemas/CustomObjectIdentifier'
-          - description: <p/> <p>Specifies the object identifier (OID) of the X.509 extension. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/Base64String1To4096'
-          - description: <p/> <p>Specifies the base64-encoded value of the X.509 extension.</p>
-        Critical:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: <p/> <p>Specifies the critical flag of the X.509 extension.</p>
-      description: <p/> <p>Specifies the X.509 extension information for a certificate.</p> <p>Extensions present in <code>CustomExtensions</code> follow the <code>ApiPassthrough</code> <a href="https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations">template rules</a>. </p>
-    KeyUsage:
-      type: object
-      properties:
-        DigitalSignature:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: ' Key can be used for digital signing.'
-        NonRepudiation:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Key can be used for non-repudiation.
-        KeyEncipherment:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Key can be used to encipher data.
-        DataEncipherment:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Key can be used to decipher data.
-        KeyAgreement:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Key can be used in a key-agreement protocol.
-        KeyCertSign:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Key can be used to sign certificates.
-        CRLSign:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Key can be used to sign CRLs.
-        EncipherOnly:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Key can be used only to encipher data.
-        DecipherOnly:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Key can be used only to decipher data.
-      description: Defines one or more purposes for which the key contained in the certificate can be used. Default value for each option is false.
     ExtendedKeyUsageType:
       type: string
       enum:
@@ -594,23 +542,22 @@ components:
       - SMART_CARD_LOGIN
       - DOCUMENT_SIGNING
       - CERTIFICATE_TRANSPARENCY
-    String5:
+    CertificatePolicyList:
+      type: array
+      items:
+        $ref: '#/components/schemas/PolicyInformation'
+      minItems: 1
+      maxItems: 20
+    CustomObjectIdentifier:
+      type: string
+      pattern: ^([0-2])\.([0-9]|([0-3][0-9]))((\.([0-9]+)){0,126})$
+      minLength: 0
+      maxLength: 64
+    String253:
       type: string
       minLength: 0
-      maxLength: 5
-    Boolean:
-      type: boolean
-    Qualifier:
-      type: object
-      required:
-      - CpsUri
-      properties:
-        CpsUri:
-          allOf:
-          - $ref: '#/components/schemas/String256'
-          - description: Contains a pointer to a certification practice statement (CPS) published by the CA.
-      description: 'Defines a <code>PolicyInformation</code> qualifier. Amazon Web Services Private CA supports the <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.4">certification practice statement (CPS) qualifier</a> defined in RFC 5280. '
-    InvalidArnException: {}
+      maxLength: 253
+    LimitExceededException: {}
     IssueCertificateRequest:
       type: object
       required:
@@ -652,48 +599,101 @@ components:
           allOf:
           - $ref: '#/components/schemas/IdempotencyToken'
           - description: Alphanumeric string that can be used to distinguish between calls to the <b>IssueCertificate</b> action. Idempotency tokens for <b>IssueCertificate</b> time out after one minute. Therefore, if you call <b>IssueCertificate</b> multiple times with the same idempotency token within one minute, Amazon Web Services Private CA recognizes that you are requesting only one certificate and will issue only one. If you change the idempotency token for each call, Amazon Web Services Private CA recognizes that you are requesting multiple certificates.
-    ExtendedKeyUsageList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ExtendedKeyUsage'
-      minItems: 1
-      maxItems: 20
-    CountryCodeString:
+    CsrBlob:
       type: string
-      pattern: '[A-Za-z]{2}'
-      minLength: 2
-      maxLength: 2
+      minLength: 1
+      maxLength: 32768
+    InvalidArnException: {}
     String1To256:
       type: string
       minLength: 1
       maxLength: 256
     ResourceNotFoundException: {}
-    SigningAlgorithm:
+    IssueCertificateResponse:
+      type: object
+      properties:
+        CertificateArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: <p>The Amazon Resource Name (ARN) of the issued certificate and the certificate serial number. This is of the form:</p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i>/certificate/<i>286535153982981100925020015808220737245</i> </code> </p>
+    Arn:
       type: string
-      enum:
-      - SHA256WITHECDSA
-      - SHA384WITHECDSA
-      - SHA512WITHECDSA
-      - SHA256WITHRSA
-      - SHA384WITHRSA
-      - SHA512WITHRSA
-    EdiPartyName:
+      pattern: arn:[\w+=/,.@-]+:[\w+=/,.@-]+:[\w+=/,.@-]*:[0-9]*:[\w+=,.@-]+(/[\w+=,.@-]+)*
+      minLength: 5
+      maxLength: 200
+    CustomAttribute:
       type: object
       required:
-      - PartyName
+      - ObjectIdentifier
+      - Value
       properties:
-        PartyName:
+        ObjectIdentifier:
+          allOf:
+          - $ref: '#/components/schemas/CustomObjectIdentifier'
+          - description: Specifies the object identifier (OID) of the attribute type of the relative distinguished name (RDN).
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String1To256'
+          - description: <p/> <p>Specifies the attribute value of relative distinguished name (RDN).</p>
+      description: Defines the X.500 relative distinguished name (RDN).
+    String40:
+      type: string
+      minLength: 0
+      maxLength: 40
+    String16:
+      type: string
+      minLength: 0
+      maxLength: 16
+    ExtendedKeyUsage:
+      type: object
+      properties:
+        ExtendedKeyUsageType:
+          allOf:
+          - $ref: '#/components/schemas/ExtendedKeyUsageType'
+          - description: Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+        ExtendedKeyUsageObjectIdentifier:
+          allOf:
+          - $ref: '#/components/schemas/CustomObjectIdentifier'
+          - description: Specifies a custom <code>ExtendedKeyUsage</code> with an object identifier (OID).
+      description: Specifies additional purposes for which the certified public key may be used other than basic purposes indicated in the <code>KeyUsage</code> extension.
+    PolicyQualifierInfo:
+      type: object
+      required:
+      - PolicyQualifierId
+      - Qualifier
+      properties:
+        PolicyQualifierId:
+          allOf:
+          - $ref: '#/components/schemas/PolicyQualifierId'
+          - description: Identifies the qualifier modifying a <code>CertPolicyId</code>.
+        Qualifier:
+          allOf:
+          - $ref: '#/components/schemas/Qualifier'
+          - description: Defines the qualifier type. Amazon Web Services Private CA supports the use of a URI for a CPS qualifier in this field.
+      description: Modifies the <code>CertPolicyId</code> of a <code>PolicyInformation</code> object with a qualifier. Amazon Web Services Private CA supports the certification practice statement (CPS) qualifier.
+    Qualifier:
+      type: object
+      required:
+      - CpsUri
+      properties:
+        CpsUri:
           allOf:
           - $ref: '#/components/schemas/String256'
-          - description: Specifies the party name.
-        NameAssigner:
-          allOf:
-          - $ref: '#/components/schemas/String256'
-          - description: Specifies the name assigner.
-      description: Describes an Electronic Data Interchange (EDI) entity as described in as defined in <a href="https://datatracker.ietf.org/doc/html/rfc5280">Subject Alternative Name</a> in RFC 5280.
+          - description: Contains a pointer to a certification practice statement (CPS) published by the CA.
+      description: 'Defines a <code>PolicyInformation</code> qualifier. Amazon Web Services Private CA supports the <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.4">certification practice statement (CPS) qualifier</a> defined in RFC 5280. '
+    GeneralNameList:
+      type: array
+      items:
+        $ref: '#/components/schemas/GeneralName'
+      minItems: 1
+      maxItems: 20
+    PositiveLong:
+      type: integer
+      minimum: 1
+    MalformedCSRException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -704,20 +704,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -730,6 +724,12 @@ components:
       required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
