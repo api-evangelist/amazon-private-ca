@@ -6,9 +6,7 @@
   "outputs": [
     "amazon-private-ca-aws-certificate-manager-private-certificate-authority-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 23 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -38,32 +36,9 @@
     "amazon-private-ca-openapi-original.yaml: tagged paths POST /#X-Amz-Target=ACMPrivateCA.UntagCertificateAuthority -> AWS Certificate Manager Private Certificate Authority",
     "amazon-private-ca-openapi-original.yaml: tagged paths POST /#X-Amz-Target=ACMPrivateCA.UpdateCertificateAuthority -> AWS Certificate Manager Private Certificate Authority",
     "amazon-private-ca-openapi-original.yaml: declared missing tag: AWS Certificate Manager Private Certificate Authority",
-    "superseded outputs removed: amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthority-api-openapi.yml, amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthorityauditreport-api-openapi.yml, amazon-private-ca-x-amz-target-acmprivateca-createpermission-api-openapi.yml, amazon-private-ca-x-amz-target-acmprivateca-deletecertificateauthority-api-openapi.yml, amazon-private-ca-x-amz-target-acmprivateca-deletepermission-api-openapi.yml \u2026",
-    "apis.yml register: written (+1 apis, 1 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
-    "amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthority-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthorityauditreport-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-createpermission-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-deletecertificateauthority-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-deletepermission-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-deletepolicy-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthority-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthorityauditreport-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-getcertificate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycertificate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycsr-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-getpolicy-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-importcertificateauthoritycertificate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-issuecertificate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-listcertificateauthorities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-listpermissions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-listtags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-putpolicy-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-restorecertificateauthority-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-revokecertificate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-tagcertificateauthority-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-untagcertificateauthority-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-private-ca-x-amz-target-acmprivateca-updatecertificateauthority-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "amazon-private-ca-aws-certificate-manager-private-certificate-authority-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
