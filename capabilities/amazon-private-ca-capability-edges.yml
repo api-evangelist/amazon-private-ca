@@ -1,0 +1,25 @@
+slug: amazon-private-ca
+provider: Amazon Private CA
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: AWS Certificate Manager Private Certificate Authority
+  spec_file: amazon-private-ca-aws-certificate-manager-private-certificate-authority-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.8
+  evidence: CreateCertificateAuthority, IssueCertificateResponse, RevocationConfiguration — "securely
+    manage the lifecycle of your private certificates"
+  reason: PKI/certificate authority lifecycle is a cybersecurity control capability (credential issuance
+    and revocation); no single candidate L2 cleanly covers PKI so L1 only.

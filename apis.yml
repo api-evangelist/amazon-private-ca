@@ -72,6 +72,9 @@ apis:
   - type: RateLimits
     url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
 common:
+- type: CapabilityMap
+  url: capabilities/amazon-private-ca-capability-edges.yml
+  name: Amazon Private CA Business Capability Map
 - type: Website
   url: https://aws.amazon.com/private-ca/
 - type: PostmanWorkspace
