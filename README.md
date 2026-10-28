@@ -66,378 +66,260 @@
 
 AWS Private Certificate Authority (AWS Private CA) is a highly available, fully managed private CA service that helps you easily and securely manage the lifecycle of your private certificates. It allows you to create private CA hierarchies and issue X.509 certificates for your internal resources including TLS certificates for microservices, IoT devices, and user authentication.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/apis.yml)
+**Areas:** AWS · Certificate Authority · Certificates · PKI · Security · X.509 · TLS · IoT
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon Private CA on APIs.io
 
-## Tags:
+Everything profiled for Amazon Private CA is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-private-ca/](https://apis.io/providers/amazon-private-ca/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Certificate Authority, Certificates, PKI, Security, X.509, TLS, IoT
+### APIs (1)
 
-## Timestamps
+- [Amazon Private CA AWS Certificate Manager Private Certificate Authority API](https://apis.io/apis/amazon-private-ca/amazon-private-ca-aws-certificate-manager-private-certificate-authority-api/) — The AWS Certificate Manager Private Certificate Authority API from Amazon Private CA — 23 operation(s) for aws certificate manager private certificate…
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### AWS Private CA API
-The AWS Private CA API provides programmatic access to create and manage private certificate authorities, issue X.509 certificates, manage certificate revocation lists, configure audit reports, and control permissions and policies for private PKI infrastructure.
+#### Agentic access (1)
 
-**Human URL:** [https://aws.amazon.com/private-ca/](https://aws.amazon.com/private-ca/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Amazon Private Ca Agentic Access](https://apis.io/agentic-access/amazon-private-ca/amazon-private-ca-agentic-access/)
 
- - Certificates, PKI, Security, Certificate Authority, X.509
+#### JSON Schema (76)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html)
-- [OpenAPI](openapi/amazon-private-ca-openapi-original.yaml)
-- [GettingStarted](https://aws.amazon.com/private-ca/getting-started/)
-- [Pricing](https://aws.amazon.com/private-ca/pricing/)
-- [FAQ](https://aws.amazon.com/private-ca/faqs/)
-- [Authentication](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
-- [RateLimits](https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html)
+- [AccessDescription](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-access-description/)
+- [AccessMethod](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-access-method/)
+- [AccessMethodType](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-access-method-type/)
+- [ActionType](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-action-type/)
+- [ApiPassthrough](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-api-passthrough/)
+- [ASN1Subject](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-asn1subject/)
+- [AuditReportResponseFormat](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-audit-report-response-format/)
+- [AuditReportStatus](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-audit-report-status/)
+- [CertificateAuthority](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-certificate-authority/)
+- [CertificateAuthorityConfiguration](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-certificate-authority-configuration/)
+- [CertificateAuthorityStatus](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-certificate-authority-status/)
+- [CertificateAuthorityType](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-certificate-authority-type/)
+- [CertificateAuthorityUsageMode](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-certificate-authority-usage-mode/)
+- [CreateCertificateAuthorityAuditReportRequest](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-create-certificate-authority-audit-report-request/)
+- [CreateCertificateAuthorityAuditReportResponse](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-create-certificate-authority-audit-report-response/)
+- [CreateCertificateAuthorityRequest](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-create-certificate-authority-request/)
+- [CreateCertificateAuthorityResponse](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-create-certificate-authority-response/)
+- [CreatePermissionRequest](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-create-permission-request/)
+- [CrlConfiguration](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-crl-configuration/)
+- [CsrExtensions](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-csr-extensions/)
+- [CustomAttribute](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-custom-attribute/)
+- [CustomExtension](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-custom-extension/)
+- [DeleteCertificateAuthorityRequest](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-delete-certificate-authority-request/)
+- [DeletePermissionRequest](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-delete-permission-request/)
+- [DeletePolicyRequest](https://apis.io/schemas/amazon-private-ca/amazon-private-ca-delete-policy-request/)
+- …and 51 more published on APIs.io
 
-## Common Properties
+#### JSON Structure (76)
 
-- [Portal](https://aws.amazon.com/private-ca/)
+Data models expressed in JSON Structure.
+
+- [Amazon Private Ca Access Description Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-access-description-structure/)
+- [Amazon Private Ca Access Method Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-access-method-structure/)
+- [Amazon Private Ca Access Method Type Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-access-method-type-structure/)
+- [Amazon Private Ca Action Type Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-action-type-structure/)
+- [Amazon Private Ca Api Passthrough Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-api-passthrough-structure/)
+- [Amazon Private Ca Asn1Subject Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-asn1subject-structure/)
+- [Amazon Private Ca Audit Report Response Format Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-audit-report-response-format-structure/)
+- [Amazon Private Ca Audit Report Status Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-audit-report-status-structure/)
+- [Amazon Private Ca Certificate Authority Configuration Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-certificate-authority-configuration-structure/)
+- [Amazon Private Ca Certificate Authority Status Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-certificate-authority-status-structure/)
+- [Amazon Private Ca Certificate Authority Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-certificate-authority-structure/)
+- [Amazon Private Ca Certificate Authority Type Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-certificate-authority-type-structure/)
+- [Amazon Private Ca Certificate Authority Usage Mode Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-certificate-authority-usage-mode-structure/)
+- [Amazon Private Ca Create Certificate Authority Audit Report Request Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-create-certificate-authority-audit-report-request-structure/)
+- [Amazon Private Ca Create Certificate Authority Audit Report Response Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-create-certificate-authority-audit-report-response-structure/)
+- [Amazon Private Ca Create Certificate Authority Request Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-create-certificate-authority-request-structure/)
+- [Amazon Private Ca Create Certificate Authority Response Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-create-certificate-authority-response-structure/)
+- [Amazon Private Ca Create Permission Request Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-create-permission-request-structure/)
+- [Amazon Private Ca Crl Configuration Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-crl-configuration-structure/)
+- [Amazon Private Ca Csr Extensions Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-csr-extensions-structure/)
+- [Amazon Private Ca Custom Attribute Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-custom-attribute-structure/)
+- [Amazon Private Ca Custom Extension Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-custom-extension-structure/)
+- [Amazon Private Ca Delete Certificate Authority Request Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-delete-certificate-authority-request-structure/)
+- [Amazon Private Ca Delete Permission Request Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-delete-permission-request-structure/)
+- [Amazon Private Ca Delete Policy Request Structure](https://apis.io/json-structure/amazon-private-ca/amazon-private-ca-delete-policy-request-structure/)
+- …and 51 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Private Ca Context](https://apis.io/jsonld/amazon-private-ca/amazon-private-ca-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Private Ca Vocabulary](https://apis.io/vocabularies/amazon-private-ca/amazon-private-ca-vocabulary/)
+
+#### Examples (59)
+
+Example requests and responses.
+
+- [Amazon Private Ca Access Description Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-access-description-example/)
+- [Amazon Private Ca Access Method Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-access-method-example/)
+- [Amazon Private Ca Api Passthrough Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-api-passthrough-example/)
+- [Amazon Private Ca Asn1Subject Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-asn1subject-example/)
+- [Amazon Private Ca Certificate Authority Configuration Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-certificate-authority-configuration-example/)
+- [Amazon Private Ca Certificate Authority Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-certificate-authority-example/)
+- [Amazon Private Ca Create Certificate Authority Audit Report Request Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-create-certificate-authority-audit-report-request-example/)
+- [Amazon Private Ca Create Certificate Authority Audit Report Response Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-create-certificate-authority-audit-report-response-example/)
+- [Amazon Private Ca Create Certificate Authority Request Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-create-certificate-authority-request-example/)
+- [Amazon Private Ca Create Certificate Authority Response Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-create-certificate-authority-response-example/)
+- [Amazon Private Ca Create Permission Request Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-create-permission-request-example/)
+- [Amazon Private Ca Crl Configuration Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-crl-configuration-example/)
+- [Amazon Private Ca Csr Extensions Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-csr-extensions-example/)
+- [Amazon Private Ca Custom Attribute Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-custom-attribute-example/)
+- [Amazon Private Ca Custom Extension Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-custom-extension-example/)
+- [Amazon Private Ca Delete Certificate Authority Request Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-delete-certificate-authority-request-example/)
+- [Amazon Private Ca Delete Permission Request Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-delete-permission-request-example/)
+- [Amazon Private Ca Delete Policy Request Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-delete-policy-request-example/)
+- [Amazon Private Ca Describe Certificate Authority Audit Report Request Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-describe-certificate-authority-audit-report-request-example/)
+- [Amazon Private Ca Describe Certificate Authority Audit Report Response Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-describe-certificate-authority-audit-report-response-example/)
+- [Amazon Private Ca Describe Certificate Authority Request Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-describe-certificate-authority-request-example/)
+- [Amazon Private Ca Describe Certificate Authority Response Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-describe-certificate-authority-response-example/)
+- [Amazon Private Ca Edi Party Name Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-edi-party-name-example/)
+- [Amazon Private Ca Extended Key Usage Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-extended-key-usage-example/)
+- [Amazon Private Ca Extensions Example](https://apis.io/examples/amazon-private-ca/amazon-private-ca-extensions-example/)
+- …and 34 more published on APIs.io
+
+#### Collections (46)
+
+Postman and Open Collection request collections.
+
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthority-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthorityAuditReport API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthorityauditreport-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreatePermission API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-createpermission-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.DeleteCertificateAuthority API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-deletecertificateauthority-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.DeletePermission API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-deletepermission-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.DeletePolicy API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-deletepolicy-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.DescribeCertificateAuthority API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthority-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.DescribeCertificateAuthorityAuditReport API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-describecertificateauthorityauditreport-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.GetCertificate API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-getcertificate-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.GetCertificateAuthorityCertificate API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycertificate-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.GetCertificateAuthorityCsr API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-getcertificateauthoritycsr-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.GetPolicy API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-getpolicy-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.ImportCertificateAuthorityCertificate API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-importcertificateauthoritycertificate-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.IssueCertificate API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-issuecertificate-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.ListCertificateAuthorities API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-listcertificateauthorities-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.ListPermissions API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-listpermissions-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.ListTags API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-listtags-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.PutPolicy API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-putpolicy-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.RestoreCertificateAuthority API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-restorecertificateauthority-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.RevokeCertificate API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-revokecertificate-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.TagCertificateAuthority API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-tagcertificateauthority-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.UntagCertificateAuthority API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-untagcertificateauthority-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.UpdateCertificateAuthority API](https://apis.io/collections/amazon-private-ca/open-amazon-private-ca-x-amz-target-acmprivateca-updatecertificateauthority-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority API](https://apis.io/collections/amazon-private-ca/postman-amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthority-api/)
+- [AWS Certificate Manager Private Certificate Authority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthority #X Amz Target=ACMPrivateCA.CreateCertificateAuthorityAuditReport API](https://apis.io/collections/amazon-private-ca/postman-amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthorityauditreport-api/)
+- …and 21 more published on APIs.io
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Private CA — jsonschema rules](https://apis.io/rules/amazon-private-ca/amazon-private-ca-jsonschema-spectral-rules/)
+- [Amazon Private CA API Rules](https://apis.io/rules/amazon-private-ca/amazon-private-ca-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Private Ca Authentication](https://apis.io/security/amazon-private-ca/amazon-private-ca-authentication/)
+- [Amazon Private Ca Domain Security](https://apis.io/security/amazon-private-ca/amazon-private-ca-domain-security/)
+- [Amazon Private Ca Trust Center](https://apis.io/security/amazon-private-ca/amazon-private-ca-trust-center/)
+- [Amazon Private Ca Vulnerability Disclosure](https://apis.io/security/amazon-private-ca/amazon-private-ca-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Private Ca Plans Pricing](https://apis.io/plans/amazon-private-ca/amazon-private-ca-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Private Ca Rate Limits](https://apis.io/rate-limits/amazon-private-ca/amazon-private-ca-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Private Ca Finops](https://apis.io/finops/amazon-private-ca/amazon-private-ca-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/private-ca/)
 - [Documentation](https://docs.aws.amazon.com/privateca/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/security/tag/aws-certificate-manager-private-ca/)
-- [GitHubOrganization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/acm-pca/)
-- [SignUp](https://portal.aws.amazon.com/billing/signup)
-- [StatusPage](https://health.aws.amazon.com/health/status)
-- [SpectralRules](rules/amazon-private-ca-spectral-rules.yml)
-- [NaftikoCapability](capabilities/pki-management.yaml)
-- [Vocabulary](vocabulary/amazon-private-ca-vocabulary.yaml)
-- [JSON-LD](json-ld/amazon-private-ca-context.jsonld)
-- [JSONSchema](json-schema/amazon-private-ca-access-description-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-access-method-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-access-method-type-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-action-type-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-api-passthrough-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-asn1subject-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-audit-report-response-format-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-audit-report-status-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-certificate-authority-configuration-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-certificate-authority-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-certificate-authority-status-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-certificate-authority-type-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-certificate-authority-usage-mode-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-create-certificate-authority-audit-report-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-create-certificate-authority-audit-report-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-create-certificate-authority-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-create-certificate-authority-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-create-permission-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-crl-configuration-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-csr-extensions-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-custom-attribute-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-custom-extension-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-delete-certificate-authority-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-delete-permission-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-delete-policy-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-describe-certificate-authority-audit-report-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-describe-certificate-authority-audit-report-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-describe-certificate-authority-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-describe-certificate-authority-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-edi-party-name-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-extended-key-usage-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-extended-key-usage-type-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-extensions-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-failure-reason-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-general-name-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-get-certificate-authority-certificate-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-get-certificate-authority-certificate-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-get-certificate-authority-csr-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-get-certificate-authority-csr-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-get-certificate-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-get-certificate-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-get-policy-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-get-policy-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-import-certificate-authority-certificate-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-issue-certificate-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-issue-certificate-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-key-algorithm-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-key-storage-security-standard-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-key-usage-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-list-certificate-authorities-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-list-certificate-authorities-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-list-permissions-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-list-permissions-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-list-tags-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-list-tags-response-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-ocsp-configuration-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-other-name-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-permission-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-policy-information-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-policy-qualifier-id-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-policy-qualifier-info-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-put-policy-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-qualifier-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-resource-owner-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-restore-certificate-authority-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-revocation-configuration-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-revocation-reason-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-revoke-certificate-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-s3object-acl-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-signing-algorithm-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-tag-certificate-authority-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-tag-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-untag-certificate-authority-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-update-certificate-authority-request-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-validity-period-type-schema.json)
-- [JSONSchema](json-schema/amazon-private-ca-validity-schema.json)
-- [JSONStructure](json-structure/amazon-private-ca-access-description-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-access-method-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-access-method-type-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-action-type-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-api-passthrough-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-asn1subject-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-audit-report-response-format-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-audit-report-status-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-certificate-authority-configuration-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-certificate-authority-status-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-certificate-authority-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-certificate-authority-type-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-certificate-authority-usage-mode-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-create-certificate-authority-audit-report-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-create-certificate-authority-audit-report-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-create-certificate-authority-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-create-certificate-authority-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-create-permission-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-crl-configuration-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-csr-extensions-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-custom-attribute-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-custom-extension-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-delete-certificate-authority-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-delete-permission-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-delete-policy-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-describe-certificate-authority-audit-report-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-describe-certificate-authority-audit-report-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-describe-certificate-authority-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-describe-certificate-authority-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-edi-party-name-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-extended-key-usage-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-extended-key-usage-type-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-extensions-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-failure-reason-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-general-name-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-get-certificate-authority-certificate-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-get-certificate-authority-certificate-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-get-certificate-authority-csr-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-get-certificate-authority-csr-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-get-certificate-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-get-certificate-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-get-policy-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-get-policy-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-import-certificate-authority-certificate-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-issue-certificate-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-issue-certificate-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-key-algorithm-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-key-storage-security-standard-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-key-usage-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-list-certificate-authorities-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-list-certificate-authorities-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-list-permissions-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-list-permissions-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-list-tags-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-list-tags-response-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-ocsp-configuration-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-other-name-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-permission-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-policy-information-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-policy-qualifier-id-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-policy-qualifier-info-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-put-policy-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-qualifier-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-resource-owner-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-restore-certificate-authority-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-revocation-configuration-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-revocation-reason-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-revoke-certificate-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-s3object-acl-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-signing-algorithm-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-tag-certificate-authority-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-tag-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-untag-certificate-authority-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-update-certificate-authority-request-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-validity-period-type-structure.json)
-- [JSONStructure](json-structure/amazon-private-ca-validity-structure.json)
-- [Example](examples/amazon-private-ca-access-description-example.json)
-- [Example](examples/amazon-private-ca-access-method-example.json)
-- [Example](examples/amazon-private-ca-api-passthrough-example.json)
-- [Example](examples/amazon-private-ca-asn1subject-example.json)
-- [Example](examples/amazon-private-ca-certificate-authority-configuration-example.json)
-- [Example](examples/amazon-private-ca-certificate-authority-example.json)
-- [Example](examples/amazon-private-ca-create-certificate-authority-audit-report-request-example.json)
-- [Example](examples/amazon-private-ca-create-certificate-authority-audit-report-response-example.json)
-- [Example](examples/amazon-private-ca-create-certificate-authority-request-example.json)
-- [Example](examples/amazon-private-ca-create-certificate-authority-response-example.json)
-- [Example](examples/amazon-private-ca-create-permission-request-example.json)
-- [Example](examples/amazon-private-ca-crl-configuration-example.json)
-- [Example](examples/amazon-private-ca-csr-extensions-example.json)
-- [Example](examples/amazon-private-ca-custom-attribute-example.json)
-- [Example](examples/amazon-private-ca-custom-extension-example.json)
-- [Example](examples/amazon-private-ca-delete-certificate-authority-request-example.json)
-- [Example](examples/amazon-private-ca-delete-permission-request-example.json)
-- [Example](examples/amazon-private-ca-delete-policy-request-example.json)
-- [Example](examples/amazon-private-ca-describe-certificate-authority-audit-report-request-example.json)
-- [Example](examples/amazon-private-ca-describe-certificate-authority-audit-report-response-example.json)
-- [Example](examples/amazon-private-ca-describe-certificate-authority-request-example.json)
-- [Example](examples/amazon-private-ca-describe-certificate-authority-response-example.json)
-- [Example](examples/amazon-private-ca-edi-party-name-example.json)
-- [Example](examples/amazon-private-ca-extended-key-usage-example.json)
-- [Example](examples/amazon-private-ca-extensions-example.json)
-- [Example](examples/amazon-private-ca-general-name-example.json)
-- [Example](examples/amazon-private-ca-get-certificate-authority-certificate-request-example.json)
-- [Example](examples/amazon-private-ca-get-certificate-authority-certificate-response-example.json)
-- [Example](examples/amazon-private-ca-get-certificate-authority-csr-request-example.json)
-- [Example](examples/amazon-private-ca-get-certificate-authority-csr-response-example.json)
-- [Example](examples/amazon-private-ca-get-certificate-request-example.json)
-- [Example](examples/amazon-private-ca-get-certificate-response-example.json)
-- [Example](examples/amazon-private-ca-get-policy-request-example.json)
-- [Example](examples/amazon-private-ca-get-policy-response-example.json)
-- [Example](examples/amazon-private-ca-import-certificate-authority-certificate-request-example.json)
-- [Example](examples/amazon-private-ca-issue-certificate-request-example.json)
-- [Example](examples/amazon-private-ca-issue-certificate-response-example.json)
-- [Example](examples/amazon-private-ca-key-usage-example.json)
-- [Example](examples/amazon-private-ca-list-certificate-authorities-request-example.json)
-- [Example](examples/amazon-private-ca-list-certificate-authorities-response-example.json)
-- [Example](examples/amazon-private-ca-list-permissions-request-example.json)
-- [Example](examples/amazon-private-ca-list-permissions-response-example.json)
-- [Example](examples/amazon-private-ca-list-tags-request-example.json)
-- [Example](examples/amazon-private-ca-list-tags-response-example.json)
-- [Example](examples/amazon-private-ca-ocsp-configuration-example.json)
-- [Example](examples/amazon-private-ca-other-name-example.json)
-- [Example](examples/amazon-private-ca-permission-example.json)
-- [Example](examples/amazon-private-ca-policy-information-example.json)
-- [Example](examples/amazon-private-ca-policy-qualifier-info-example.json)
-- [Example](examples/amazon-private-ca-put-policy-request-example.json)
-- [Example](examples/amazon-private-ca-qualifier-example.json)
-- [Example](examples/amazon-private-ca-restore-certificate-authority-request-example.json)
-- [Example](examples/amazon-private-ca-revocation-configuration-example.json)
-- [Example](examples/amazon-private-ca-revoke-certificate-request-example.json)
-- [Example](examples/amazon-private-ca-tag-certificate-authority-request-example.json)
-- [Example](examples/amazon-private-ca-tag-example.json)
-- [Example](examples/amazon-private-ca-untag-certificate-authority-request-example.json)
-- [Example](examples/amazon-private-ca-update-certificate-authority-request-example.json)
-- [Example](examples/amazon-private-ca-validity-example.json)
-- [NaftikoCapability](capabilities/shared/amazon-private-ca.yaml)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Private CA Hierarchy | Create root and subordinate CA hierarchies for complete control over your PKI infrastructure. |
-| X.509 Certificate Issuance | Issue end-entity and CA certificates signed by your private CAs for internal resources. |
-| Certificate Revocation | Revoke compromised or expired certificates with CRL and OCSP support. |
-| Audit Reports | Generate detailed audit reports of all certificate issuance activity stored in S3. |
-| Short-Lived Certificates | Issue short-lived certificates to reduce revocation overhead and improve security posture. |
-| Custom Templates | Use certificate templates to standardize certificate extensions and constraints. |
-| IAM Integration | Control access to CA operations using fine-grained IAM policies and resource-based policies. |
-| High Availability | Fully managed, highly available service with automatic failover across AWS Availability Zones. |
+**Kin Score 56.6** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 62.9 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 59.0 |
+| Access clarity | 60.5 |
 
-| Name | Description |
-|------|-------------|
-| TLS for Internal Services | Issue TLS certificates for microservices, APIs, and internal web applications. |
-| IoT Device Authentication | Provision unique X.509 certificates to IoT devices for mutual TLS authentication. |
-| User and Workload Identity | Issue certificates for user authentication and workload identity in zero-trust architectures. |
-| Code Signing | Sign software artifacts and container images with private CA-issued certificates. |
-| VPN and Network Security | Issue certificates for VPN clients and network devices for mutual authentication. |
+**Agent readiness 36.4** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | verified |
+| Error Semantics | verified |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| AWS Certificate Manager | Integrate Private CA with ACM to manage and deploy certificates on AWS services. |
-| AWS IoT Core | Use Private CA to provision certificates for IoT devices connecting to AWS IoT Core. |
-| Kubernetes | Integrate with cert-manager for automated certificate provisioning in Kubernetes clusters. |
-| Amazon EKS | Issue certificates for service mesh and pod-to-pod TLS in EKS clusters. |
-| AWS Secrets Manager | Store and rotate private keys associated with issued certificates. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-private-ca/](https://apis.io/providers/amazon-private-ca/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [amazon-private-ca-openapi-original.yaml](openapi/amazon-private-ca-openapi-original.yaml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Private CA: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-- [amazon-private-ca-access-description-schema.json](json-schema/amazon-private-ca-access-description-schema.json)
-- [amazon-private-ca-access-method-schema.json](json-schema/amazon-private-ca-access-method-schema.json)
-- [amazon-private-ca-access-method-type-schema.json](json-schema/amazon-private-ca-access-method-type-schema.json)
-- [amazon-private-ca-action-type-schema.json](json-schema/amazon-private-ca-action-type-schema.json)
-- [amazon-private-ca-api-passthrough-schema.json](json-schema/amazon-private-ca-api-passthrough-schema.json)
-- [amazon-private-ca-asn1subject-schema.json](json-schema/amazon-private-ca-asn1subject-schema.json)
-- [amazon-private-ca-audit-report-response-format-schema.json](json-schema/amazon-private-ca-audit-report-response-format-schema.json)
-- [amazon-private-ca-audit-report-status-schema.json](json-schema/amazon-private-ca-audit-report-status-schema.json)
-- [amazon-private-ca-certificate-authority-configuration-schema.json](json-schema/amazon-private-ca-certificate-authority-configuration-schema.json)
-- [amazon-private-ca-certificate-authority-schema.json](json-schema/amazon-private-ca-certificate-authority-schema.json)
-- ...and 66 more
-
-### JSON Structure
-
-- [amazon-private-ca-access-description-structure.json](json-structure/amazon-private-ca-access-description-structure.json)
-- [amazon-private-ca-access-method-structure.json](json-structure/amazon-private-ca-access-method-structure.json)
-- [amazon-private-ca-access-method-type-structure.json](json-structure/amazon-private-ca-access-method-type-structure.json)
-- [amazon-private-ca-action-type-structure.json](json-structure/amazon-private-ca-action-type-structure.json)
-- [amazon-private-ca-api-passthrough-structure.json](json-structure/amazon-private-ca-api-passthrough-structure.json)
-- [amazon-private-ca-asn1subject-structure.json](json-structure/amazon-private-ca-asn1subject-structure.json)
-- [amazon-private-ca-audit-report-response-format-structure.json](json-structure/amazon-private-ca-audit-report-response-format-structure.json)
-- [amazon-private-ca-audit-report-status-structure.json](json-structure/amazon-private-ca-audit-report-status-structure.json)
-- [amazon-private-ca-certificate-authority-configuration-structure.json](json-structure/amazon-private-ca-certificate-authority-configuration-structure.json)
-- [amazon-private-ca-certificate-authority-status-structure.json](json-structure/amazon-private-ca-certificate-authority-status-structure.json)
-- ...and 66 more
-
-### JSON-LD
-
-- [amazon-private-ca-context.jsonld](json-ld/amazon-private-ca-context.jsonld)
-
-### Examples
-
-- [amazon-private-ca-access-description-example.json](examples/amazon-private-ca-access-description-example.json)
-- [amazon-private-ca-access-method-example.json](examples/amazon-private-ca-access-method-example.json)
-- [amazon-private-ca-api-passthrough-example.json](examples/amazon-private-ca-api-passthrough-example.json)
-- [amazon-private-ca-asn1subject-example.json](examples/amazon-private-ca-asn1subject-example.json)
-- [amazon-private-ca-certificate-authority-configuration-example.json](examples/amazon-private-ca-certificate-authority-configuration-example.json)
-- [amazon-private-ca-certificate-authority-example.json](examples/amazon-private-ca-certificate-authority-example.json)
-- [amazon-private-ca-create-certificate-authority-audit-report-request-example.json](examples/amazon-private-ca-create-certificate-authority-audit-report-request-example.json)
-- [amazon-private-ca-create-certificate-authority-audit-report-response-example.json](examples/amazon-private-ca-create-certificate-authority-audit-report-response-example.json)
-- [amazon-private-ca-create-certificate-authority-request-example.json](examples/amazon-private-ca-create-certificate-authority-request-example.json)
-- [amazon-private-ca-create-certificate-authority-response-example.json](examples/amazon-private-ca-create-certificate-authority-response-example.json)
-- ...and 49 more
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [amazon-private-ca.yaml](capabilities/shared/amazon-private-ca.yaml)
-
-### Workflow Capabilities
-
-- [pki-management.yaml](capabilities/pki-management.yaml)
-
-## Vocabulary
-
-- [amazon-private-ca-vocabulary.yaml](vocabulary/amazon-private-ca-vocabulary.yaml)
-
-## Rules
-
-- [amazon-private-ca-spectral-rules.yml](rules/amazon-private-ca-spectral-rules.yml)
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-private-ca/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
