@@ -1,10 +1,13 @@
 name: Amazon Private CA
-description: AWS Private Certificate Authority (AWS Private CA) is a highly available, fully managed private
-  CA service that helps you easily and securely manage the lifecycle of your private certificates. It
-  allows you to create private CA hierarchies and issue X.509 certificates for your internal resources
-  including TLS certificates for microservices, IoT devices, and user authentication.
+
+description: AWS Private Certificate Authority (AWS Private CA) is a highly available, fully managed private CA service that helps you easily
+  and securely manage the lifecycle of your private certificates. It allows you to create private CA hierarchies and issue X.509 certificates
+  for your internal resources including TLS certificates for microservices, IoT devices, and user authentication.
+
 url: https://raw.githubusercontent.com/api-evangelist/amazon-private-ca/refs/heads/main/apis.yml
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -17,7 +20,9 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 specificationVersion: '0.23'
+
 accessModel:
   pricing: freemium
   onboarding: self-serve
@@ -28,14 +33,16 @@ accessModel:
   gated_source:
   - onboarding
   label: Freemium (free trial) · Self-serve signup
-  confidence: medium
+  confidence: high
   source:
   - plans
   - authentication
+  - rate-limits
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+
 tags:
 - Amazon Web Services
 - Certificate Authority
@@ -54,36 +61,69 @@ tags_raw:
 - X.509
 - TLS
 - IoT
+
 created: '2026-03-16'
+
 modified: '2026-09-16'
-apis:
-- aid: >-
-    amazon-private-ca:amazon-private-ca-aws-certificate-manager-private-certificate-authority-api
-  name: Amazon Private CA AWS Certificate Manager Private Certificate Authority API
-  description: >-
-    The AWS Certificate Manager Private Certificate Authority API from Amazon Private CA — 23 operation(s)
-    for aws certificate manager private certificate authority.
-  humanURL: https://aws.amazon.com/private-ca/
-  baseURL: https://acm-pca.amazonaws.com
-  tags:
-  - AWS Certificate Manager Private Certificate Authority
-  properties:
-  - type: OpenAPI
-    url: >-
-      openapi/amazon-private-ca-aws-certificate-manager-private-certificate-authority-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
-  - type: GettingStarted
-    url: https://aws.amazon.com/private-ca/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/private-ca/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/private-ca/faqs/
-  - type: Authentication
-    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
-  - type: RateLimits
-    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+
 common:
+- type: Spectral
+  url: rules/amazon-private-ca-spectral-rules.yml
+- type: Spectral
+  url: rules/amazon-private-ca-rules.yml
+- type: Spectral
+  url: rules/amazon-private-ca-jsonschema-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-private-ca-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/amazon-private-ca-data-model.yml
+- type: CLI
+  url: cli/amazon-private-ca-cli.yml
+- type: Idempotency
+  url: conventions/amazon-private-ca-conventions.yml
+- type: Conventions
+  url: conventions/amazon-private-ca-conventions.yml
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: Lifecycle
+  url: lifecycle/amazon-private-ca-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/amazon-private-ca-error-codes.yml
+- type: ErrorCatalog
+  url: errors/amazon-private-ca-problem-types.yml
+- type: Conformance
+  url: conformance/amazon-private-ca-conformance.yml
+- type: LLMsTxt
+  url: llms/amazon-private-ca-llms.txt
+- type: SecurityTxt
+  url: well-known/amazon-private-ca-security.txt
+- type: WellKnown
+  url: well-known/amazon-private-ca-well-known.yml
+- type: Hosts
+  url: hosts/amazon-private-ca-hosts.yml
+- type: Vendors
+  url: vendors/amazon-private-ca-vendors.yml
+- type: SDKs
+  url: packages/amazon-private-ca-packages.yml
+- type: Packages
+  url: packages/amazon-private-ca-packages.yml
+- type: SignUp
+  url: https://signin.aws.amazon.com/signup?request_type=builderId
+- type: Security
+  url: https://aws.amazon.com/security/?nc2=h_dsc_aa_sec
+- type: Newsroom
+  url: https://aws.amazon.com/media/?nc2=h_sol_ind_med
+- type: APIReference
+  url: https://docs.aws.amazon.com/cli/latest/reference/acm-pca/index.html
+- type: GettingStarted
+  url: https://docs.aws.amazon.com/AmazonRDS/latest/gettingstartedguide/what-is-rds
 - type: Plans
   url: plans/amazon-private-ca-plans-pricing.yml
 - type: RateLimits
@@ -117,8 +157,6 @@ common:
   url: https://aws.amazon.com/privacy/
 - type: Support
   url: https://aws.amazon.com/premiumsupport/
-- type: Blog
-  url: https://aws.amazon.com/blogs/security/tag/aws-certificate-manager-private-ca/
 - type: GitHubOrganization
   url: https://github.com/aws
 - type: Console
@@ -148,8 +186,7 @@ common:
   - name: IAM Integration
     description: Control access to CA operations using fine-grained IAM policies and resource-based policies.
   - name: High Availability
-    description: Fully managed, highly available service with automatic failover across AWS Availability
-      Zones.
+    description: Fully managed, highly available service with automatic failover across AWS Availability Zones.
 - type: UseCases
   data:
   - name: TLS for Internal Services
@@ -600,6 +637,206 @@ common:
   url: examples/amazon-private-ca-validity-example.json
 - type: Integrations
   url: https://aws.amazon.com/partners/
+- type: UsageTerms
+  url: terms/amazon-private-ca-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-private-ca-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-private-ca-compliance.yml
+- type: Eligibility
+  url: eligibility/amazon-private-ca-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-private-ca-ai-preferences.yml
+- type: DataLicense
+  url: data-license/amazon-private-ca-data-license.yml
+
+apis:
+- aid: amazon-private-ca:amazon-private-ca-aws-certificate-manager-private-certificate-authority-api
+  name: Amazon Private CA AWS Certificate Manager Private Certificate Authority API
+  description: The AWS Certificate Manager Private Certificate Authority API from Amazon Private CA — 23 operation(s) for aws certificate manager
+    private certificate authority.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://acm-pca.{region}.amazonaws.com
+  tags:
+  - AWS Certificate Manager Private Certificate Authority
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-aws-certificate-manager-private-certificate-authority-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/privateca/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/private-ca/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/private-ca/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/private-ca/faqs/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/privateca/latest/userguide/PcaLimits.html
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-issue-certificate-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-certificate-authority-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-revoke-certificate-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-import-certificate-authority-certificate-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-permissions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-permission-request-schema.json
+- aid: amazon-private-ca:amazon-private-ca-accesscontrolentries-api
+  name: Amazon Private CA Private Ca Accesscontrolentries API
+  description: The Private Ca Accesscontrolentries API from Amazon Private CA — 2 operation(s) for private ca accesscontrolentries.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://pca-connector-ad.{region}.amazonaws.com
+  tags:
+  - Private Ca Accesscontrolentries
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-accesscontrolentries-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-template-group-access-control-entries-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-template-group-access-control-entry-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-update-template-group-access-control-entry-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-template-group-access-control-entries-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-delete-template-group-access-control-entry-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-get-template-group-access-control-entry-request-schema.json
+- aid: amazon-private-ca:amazon-private-ca-connectors-api
+  name: Amazon Private CA Private Ca Connectors API
+  description: The Private Ca Connectors API from Amazon Private CA — 2 operation(s) for private ca connectors.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://pca-connector-ad.{region}.amazonaws.com
+  tags:
+  - Private Ca Connectors
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-connectors-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-connectors-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-connector-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-connectors-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-delete-connector-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-get-connector-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-connector-response-schema.json
+- aid: amazon-private-ca:amazon-private-ca-directoryregistrations-api
+  name: Amazon Private CA Private Ca Directoryregistrations API
+  description: The Private Ca Directoryregistrations API from Amazon Private CA — 2 operation(s) for private ca directoryregistrations.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://pca-connector-ad.{region}.amazonaws.com
+  tags:
+  - Private Ca Directoryregistrations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-directoryregistrations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-directory-registrations-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-directory-registrations-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-directory-registration-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-delete-directory-registration-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-get-directory-registration-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-directory-registration-response-schema.json
+- aid: amazon-private-ca:amazon-private-ca-operations-api
+  name: Amazon Private CA Private Ca Operations API
+  description: The Private Ca Operations API from Amazon Private CA — 5 operation(s) for private ca operations.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://pca-connector-scep.{region}.amazonaws.com
+  tags:
+  - Private Ca Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-operations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-challenge-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-challenge-metadata-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-challenge-metadata-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-delete-challenge-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-get-challenge-metadata-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-get-challenge-password-request-schema.json
+- aid: amazon-private-ca:amazon-private-ca-serviceprincipalnames-api
+  name: Amazon Private CA Private Ca Serviceprincipalnames API
+  description: The Private Ca Serviceprincipalnames API from Amazon Private CA — 2 operation(s) for private ca serviceprincipalnames.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://pca-connector-ad.{region}.amazonaws.com
+  tags:
+  - Private Ca Serviceprincipalnames
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-serviceprincipalnames-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-service-principal-names-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-service-principal-names-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-service-principal-name-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-delete-service-principal-name-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-get-service-principal-name-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-get-service-principal-name-response-schema.json
+- aid: amazon-private-ca:amazon-private-ca-tags-api
+  name: Amazon Private CA Private Ca Tags API
+  description: The Private Ca Tags API from Amazon Private CA — 1 operation(s) for private ca tags.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://pca-connector-ad.{region}.amazonaws.com
+  tags:
+  - Private Ca Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-tags-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-tag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-untag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-tags-for-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-tags-for-resource-response-schema.json
+- aid: amazon-private-ca:amazon-private-ca-templates-api
+  name: Amazon Private CA Private Ca Templates API
+  description: The Private Ca Templates API from Amazon Private CA — 2 operation(s) for private ca templates.
+  humanURL: https://aws.amazon.com/private-ca/
+  baseURL: https://pca-connector-ad.{region}.amazonaws.com
+  tags:
+  - Private Ca Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-private-ca-templates-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-templates-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-create-template-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-update-template-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-list-templates-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-delete-template-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-private-ca-get-template-request-schema.json
+
 integrations:
 - name: Partner Programs
 - name: Resources
@@ -609,10 +846,14 @@ integrations:
 - name: AWS Partner Central
 - name: Partner Paths
 - name: co-sell with AWS
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-  url: https://apievangelist.com
+
 include: []
+
 x-parent: amazon-web-services
+
 x-relationship: product
+x-enrichment:
+  date: '2026-11-11'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v6

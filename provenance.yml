@@ -5,12 +5,24 @@ artifacts:
   agentic-access/amazon-private-ca-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-private-ca-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-private-ca-authentication.yml:
     method: derived
     evidence: declared in the artifact
   capabilities/amazon-private-ca-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  cli/amazon-private-ca-cli.yml:
+    method: searched
+    evidence: declared in the artifact
   collections/amazon-private-ca-x-amz-target-acmprivateca-createcertificateauthority-api.opencollection.json:
     method: unknown
     evidence: no authorship recorded
@@ -149,6 +161,30 @@ artifacts:
   collections/amazon-private-ca-x-amz-target-acmprivateca-updatecertificateauthority-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  compliance/amazon-private-ca-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-private-ca-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-private-ca-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-license/amazon-private-ca-data-license.yml:
+    method: harvested
+    evidence: declared in the artifact
+  data-model/amazon-private-ca-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-private-ca-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-private-ca-error-codes.yml:
+    method: searched
+    evidence: declared in the artifact
+  errors/amazon-private-ca-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/amazon-private-ca-access-description-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -332,6 +368,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-private-ca-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -392,7 +431,31 @@ artifacts:
   json-schema/amazon-private-ca-create-certificate-authority-response-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-private-ca-create-challenge-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-create-connector-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-create-connector-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-create-directory-registration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-create-directory-registration-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-private-ca-create-permission-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-create-service-principal-name-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-create-template-group-access-control-entry-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-create-template-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-crl-configuration-schema.json:
@@ -410,10 +473,28 @@ artifacts:
   json-schema/amazon-private-ca-delete-certificate-authority-request-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-private-ca-delete-challenge-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-delete-connector-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-delete-directory-registration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-private-ca-delete-permission-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-delete-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-delete-service-principal-name-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-delete-template-group-access-control-entry-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-delete-template-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-describe-certificate-authority-audit-report-request-schema.json:
@@ -464,10 +545,34 @@ artifacts:
   json-schema/amazon-private-ca-get-certificate-response-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-private-ca-get-challenge-metadata-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-get-challenge-password-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-get-connector-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-get-directory-registration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-private-ca-get-policy-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-get-policy-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-get-service-principal-name-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-get-service-principal-name-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-get-template-group-access-control-entry-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-get-template-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-import-certificate-authority-certificate-request-schema.json:
@@ -494,16 +599,58 @@ artifacts:
   json-schema/amazon-private-ca-list-certificate-authorities-response-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-challenge-metadata-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-challenge-metadata-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-connectors-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-connectors-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-directory-registrations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-directory-registrations-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-private-ca-list-permissions-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-list-permissions-response-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-service-principal-names-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-service-principal-names-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-tags-for-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-tags-for-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-private-ca-list-tags-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-list-tags-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-template-group-access-control-entries-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-template-group-access-control-entries-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-templates-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-list-templates-response-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-ocsp-configuration-schema.json:
@@ -554,13 +701,25 @@ artifacts:
   json-schema/amazon-private-ca-tag-certificate-authority-request-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-private-ca-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-private-ca-tag-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-untag-certificate-authority-request-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-private-ca-untag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-private-ca-update-certificate-authority-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-update-template-group-access-control-entry-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-private-ca-update-template-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-private-ca-validity-period-type-schema.json:
@@ -800,7 +959,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -869,13 +1028,51 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-private-ca-openapi-original.yaml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
-  openapi/amazon-private-ca-aws-certificate-manager-private-certificate-authority-api-openapi.yml:
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-private-ca-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-private-ca-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-private-ca-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-private-ca-mcp.yml:
     method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    evidence: declared in the artifact
+  openapi/amazon-private-ca-accesscontrolentries-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-private-ca-aws-certificate-manager-private-certificate-authority-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-private-ca-connectors-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-private-ca-directoryregistrations-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-private-ca-operations-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-private-ca-serviceprincipalnames-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-private-ca-tags-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-private-ca-templates-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  packages/amazon-private-ca-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-private-ca-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-private-ca-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -948,10 +1145,19 @@ artifacts:
   postman/amazon-private-ca-x-amz-target-acmprivateca-updatecertificateauthority-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  privacy/amazon-private-ca-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-private-ca-rate-limits.yml:
+    method: searched
+    evidence: declared in the artifact
+  regulatory/amazon-private-ca-regulatory-posture.yml:
+    method: unknown
+    evidence: no authorship recorded
+  rules/amazon-private-ca-jsonschema-spectral-rules.yml:
     method: generated
     evidence: declared in the artifact
-  rules/amazon-private-ca-jsonschema-spectral-rules.yml:
+  rules/amazon-private-ca-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-private-ca-spectral-rules.yml:
@@ -966,12 +1172,48 @@ artifacts:
   security/amazon-private-ca-vulnerability-disclosure.yml:
     method: searched
     evidence: declared in the artifact
+  skills/_index.yml:
+    method: generated
+    evidence: declared in the artifact
+  skills/amazon-private-ca-delete-and-restore-ca.md:
+    method: generated
+    evidence: declared in the artifact
+  skills/amazon-private-ca-issue-private-certificate.md:
+    method: generated
+    evidence: declared in the artifact
   sla/amazon-private-ca-sla.yml:
     method: generated
     evidence: declared in the artifact
   smithy/acm-pca-2017-08-22.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/acm-pca/service/2017-08-22/acm-pca-2017-08-22.json
+      (sha256 ae96486e0933, fetched 2026-11-11T21:13:53+00:00)
+  smithy/pca-connector-ad-2018-05-10.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/pca-connector-ad/service/2018-05-10/pca-connector-ad-2018-05-10.json
+      (sha256 3a5b35be7e80, fetched 2026-11-11T21:13:54+00:00)
+  smithy/pca-connector-scep-2018-05-10.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/pca-connector-scep/service/2018-05-10/pca-connector-scep-2018-05-10.json
+      (sha256 03642cc2911e, fetched 2026-11-11T21:13:55+00:00)
+  terms/amazon-private-ca-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-private-ca-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-private-ca-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-private-ca-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-private-ca-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-private-ca-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-private-ca-well-known.yml:
     method: unknown
     evidence: no authorship recorded
