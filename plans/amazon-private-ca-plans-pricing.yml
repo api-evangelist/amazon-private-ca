@@ -78,7 +78,7 @@ plans:
   unit: first private CA per account per Region
   included_quota: CA operation free; certificates still charged
 x-canonical:
-  generated: '2026-11-13'
+  generated: '2026-11-20'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - metered
